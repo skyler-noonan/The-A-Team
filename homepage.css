@@ -1,0 +1,65 @@
+html, body {
+    height: 100%
+}
+body{ 
+    display: flex;
+    
+}
+#imgProfile
+{
+    width: 80px;
+    height: 80px;
+}
+
+header div{
+    position: static;
+    border: 3px solid;
+    border-color: blue;
+    padding: 3px;
+    margin: 2px;
+    overflow:auto;
+    background-color: antiquewhite;
+
+}
+header div button,h1{
+    display: inline-block;
+    margin: 20px
+    
+
+}
+header button
+{
+    height: 40px;
+    width: 90px;
+    color: purple;
+    background-color: aquamarine;
+}
+/*body{
+    border: 2px solid;
+    border-color: red;
+}*/
+
+.mainContent{
+border: 2px solid;
+border-color: orange;
+margin:10px;
+width:100%;
+overflow: hidden;
+background-color: rgb(235, 221, 221);
+
+
+
+}
+#sideBar{
+    float: right;
+    position:static;
+    
+    width: 400px;
+    height: auto;
+    border: 2px solid;
+    border-color: green;
+    margin: 2px;
+    overflow: hidden;
+
+
+}
