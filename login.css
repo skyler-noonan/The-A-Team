@@ -1,0 +1,26 @@
+.content
+{
+    border: 2px solid black;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#website
+{
+    margin-left: 3%;
+}
+
+#welcome
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+
+}
+
+.log
+{
+    text-align: left;
+    margin-left: 10%;
+}
