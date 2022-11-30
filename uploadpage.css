@@ -1,0 +1,112 @@
+html, body {
+    height: 100%
+}
+body{ 
+    display: flex;
+    
+}
+#imgProfile
+{
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+header div{
+    position: static;
+    border: 3px solid;
+    border-color: blue;
+    padding: 3px;
+    margin: 2px;
+    overflow:auto;
+    background-color: antiquewhite;
+
+}
+header div button,h1{
+    display: inline-block;
+    margin: 20px;
+    
+
+}
+header button
+{
+    height: 40px;
+    width: 90px;
+    color: purple;
+    background-color: aquamarine;
+}
+/*body{
+    border: 2px solid;
+    border-color: red;
+}*/
+
+.mainContent{
+border: 2px solid;
+border-color: orange;
+margin:10px;
+width:100%;
+height:100%;
+overflow: hidden;
+background-color: rgb(235, 221, 221);
+}
+#likes{
+   
+    font-weight: bold;
+}
+#comments{
+   
+    font-weight: bold;
+}
+#username{
+    
+    font-weight: bold;
+}
+
+#posts
+{
+    border: 2px solid;
+    border-color: hotpink;
+    margin:3px;
+    padding: 2px;
+    overflow: hidden;
+    width: 1050px;
+    background-color: turquoise;
+    float:left;
+
+}
+#sideBar{
+    float: right;
+    position:static;
+    
+    width: 400px;
+    height: auto;
+    border: 2px solid;
+    border-color: green;
+    margin: 2px;
+    overflow: hidden;
+
+
+}
+.poster{
+    border: 2px solid;
+    border-color: black;
+    overflow:hidden;
+ 
+    
+}
+#posterInfo{
+    border: 2px solid;
+    border-color: orange;
+    padding-top: 2px;
+    float:left;
+    margin: 20px;
+
+    
+}
+div div span 
+{ 
+    margin-left:100px;
+    margin-right:100px;
+
+}
+
