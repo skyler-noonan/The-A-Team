@@ -198,7 +198,7 @@ function generateOtherUserPost() {
 function generateUsername() {
     ranChoose = (Math.floor(Math.random() * 15));
     choose = ranChoose.toString();
-    newName = JSON.parse(randomUsername);
+    newName = JSON.parse(JSONname);
     generatedUsername = newName[choose];
     return (toString(generatedUsername));
 }
