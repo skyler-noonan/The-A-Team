@@ -157,6 +157,11 @@ div span {
 #detailheading{
     font-size: 40px;
     text-align:left;
+    display: inline-block;
+}
+#urlBox{
+    font-size:medium;
+    font-display: ;
 }
 
 
