@@ -33,10 +33,7 @@ function login(){
 
 
 }
-//always generate on home page
-for (i=0; i<= 4; i++){
-    generateOtherUserPost();
-}
+
 
 //following div id="posts"
 
@@ -91,6 +88,11 @@ function generateOtherUserPost() {
 
     $(allHomePosts).append(newPostDiv)
 
+}
+
+//always generate on home page
+for (i=0; i<= 4; i++){
+    generateOtherUserPost();
 }
 
 //global object literals 
