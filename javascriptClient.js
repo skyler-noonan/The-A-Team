@@ -35,7 +35,7 @@ function login(){
 }
 
 // JSON literals for random generated content 
-//scroll all the way down for functions 
+//SCROLL ALL THE WAY DOWN FOR THE FUNCTIONS
 
 randomUsername = {
     "0": "Openlive",
