@@ -161,15 +161,15 @@ div span {
 }
 
 #submitPost {
-    width:10px;
+    width:100px;
     height:30px;
     font-size: 30px;
 }
 
 .detailheading{
-    font-size: 30px;
+    font-size: 80px;
     text-align:left;
-    text-decoration: underline black;
+    text-decoration: underline;
     font-weight: bold;
 }
 
