@@ -1,6 +1,6 @@
-var username = "";
-var password = "";
-var email = "";
+var username = "A-Team Test"; //A-Team Test //for TA 
+var password = "ateam123"; //ateam123
+var email = "ateam@email.com"; //ateam@email.com
 var loginUsername = "";
 var loginPassword = "";
 var loginEmail = "";
@@ -33,13 +33,63 @@ function login(){
 
 
 }
+//following div id="posts"
+function generateOtherUserPost() { 
+    newPostDiv = document.createElement("div");
+        $(newPostDiv).attr("id", "posts");
+        span1 = document.createElement("span");
+        $(span1).text("Date Posted: " + generateDate());
+        span2 = document.createElement("span");
+        $(span2).text(generateHashtag());
+        $(newPostDiv).append(span1);
+        $(newPostDiv).append(span2);
+
+        break1 = document.createElement("br");
+        $(newPostDiv).append(break1);
+
+        homeProfilePic = document.createElement("img"); //profile picture as followed in homepage.html
+        $(homeProfilePic).attr("src", generateProfilePicture());
+        $(homeProfilePic).attr("alt", "error");
+        $(newPostDiv).append(homeProfilePic);
+
+        break2 = document.createElement("br");
+        $(newPostDiv).append(break2);
+
+        poster = document.createElement("div");
+            $(poster).attr("id", "poster");
+
+            posterImage = document.createElement("img");
+            $(posterImage).attr("src", generatePostPicture());
+            $(poster).append(posterImage);
+
+            posterInfo = document.createElement("div");
+            $(posterInfo).attr("id", "posterInfo");
+                span3 = document.createElement("span"); //username
+                $(span3).attr("id", "username");
+                $(span3).text(generateUsername());
+
+                span4 = document.createElement("span"); //likes
+                $(span4).attr("id", "likes");
+                $(span4).text(generate);
+
+
+
+
+
+
+
+
+    $(allHomePosts).append(newPostDiv)
+
+}
+
 //global object literals 
 function generateUsername() {
     ranChoose = (Math.floor(Math.random() * 15));
     choose = ranChoose.toString();
     newName = JSON.parse(randomUsername);
     generatedUsername = newName[choose];
-    return generatedUsername;
+    return (toString(generatedUsername));
 }
 
 function generateDescription() {
@@ -47,15 +97,33 @@ function generateDescription() {
     choose = ranChoose.toString();
     newDescription = JSON.parse(JSONDescr);
     generatedDescription = newDescription[choose];
-    return generatedDescription; 
+    return (toString(generatedDescription)); 
 }; 
+
+function generateNumLikes() {
+    generateLike = Math.floor(Math.random() * 1001)
+    return (toString(generateLike));
+}
+
+function generateNumComment() {
+    generateLike = Math.floor(Math.random() * 6)
+    return (toString(generateLike));
+}
+
+function generateDate() {
+    d = new Date()
+    year = d.getFullYear()
+    date = d.getDate()
+    month = d.getMonth()
+    return (toString(year + "-" + month + "-" + date))
+}
 
 function generateNotifications() {
     ranChoose = (Math.floor(Math.random() * 4));
     choose = ranChoose.toString();
     newNotification = JSON.parse(JSONNoti);
     generatedNotification = newNotification[choose];
-    return generatedNotification; //string
+    return (toString(generatedNotification)); //string
 }; 
 
 function generateHashtag() {
@@ -63,7 +131,7 @@ function generateHashtag() {
     choose = ranChoose.toString();
     newHashtag = JSON.parse(JSONHashtag);
     generatedHashtag = newHashtag[choose];
-    return generatedHashtag; //string
+    return (toString(generatedHashtag)); //string
 }; 
 
 function generateProfilePicture() {
@@ -71,14 +139,14 @@ function generateProfilePicture() {
     choose = ranChoose.toString();
     newProfilePic = JSON.parse(JSONProfilePic);
     generatedProfilePic= newProfilePic[choose];
-    return generatedProfilePic; // as image url for src = ""
+    return (toString(generatedProfilePic)); // as image url for src = ""
 }; 
 function generatePostPicture() {
     ranChoose = (Math.floor(Math.random() * 11));
     choose = ranChoose.toString();
     newPostPic = JSON.parse(JSONPostPic);
     generatedPostPic= newPostPic[choose];
-    return generatedPostPic; // as image url for src = ""
+    return (toString(generatedPostPic)); // as image url for src = ""
 }; 
 
 randomUsername = {
