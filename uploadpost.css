@@ -169,7 +169,7 @@ div span {
 .detailheading{
     font-size: 30px;
     text-align:left;
-    text-decoration: underline;
+    text-decoration: underline black;
     font-weight: bold;
 }
 
