@@ -158,10 +158,11 @@ div span {
     font-size: 40px;
     text-align:left;
     display: inline-block;
+    text-decoration: underline;
 }
 #urlBox{
     font-size:medium;
-    font-display: ;
+    font-display: bold;
 }
 
 
