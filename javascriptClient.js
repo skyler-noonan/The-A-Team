@@ -33,7 +33,13 @@ function login(){
 
 
 }
+//always generate on home page
+for (i=0; i<= 4; i++){
+    generateOtherUserPost();
+}
+
 //following div id="posts"
+
 function generateOtherUserPost() { 
     newPostDiv = document.createElement("div");
         $(newPostDiv).attr("id", "posts");
