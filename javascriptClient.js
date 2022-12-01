@@ -36,7 +36,7 @@ function login(){
 
 
 //following div id="posts"
-
+window.onload = function(){ 
 function generateOtherUserPost() { 
     allHomePosts = document.createElement("div");
     $(allHomePosts).attr("id", "allHomePosts");
@@ -252,3 +252,6 @@ randomURLPostPicture = {
     "10": "https://assets.bucketlistly.blog/sites/5adf778b6eabcc00190b75b1/assets/6075182686d092000b192cf1/best-free-travel-images-image-3.jpg"
 }
 JSONPostPic = JSON.stringify(randomURLPostPicture);
+
+
+}
