@@ -34,139 +34,8 @@ function login(){
 
 }
 
-
-//following div id="posts"
-window.onload = function(){ 
-    console.log("working")
-    for (i=0; i<= 4; i++){
-        generateOtherUserPost();
-    }
-}
-
-function generateOtherUserPost() { 
-    allHomePosts = document.createElement("div");
-    $(allHomePosts).attr("id", "allHomePosts");
-
-    newPostDiv = document.createElement("div");
-        $(newPostDiv).attr("id", "posts");
-        span1 = document.createElement("span");
-        $(span1).text("Date Posted: " + generateDate());
-        span2 = document.createElement("span");
-        $(span2).text(generateHashtag());
-        $(newPostDiv).append(span1);
-        $(newPostDiv).append(span2);
-
-        break1 = document.createElement("br");
-        $(newPostDiv).append(break1);
-
-        homeProfilePic = document.createElement("img"); //profile picture as followed in homepage.html
-        $(homeProfilePic).attr("src", generateProfilePicture());
-        $(homeProfilePic).attr("alt", "error");
-        $(newPostDiv).append(homeProfilePic);
-
-        break2 = document.createElement("br");
-        $(newPostDiv).append(break2);
-
-        poster = document.createElement("div");
-        $(poster).attr("id", "poster");
-
-            posterImage = document.createElement("img");
-            $(posterImage).attr("src", generatePostPicture());
-            $(poster).append(posterImage);
-
-            posterInfo = document.createElement("div");
-            $(posterInfo).attr("id", "posterInfo");
-                span3 = document.createElement("span"); //username
-                $(span3).attr("id", "username");
-                $(span3).text(generateUsername());
-                $(span3).append(posterInfo);
-
-                span4 = document.createElement("span"); //likes num
-                $(span4).attr("id", "likes");
-                $(span4).text(generateNumLikes());
-                $(span4).append(posterInfo);
-
-                span5 = document.createElement("span"); //comments num
-                $(span5).attr("id", "comments");
-                $(span5).text(generateNumComment());
-                $(span5).append(posterInfo);
-
-            $(poster).append(posterInfo);   
-
-        $(newPostDiv).append(poster);
-
-    $(allHomePosts).append(newPostDiv)
-
-}
-
-//always generate on home page
-
-
-//global object literals 
-function generateUsername() {
-    ranChoose = (Math.floor(Math.random() * 15));
-    choose = ranChoose.toString();
-    newName = JSON.parse(randomUsername);
-    generatedUsername = newName[choose];
-    return (toString(generatedUsername));
-}
-
-function generateDescription() {
-    ranChoose = (Math.floor(Math.random() * 5));
-    choose = ranChoose.toString();
-    newDescription = JSON.parse(JSONDescr);
-    generatedDescription = newDescription[choose];
-    return (toString(generatedDescription)); 
-}; 
-
-function generateNumLikes() {
-    generateLike = Math.floor(Math.random() * 1001)
-    return (toString(generateLike));
-}
-
-function generateNumComment() {
-    generateLike = Math.floor(Math.random() * 6)
-    return (toString(generateLike));
-}
-
-function generateDate() {
-    d = new Date()
-    year = d.getFullYear()
-    date = d.getDate()
-    month = d.getMonth()
-    return (toString(year + "-" + month + "-" + date))
-}
-
-function generateNotifications() {
-    ranChoose = (Math.floor(Math.random() * 4));
-    choose = ranChoose.toString();
-    newNotification = JSON.parse(JSONNoti);
-    generatedNotification = newNotification[choose];
-    return (toString(generatedNotification)); //string
-}; 
-
-function generateHashtag() {
-    ranChoose = (Math.floor(Math.random() * 7));
-    choose = ranChoose.toString();
-    newHashtag = JSON.parse(JSONHashtag);
-    generatedHashtag = newHashtag[choose];
-    return (toString(generatedHashtag)); //string
-}; 
-
-function generateProfilePicture() {
-    ranChoose = (Math.floor(Math.random() * 11));
-    choose = ranChoose.toString();
-    newProfilePic = JSON.parse(JSONProfilePic);
-    generatedProfilePic= newProfilePic[choose];
-    return (toString(generatedProfilePic)); // as image url for src = ""
-}; 
-function generatePostPicture() {
-    ranChoose = (Math.floor(Math.random() * 11));
-    choose = ranChoose.toString();
-    newPostPic = JSON.parse(JSONPostPic);
-    generatedPostPic= newPostPic[choose];
-    return (toString(generatedPostPic)); // as image url for src = ""
-}; 
+// JSON literals for random generated content 
+//scroll all the way down for functions 
 
 randomUsername = {
     "0": "Openlive",
@@ -258,3 +127,135 @@ randomURLPostPicture = {
 JSONPostPic = JSON.stringify(randomURLPostPicture);
 
 
+window.onload = function(){ 
+    console.log("working")
+    for (i=0; i<= 4; i++){
+        generateOtherUserPost();
+    }
+}
+
+function generateOtherUserPost() { 
+    allHomePosts = document.createElement("div");
+    $(allHomePosts).attr("id", "allHomePosts");
+
+    newPostDiv = document.createElement("div");
+        $(newPostDiv).attr("id", "posts");
+        span1 = document.createElement("span");
+        $(span1).text("Date Posted: " + generateDate());
+        span2 = document.createElement("span");
+        $(span2).text(generateHashtag());
+        $(newPostDiv).append(span1);
+        $(newPostDiv).append(span2);
+
+        break1 = document.createElement("br");
+        $(newPostDiv).append(break1);
+
+        homeProfilePic = document.createElement("img"); //profile picture as followed in homepage.html
+        $(homeProfilePic).attr("src", generateProfilePicture());
+        $(homeProfilePic).attr("alt", "error");
+        $(newPostDiv).append(homeProfilePic);
+
+        break2 = document.createElement("br");
+        $(newPostDiv).append(break2);
+
+        poster = document.createElement("div");
+        $(poster).attr("id", "poster");
+
+            posterImage = document.createElement("img");
+            $(posterImage).attr("src", generatePostPicture());
+            $(poster).append(posterImage);
+
+            posterInfo = document.createElement("div");
+            $(posterInfo).attr("id", "posterInfo");
+                span3 = document.createElement("span"); //username
+                $(span3).attr("id", "username");
+                $(span3).text(generateUsername());
+                $(span3).append(posterInfo);
+
+                span4 = document.createElement("span"); //likes num
+                $(span4).attr("id", "likes");
+                $(span4).text(generateNumLikes());
+                $(span4).append(posterInfo);
+
+                span5 = document.createElement("span"); //comments num
+                $(span5).attr("id", "comments");
+                $(span5).text(generateNumComment());
+                $(span5).append(posterInfo);
+
+            $(poster).append(posterInfo);   
+
+        $(newPostDiv).append(poster);
+
+    $(allHomePosts).append(newPostDiv)
+
+}
+
+//always generate on home page
+
+
+//FUNCTIONS FOR CONTENT 
+
+function generateUsername() {
+    ranChoose = (Math.floor(Math.random() * 15));
+    choose = ranChoose.toString();
+    newName = JSON.parse(randomUsername);
+    generatedUsername = newName[choose];
+    return (toString(generatedUsername));
+}
+
+function generateDescription() {
+    ranChoose = (Math.floor(Math.random() * 5));
+    choose = ranChoose.toString();
+    newDescription = JSON.parse(JSONDescr);
+    generatedDescription = newDescription[choose];
+    return (toString(generatedDescription)); 
+}; 
+
+function generateNumLikes() {
+    generateLike = Math.floor(Math.random() * 1001)
+    return (toString(generateLike));
+}
+
+function generateNumComment() {
+    generateLike = Math.floor(Math.random() * 6)
+    return (toString(generateLike));
+}
+
+function generateDate() {
+    d = new Date()
+    year = d.getFullYear()
+    date = d.getDate()
+    month = d.getMonth()
+    return (toString(year + "-" + month + "-" + date))
+}
+
+function generateNotifications() {
+    ranChoose = (Math.floor(Math.random() * 4));
+    choose = ranChoose.toString();
+    newNotification = JSON.parse(JSONNoti);
+    generatedNotification = newNotification[choose];
+    return (toString(generatedNotification)); //string
+}; 
+
+function generateHashtag() {
+    ranChoose = (Math.floor(Math.random() * 7));
+    choose = ranChoose.toString();
+    newHashtag = JSON.parse(JSONHashtag);
+    generatedHashtag = newHashtag[choose];
+    return (toString(generatedHashtag)); //string
+}; 
+
+function generateProfilePicture() {
+    ranChoose = (Math.floor(Math.random() * 11));
+    choose = ranChoose.toString();
+    newProfilePic = JSON.parse(JSONProfilePic);
+    generatedProfilePic= newProfilePic[choose];
+    return (toString(generatedProfilePic)); // as image url for src = ""
+}; 
+function generatePostPicture() {
+    ranChoose = (Math.floor(Math.random() * 11));
+    choose = ranChoose.toString();
+    newPostPic = JSON.parse(JSONPostPic);
+    generatedPostPic= newPostPic[choose];
+    return (toString(generatedPostPic)); // as image url for src = ""
+}; 
