@@ -3,7 +3,10 @@
 <head>
   <title>A-Team login </title>
   <meta charset="utf-8">
-  <script src=""></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="javascriptClient.js"></script>
+
  
   <link rel="stylesheet" href="login.css" type="text/css" >
  
@@ -22,10 +25,13 @@
 
     <div class="log">
     
-    Email: <input type="email" value=""><br><br>
-    Password: <input type="password" value=""><br><br>
+    Email: <input type="email" id="email" value=""><br><br>
+    Username: <input type="email" id="username" value=""><br><br>
+    Password: <input type="password" id = "password" value=""><br><br>
 
-    <button onclick="login()">Login</button>
+    <button id="register" onclick = "register()">Register</button>
+    <button id="login" onclick="login()">Login</button>
+   
 
     </div>
 	

@@ -24,3 +24,11 @@
     text-align: left;
     margin-left: 10%;
 }
+
+#register {
+    visibility:visible;
+}
+#login {
+    
+    visibility:hidden;
+}
