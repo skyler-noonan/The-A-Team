@@ -161,16 +161,11 @@ div span {
 }
 
 #submitPost {
-    width:100px;
-    height:30px;
-    font-size: 30px;
+    width:50px;
+    height:20px;
+    font-size: 20px;
 }
 
-.detailheading{
-    font-size: 80px;
-    text-align:left;
-    text-decoration: underline;
-    font-weight: bold;
-}
+
 
 
