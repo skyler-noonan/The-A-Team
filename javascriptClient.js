@@ -37,6 +37,7 @@ function login(){
 
 //following div id="posts"
 window.onload = function(){ 
+    console.log("working")
     for (i=0; i<= 4; i++){
         generateOtherUserPost();
     }
