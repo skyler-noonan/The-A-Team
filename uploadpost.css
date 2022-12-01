@@ -111,3 +111,53 @@ div div span
 
 }
 
+
+/* start of upload page css */ 
+
+div span {
+    font-weight: bold
+}
+#detailsSideBar {
+    float: right;
+    position: static;
+    display: block;
+    overflow: auto;
+    border: 4px solid;
+    border-color: orange;
+    padding: 20px;
+    width:400px;
+    height: 200px;
+}
+
+#detailsSideBar span {
+    text-align: left;
+}
+
+#description {
+    width: 200px;
+    height: 120px;
+}
+#insideBar {
+    font-size: 20px;
+    text-align: left;
+}
+#userProfile {
+    width: 80px;
+    height: 80px;
+    float: left;
+
+}
+#topupload {
+    text-align: left;
+}
+#top {
+    right:30px
+}
+
+#detailheading{
+    font-size: 40px;
+    text-align:left;
+}
+
+
+
