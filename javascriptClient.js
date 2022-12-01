@@ -38,6 +38,9 @@ function login(){
 //following div id="posts"
 
 function generateOtherUserPost() { 
+    allHomePosts = document.createElement("div");
+    $(allHomePosts).attr("id", "allHomePosts");
+
     newPostDiv = document.createElement("div");
         $(newPostDiv).attr("id", "posts");
         span1 = document.createElement("span");
