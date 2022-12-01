@@ -161,9 +161,10 @@ div span {
 }
 
 #submitPost {
-    width:100px;
-    height:30px;
-    font-size: 30px;
+    background-color: aqua;
+    height: 40px;
+    width: 90px;
+    color: purple;
 }
 
 .detailheading{
