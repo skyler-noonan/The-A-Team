@@ -56,7 +56,7 @@ function generateOtherUserPost() {
         $(newPostDiv).append(break2);
 
         poster = document.createElement("div");
-            $(poster).attr("id", "poster");
+        $(poster).attr("id", "poster");
 
             posterImage = document.createElement("img");
             $(posterImage).attr("src", generatePostPicture());
@@ -67,17 +67,21 @@ function generateOtherUserPost() {
                 span3 = document.createElement("span"); //username
                 $(span3).attr("id", "username");
                 $(span3).text(generateUsername());
+                $(span3).append(posterInfo);
 
-                span4 = document.createElement("span"); //likes
+                span4 = document.createElement("span"); //likes num
                 $(span4).attr("id", "likes");
-                $(span4).text(generate);
+                $(span4).text(generateNumLikes());
+                $(span4).append(posterInfo);
 
+                span5 = document.createElement("span"); //comments num
+                $(span5).attr("id", "comments");
+                $(span5).text(generateNumComment());
+                $(span5).append(posterInfo);
 
+            $(poster).append(posterInfo);   
 
-
-
-
-
+        $(newPostDiv).append(poster);
 
     $(allHomePosts).append(newPostDiv)
 
