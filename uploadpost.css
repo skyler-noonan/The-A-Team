@@ -154,12 +154,7 @@ div span {
     right:30px
 }
 
-.detailheading{
-    font-size: 40px;
-    text-align:left;
-    display: inline-block;
-    text-decoration: underline;
-}
+
 #urlBox{
     font-size:medium;
     font-display: bold;
@@ -167,9 +162,15 @@ div span {
 
 #submitPost {
     width:100px;
-    height:20px;
-
+    height:30px;
+    font-size: 30px;
 }
 
+.detailheading{
+    font-size: 80px;
+    text-align:left;
+    text-decoration: underline;
+    font-weight: bold;
+}
 
 
