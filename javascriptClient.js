@@ -187,7 +187,7 @@ function generateOtherUserPost() {
         $(newPostDiv).append(poster);
 
     $(allHomePosts).append(newPostDiv)
-
+    $(#allHomePosts).append(allHomePosts)
 }
 
 //always generate on home page
