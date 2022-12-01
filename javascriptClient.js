@@ -37,6 +37,11 @@ function login(){
 
 //following div id="posts"
 window.onload = function(){ 
+    for (i=0; i<= 4; i++){
+        generateOtherUserPost();
+    }
+}
+
 function generateOtherUserPost() { 
     allHomePosts = document.createElement("div");
     $(allHomePosts).attr("id", "allHomePosts");
@@ -94,9 +99,7 @@ function generateOtherUserPost() {
 }
 
 //always generate on home page
-for (i=0; i<= 4; i++){
-    generateOtherUserPost();
-}
+
 
 //global object literals 
 function generateUsername() {
@@ -254,4 +257,3 @@ randomURLPostPicture = {
 JSONPostPic = JSON.stringify(randomURLPostPicture);
 
 
-}
