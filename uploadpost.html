@@ -41,11 +41,11 @@
         <div id = "insideBar">
         <form>
         <label for="dateBox">Date Posted:</label>
-        <input id ="dateBox" type="date" name="dateBox"><br>
+        <input id ="dateBox" type="date" name="newPostingDate"><br>
         
         
         <label for="description">Enter Post Description:</label>
-        <input type="text" name="description" id="description" value="Enter post description"> 
+        <input type="text" name="description" id="newPostDescription" value="Enter post description"> 
     
         <button id = "submitPost" type="button" value = "Post Event" onclick="">Save Changes</button>
         </form>
@@ -53,11 +53,11 @@
     </div>
 
     <form>
-    <label id = "urlBox" for="uploadFile">Enter image URL for file upload:</label> 
-    <input type="text" id="uploadFile" name="uploadFile"> <input id="submitFile" type="submit" value="Upload File">
- 
+    <label id = "urlBox" for="uploadFile">Proceed for post file upload:</label><br>
+    For image URL? Paste image URL here: <input type="text" id="uploadFile" name="uploadFile"> <input id="postFileURLType" type="submit" value="Upload File">
+    For image upload? (JPEG & PNG only): <input type="text" id="uploadFile" name="uploadFile"> <input id="postFileURLType" type="submit" value="Upload File">
     </form>
-    <button id = "submitPost" type="button" onclick="">Submit Post</button>
+    <button id ="submitFinalPost" type="button" onclick="">Submit Post</button>
 </div>
 
 
