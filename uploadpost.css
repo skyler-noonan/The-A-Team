@@ -91,7 +91,7 @@ background-color: rgb(235, 221, 221);
 .poster{
     border: 2px solid;
     border-color: black;
-    overflow:hidden;
+    overflow:auto;
  
     
 }
