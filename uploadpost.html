@@ -24,7 +24,7 @@
     <div id = "top">
     <span> Post Draft </span>  
   
-    <span> Enter hashtag/s</span> <input type="text" id="hashtagBox" value="#...">
+    <span> Enter hashtag/s</span> <button id="submitPost" onclick="">Enter hashtags</button>
     </div>
 </div>        
 
@@ -39,11 +39,11 @@
         <div id = "insideBar">
         <form>
         <label for="dateBox">Date Posted:</label>
-        <input id ="dateBox" type="date" name="dateBox"><br>
+        <button>Post Date</button><br>
         
         
         <label for="description">Enter Post Description:</label>
-        <input type="text" name="description" id="description" value="Enter post description"> 
+        <button id="submitPost" onclick="">Enter Post Description</button><br>
     
         <button id = "submitPost" type="button" value = "Post Event" onclick="">Save Changes</button>
         </form>
@@ -52,7 +52,7 @@
 
     <form>
     <label id = "urlBox" for="uploadFile">Enter image URL for file upload:</label> 
-    <input type="text" id="uploadFile" name="uploadFile"> <input id="submitFile" type="submit" value="Upload File">
+    <button id="submitPost" onclick="">Upload File</button>
  
     </form>
     <button id = "submitPost" type="button" onclick="">Submit Post</button>
