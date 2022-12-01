@@ -150,6 +150,10 @@ div span {
 }
 #topupload {
     text-align: left;
+    font-size: 30px;
+}
+#hashtagBox {
+    height: 30px;
 }
 #top {
     right:30px
