@@ -78,7 +78,7 @@ JSONDescr = JSON.stringify(randomDescription);
 randomNotifications = {
     "0": " started following your A-Team account.",
     "1": " liked your A-Team post.", 
-    "2": "commented on your post: " + description, 
+    "2": "commented on your post: ",
     "3": num + " viewed your profile."
 }   
 JSONNoti = JSON.stringify(randomNotifications)
