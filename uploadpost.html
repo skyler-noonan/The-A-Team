@@ -54,8 +54,11 @@
 
     <form>
     <label id = "urlBox" for="uploadFile">Proceed for post file upload:</label><br>
-    For image URL? Paste image URL here: <input type="text" id="uploadFile" name="uploadFile"> <input id="postFileURLType" type="submit" value="Upload File">
-    For image upload? (JPEG & PNG only): <input type="text" id="uploadFile" name="uploadFile"> <input id="postFileURLType" type="submit" value="Upload File">
+    <label for="imageURL"> For image URL? Paste image URL here:</label> <!-- For images pasted with image URL-->
+    <input id="uploadURLTypeFile" type="text" value="Copy and paste image URL here" name="imageURL"> 
+
+    <label for="imageJPEGFile">For image upload? (JPEG & PNG only):</label> <!-- For images uploaded solely as JPEG or PNG-->
+     <input type="file" id="uploadImageTypeFile" accept="image/jpg, image/png" name="imageJPEGFile"> <!-- Using input type ="File"-->
     </form>
     <button id ="submitFinalPost" type="button" onclick="">Submit Post</button>
 </div>
