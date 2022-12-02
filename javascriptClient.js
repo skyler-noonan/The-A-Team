@@ -68,13 +68,13 @@ function updateSideBar(){
     $("#userFollowing").html(generateNumFollowing() + " Following");
     console.log("update sidebar")
     $("#notifications").css("font-weight", "bold");
-    genNotify = (Math.floor(Math.random()*16)) +1
-    for (k = 0; k <= genNotify; k++){
+    genNotify = (Math.floor(Math.random()*16)) + 3
+    for (k = 1; k < genNotify; k++){
         notificationOutput = document.createElement("p");
         $(notificationOutput).attr("id", "notificationOutput")
         $("#notificationOutput").html(generateUsername() + " " + generateNotifications()); 
         console.log($("#notificationOutput").text());
-        $(".notifications").append(notificationOutput);
+        $("#outputNotify").append(notificationOutput);
     }
     /*console.log(document.getElementById("notificationOutput").value);
     document.getElementById("notificationOutput").style.overflow = "scroll";
