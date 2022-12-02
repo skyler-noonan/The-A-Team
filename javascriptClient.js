@@ -34,6 +34,8 @@ function login(){
 
 }
 
+function
+
 // JSON literals for random generated content 
 //SCROLL ALL THE WAY DOWN FOR THE FUNCTIONS
 
@@ -129,6 +131,7 @@ JSONPostPic = (randomURLPostPicture);
 
 window.onload = function(){ 
     console.log("working")
+    console.log(document.title);
     randomGen = Math.floor(Math.random() * 12)
     for (i=0; i<= randomGen; i++){
         generateOtherUserPost();
