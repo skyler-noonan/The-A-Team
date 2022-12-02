@@ -16,8 +16,8 @@ mainUserBio = "";
 function register()
 {
     $("#register").css("visibility", "hidden");
-    $("#login").css("visibility", "visible");
-    username = document.getElementById("username").value;
+    $("#login").css("visibility", "visible")
+    username = document.getElementById("username").value; //need to update each instance login is brought up, for sidebar and profile page
     password = document.getElementById("password").value;
     email = document.getElementById("email").value;
     document.getElementById("username").value = "";
