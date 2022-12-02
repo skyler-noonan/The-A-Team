@@ -297,8 +297,8 @@ function generateOtherUserPost() {
                     cInput2 = "#"+input2; //substitute $(submitComment)
                     submitComment = document.createElement("button");
                     $(submitComment).attr("id", input2); 
-                    $(submitComment).attr("value", "Submit Comment");
-                    $(submitComment).click(function(){
+                    //$(submitComment).attr("value", "Submit Comment");
+                    $(cInput2).click(function(){
                         c = $(cInput1).text()
                         alert(c)
                         $(cInput2).css("visibility", "hidden");
