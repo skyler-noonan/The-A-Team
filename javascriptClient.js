@@ -77,7 +77,8 @@ function updateSideBar(){
         notificationOutput = document.createElement("p");
         a = 0
         $(notificationOutput).attr("id", "notificationOutput" + a )
-        $(notificationOutput.id).html(generateUsername() + " " + generateNotifications()); 
+        var selector 
+        $("notificationOutput" +a).html(generateUsername() + " " + generateNotifications()); 
         $("#outputNotify").append(notificationOutput);
     }
     /*console.log(document.getElementById("notificationOutput").value);
