@@ -82,7 +82,7 @@ function updateSideBar(noti, usernameInput){
         $("#outputNotify").append(notificationOutput);
         notificationSidebar = generateNotifications()
         if (notificationSidebar == "commented on your post: "){
-            $("#notificationOutput" +noti).html(generateUsername() + " " + notificationSidebar + generateComment();
+            $("#notificationOutput" +noti).html(generateUsername() + " " + notificationSidebar + generateComment());
 
         }else{
         $("#notificationOutput" +noti).html(generateUsername() + " " + generateNotifications()); }
