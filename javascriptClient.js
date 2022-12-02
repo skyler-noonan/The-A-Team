@@ -294,22 +294,23 @@ function generateOtherUserPost() {
                     $(commentOutline).append(commentInput);
 
                     input2 = "submitComment" + postnum 
-                    cInput2 = "#"+input2; //substitute $(submitComment)
+                    //cInput2 = "#"+input2; //substitute $(submitComment)
                     submitComment = document.createElement("button");
                     $(submitComment).attr("id", input2); 
                     //$(submitComment).attr("value", "Submit Comment");
-                    $(input2).click(function(){
+                    $("#"+input2).click(function(){
                         c = $(cInput1).text()
                         alert(c)
-                        $(cInput2).css("visibility", "hidden");
-                        $(cInput1).css("visibility", "hidden");
+                        $("#"+input2).css("visibility", "hidden");
+                        $("#"+input1).css("visibility", "hidden");
                         emptySpace = document.createElement("span");
                         input3 = "emptySpace" + postnum;
-                        cInput3 = "#" + input3; //substitute $(emptySpace);
+                        //cInput3 = "#" + input3; //substitute $(emptySpace);
                         $(emptySpace).attr("id", input3);
                         $(commentOutline).prepend(emptySpace);
                         //$(cInput3).text($(commentInput).text()) //
-                        document.getElementById(cInput3).innerHTML = $(commentInput).html();
+                        alert($("#"+input1).text());
+                        
                      
                     }) 
                     $(commentOutline).append(submitComment);
