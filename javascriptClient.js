@@ -130,11 +130,11 @@ JSONPostPic = (randomURLPostPicture);
 
 window.onload = function(){ 
     console.log("working")
-    console.log(document.title);
-    randomGen = Math.floor(Math.random() * 12)
-    for (i=0; i<= randomGen; i++){
-        generateOtherUserPost();
-    }
+    if (document.title == "Homepage"){
+        randomGen = Math.floor(Math.random() * 12)
+        for (i=0; i<= randomGen; i++){
+            generateOtherUserPost();
+    }}
 }
 
 function generateOtherUserPost() { 
