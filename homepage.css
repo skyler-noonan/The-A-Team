@@ -21,8 +21,8 @@ body{
 #profilePicture {
     max-width: 200px;
     max-height: 200px;
-    float: right;
-    display: block;
+    /*float: left;*/
+    display: inline-block;
 }
 header div{
     position: static;
