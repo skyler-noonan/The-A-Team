@@ -156,6 +156,7 @@ function generateOtherUserPost() {
         console.log(postimageURL);
         $(homeProfilePic).attr("src", postimageURL);
         $(homeProfilePic).attr("alt", "error");
+        $(homeProfilePic).attr("id", "profilePicture";)
         $(newPostDiv).append(homeProfilePic);
 
         break2 = document.createElement("br");
