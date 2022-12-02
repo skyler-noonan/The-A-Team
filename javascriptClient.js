@@ -213,7 +213,8 @@ function generateOtherUserPost() {
 
                 span5 = document.createElement("span"); //comments num
                 $(span5).attr("id", "comments");
-                $(span5).html(generateNumComment() + " comments");
+                t = generateNumComment()
+                $(span5).html( t + " comments");
                 $(posterInfo).append(span5);
                 console.log("works posterinfo")
             $(poster).append(posterInfo);  
@@ -230,11 +231,12 @@ function generateOtherUserPost() {
                 
                 commentOutline = document.createElement("div");
                 $(commentOutline).attr("id", "commentOutline");
-                    commentBox = document.createElement("p");
-                    $(commentBox).attr("id", "commentBox");
-                    $(commentBox).html(generateUsername() + ": " + generateComment());
-                    $(commentOutline).append(commentBox);
-
+                    for(i = 1; i <= t; i++){
+                        commentBox = document.createElement("p");
+                        $(commentBox).attr("id", "commentBox");
+                        $(commentBox).html(generateUsername() + ": " + generateComment());
+                        $(commentOutline).append(commentBox);
+                    }
                     emptySpace = document.createElement("span");
                     $(emptySpace).attr("id", "emptySpace");
                     $(commentOutline).append(emptySpace);
