@@ -107,7 +107,7 @@ randomUsername = {
 JSONname = (randomUsername);
 
 //used https://sassycaptions.com/bio-generator/
-var randomBio = {
+randomBio = {
     "0": "Your life does not get better by chance. It gets better by a change.e",
     "1": "Do you ever feel like a plastic bag?",
     "2": "Kind of a good Samaritan, terrible athlete, but extremely blessed in the napping skills department.",
@@ -431,21 +431,21 @@ function generateDate() {
 }
 
 function generateNotifications() {
-    ranChoose = (Math.floor(Math.random() * 4));
+    ranChoose = (Math.floor(Math.random() * 3))+1;
     choose = ranChoose.toString();
     var generatedNotification = JSONNoti[choose];
     return (generatedNotification); //string
 }; 
 
 function generateBio(){
-    ranChoose = Math.floor(Math.random()*18);
+    ranChoose = Math.floor(Math.random()*17)+1;
     choose = ranChoose.toString();
     var generatedBio = JSONBio[choose];
     return generatedBio; 
 }
 
 function generateHashtag() {
-    ranChoose = (Math.floor(Math.random() * 7));
+    ranChoose = (Math.floor(Math.random() * 6))+1;
     choose = ranChoose.toString();
     newHashtag = (JSONHashtag);
     generatedHashtag = newHashtag[choose];
@@ -453,7 +453,7 @@ function generateHashtag() {
 }; 
 
 function generateProfilePicture() {
-    ranChoose = (Math.floor(Math.random() * 11));
+    ranChoose = (Math.floor(Math.random() * 10))+1;
     choose = ranChoose.toString();
     newProfilePic = (JSONProfilePic);
     generatedProfilePic= newProfilePic[choose];
