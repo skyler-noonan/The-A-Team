@@ -220,10 +220,12 @@ function generateOtherUserPost() {
             
             underBox = document.createElement("div"); // underBox underneath posterinfo -contains description and comments
             $(underBox).attr("id", "underBox");
-                descriptionBox = document.createElement("span");
-                $(descriptionBox).attr("id", "descriptionBox");
-                $(descriptionBox).html(generateDescription())
-                $(descriptionBox).append(underBox);
+                postDescription = document.createElement("div");
+                $(postDescription).attr("id", "postDescription");
+                    descriptionBox = document.createElement("span");
+                    $(descriptionBox).attr("id", "descriptionBox");
+                    $(descriptionBox).html(generateDescription())
+                    $(postDescription).append(descriptionBox);
                 
                 commentOutline = document.createElement("div");
                 $(commentOutline).attr("id", "commentOutline");
