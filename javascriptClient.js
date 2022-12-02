@@ -439,8 +439,8 @@ function generateNotifications() {
 function generateBio(){
     ranChoose = Math.floor(Math.random()*18);
     choose = ranChoose.toString();
-    generatedBio = randomBio[choose];
-    return generatedBio.toString(); 
+    var generatedBio = randomBio[choose];
+    return generatedBio; 
 }
 
 function generateHashtag() {
