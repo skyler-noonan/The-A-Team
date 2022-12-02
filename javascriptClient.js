@@ -287,30 +287,27 @@ function generateOtherUserPost() {
                     $(commentOutline).append(emptySpace);*/
 
                     //For this, i have no idea how to pass a variable into the jquery selector
-                    //as the problem is each comment element needs to have a unique id. 
+                    //the problem is each comment element needs to have a unique id. 
+                    //as well as setting an onclick attribute for generated button, if possible in jquery, which I have not figured out 
+                    //when pressing submit, the function always applies to the last element with hiding the input & submit, 
+                    //while also returning value of the unique text box input, which here only defaults to the first 
+                    //i'm not able to return the value using .text() or .html() 
 
                     commentInput = document.createElement("input");
-                    input1 = "commentInput" + postnum; //substitute $(commentInput)
-                    cInput1 = "#" + input1; //substitute $(commentInput)
-                    $(commentInput).attr("id", input1);
+                    $(commentInput).attr("id", "commentInput");
                     $(commentInput).attr("type", "text")
                     $(commentOutline).append(commentInput);
-
-                    input2 = "submitComment" + postnum 
-                    //cInput2 = "#"+input2; //substitute $(submitComment)
+                    
                     submitComment = document.createElement("button");
                     $(submitComment).attr("id", input2); 
-                    //$(submitComment).attr("value", "Submit Comment");
                     $(submitComment).click(function(){
                         console.log("buttonWorks");
-                        c = $('"#"+input1').html()
+                        c = $(submitComment).html()
                         alert(c)
                         $("#"+input2).css("visibility", "hidden");
                         $("#"+input1).css("visibility", "hidden");
-                        emptySpace = document.createElement("span");
-                        input3 = "emptySpace" + postnum;
-                        //cInput3 = "#" + input3; //substitute $(emptySpace);
-                        $(emptySpace).attr("id", input3);
+                        emptySpace = document.createElement("p")
+                        $(emptySpace).attr("id", "emptySpace");
                         $(commentOutline).prepend(emptySpace);
                         //$(cInput3).text($(commentInput).text()) //
                         alert($("#"+input1).text());
