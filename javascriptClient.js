@@ -63,8 +63,9 @@ function updateSideBar(){
     mainUserBio = generateBio();
     document.getElementById("userBio").innerHTML = mainUserBio;
     document.getElementById("sidebarUsername").innerHTML = username;
-    document.getElementById("outputNotify").innerHTMl = generateNotifications();
-    document.getElementById("outputNotify").style.overflow = "scroll";
+    document.getElementById("sidebarUsername").style.fontWeight = "bold";
+    document.getElementById("notificationOutput").innerHTMl = generateNotifications();
+    document.getElementById("notificationOutput").style.overflow = "scroll";
     document.getElementById("userFollowers").innerHTMl = generateNumFollowers() + "Followers"
     document.getElementById("userFollowers").style.fontWeight = "bold";
     document.getElementById("userFollowing").innerHTMl = generateNumFollowing() + "Following"
