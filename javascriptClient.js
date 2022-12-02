@@ -46,6 +46,18 @@ function logout()
     window.close("./homepage.html");
 }
 
+function postEvent()
+{
+    window.open("./uploadpost.html");
+    
+}
+
+function profilePage()
+{
+    window.open("./userProfile.html");
+}
+
+
 
 // JSON literals for random generated content 
 //SCROLL ALL THE WAY DOWN FOR THE FUNCTIONS
@@ -165,6 +177,7 @@ JSONPostPic = (randomURLPostPicture);
 window.onload = function(){ 
     console.log("working")
     postnum = 0
+
     gen = Math.floor(Math.random() * 5)
     gen++
     gen++
@@ -296,6 +309,7 @@ function generateOtherUserPost() {
                         $(emptySpace).attr("id", input3);
                         $(commentOutline).prepend(emptySpace);
                         $(cInput3).html($(commentInput).val()) //
+                     
                     }) 
                     $(commentOutline).append(submitComment);
 
@@ -347,8 +361,8 @@ function generateDate() {
     var d = new Date()
     year = d.getFullYear()
     date = d.getDate()
-    month = d.getMonth()
-    return (year + "-" + month + "-" + date);
+    month = d.getMonth() + 1; // returns 0-11 so the + 1 makes it accurate
+     return (year + "-" + month + "-" + date);
 }
 
 function generateNotifications() {
