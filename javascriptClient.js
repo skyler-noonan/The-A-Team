@@ -151,7 +151,7 @@ function generateOtherUserPost() {
         $(newPostDiv).append(break1);
 
         homeProfilePic = document.createElement("img"); //profile picture as followed in homepage.html
-        postimageURL = toString(generateProfilePicture());
+        postimageURL = generateProfilePicture();
         console.log(postimageURL);
         $(homeProfilePic).attr("src", postimageURL);
         $(homeProfilePic).attr("alt", "error");
