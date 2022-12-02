@@ -421,7 +421,7 @@ function generateNotifications() {
     choose = ranChoose.toString();
     newNotification = (JSONNoti);
     generatedNotification = newNotification[choose];
-    return (toString(generatedNotification)); //string
+    return (generatedNotification); //string
 }; 
 
 function generateBio(){
