@@ -143,8 +143,10 @@ function generateOtherUserPost() {
         $(newPostDiv).attr("id", "posts");
         span1 = document.createElement("span");
         $(span1).html("Date Posted: " + generateDate());
+        $(span1).attr("id", "datePlaceholder");
         span2 = document.createElement("span");
         $(span2).html(generateHashtag());
+        $(span2).attr("id", "hashtagPlaceholder");
         $(newPostDiv).append(span1);
         $(newPostDiv).append(span2);
 
