@@ -247,11 +247,11 @@ function generateOtherUserPost() {
                     submitComment = document.createElement("button");
                     $(submitComment).attr("id", "submitComment");
                     $(submitComment).attr("value", "Submit Comment");
-                    /*$(submitComment).click(function(){
+                    $(submitComment).click(function(){
                         $(submitComment).css("visibility", hidden);
                         $(commentInput).css("visibility", hidden);
                         $(emptySpace).html($(commentInput).val())
-                    }) */
+                    }) 
                     $(commentOutline).append(submitComment);
 
                 $(underBox).append(commentOutline);

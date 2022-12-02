@@ -112,10 +112,10 @@ background-color: rgb(235, 221, 221);
     align-content: center;
 }
 #descriptionBox {
-    text-align: center;}
+    text-align: left;}
 
 #commentBox {
-    text-align: center;
+    text-align: left;
 }
 
 #commentOutline {
