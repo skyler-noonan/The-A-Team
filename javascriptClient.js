@@ -63,7 +63,7 @@ function updateSideBar(){
     mainUserBio = generateBio();
     $("#sidebarUsername").html(username);
     $("#sidebarUsername").css("font-weight", "bold");
-    $("userBio").html(mainUserBio);
+    $("#userBio").html(mainUserBio);
     $("#userFollowers").html(generateNumFollowers() + " Followers");
     $("#userFollowing").html(generateNumFollowing() + " Following");
     console.log("update sidebar")
@@ -72,9 +72,9 @@ function updateSideBar(){
     for (k = 1; k < genNotify; k++){
         notificationOutput = document.createElement("p");
         a = 0
-        $(notificationOutput).attr("id", "notificationOutput" + a)
-        $("#notificationOutput" + a).html(generateUsername() + " " + generateNotifications()); 
-        console.log($("#notificationOutput" + a).text());
+        $(notificationOutput).attr("id", "notificationOutput" )
+        //$("#notificationOutput" + a).html(generateUsername() + " " + generateNotifications()); 
+        //console.log($("#notificationOutput" + a).text());
         $("#outputNotify").append(notificationOutput);
     }
     /*console.log(document.getElementById("notificationOutput").value);
