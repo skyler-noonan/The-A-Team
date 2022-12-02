@@ -62,7 +62,7 @@ function profilePage()
 function updateSideBar(){
     mainUserBio = generateBio();
     document.getElementById("userBio").innerHTML = mainUserBio;
-    document.getElementById("siderbarUsername").innerHTML = username;
+    document.getElementById("sidebarUsername").innerHTML = username;
     document.getElementById("outputNotify").innerHTMl = generateNotifications();
     document.getElementById("outputNotify").style.overflow = "scroll";
     document.getElementById("userFollowers").innerHTMl = generateNumFollowers() + "Followers"
