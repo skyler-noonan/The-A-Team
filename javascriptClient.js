@@ -63,9 +63,9 @@ function profilePage()
 }
 
 
-function updateSideBar(noti){
+function updateSideBar(noti, usernameInput){
     mainUserBio = generateBio();
-    $("#sidebarUsername").html(username);
+    $("#sidebarUsername").html(usernameInput);
     $("#sidebarUsername").css("font-weight", "bold");
     $("#userBio").html(mainUserBio);
     $("#userFollowers").html(generateNumFollowers() + " Followers");
@@ -80,7 +80,12 @@ function updateSideBar(noti){
         
        
         $("#outputNotify").append(notificationOutput);
-        $("#notificationOutput" +noti).html(generateUsername() + " " + generateNotifications()); 
+        notificationSidebar = generateNotifications()
+        if (notificationSidebar == "commented on your post: "){
+            $("#notificationOutput" +noti).html(generateUsername() + " " + generateNotifications()) + generateComment();
+
+        }else{
+        $("#notificationOutput" +noti).html(generateUsername() + " " + generateNotifications()); }
         noti++ 
         
     }
@@ -181,7 +186,7 @@ JSONComment = (randomComment);
 randomNotifications = {
     "0": " started following your A-Team account.",
     "1": " liked your A-Team post.", 
-    "2": "commented on your post: " + generateComment(),
+    "2": "commented on your post: ",
     "3": " viewed your profile."
 }   
 JSONNoti = randomNotifications
@@ -241,7 +246,7 @@ window.onload = function(){
             postnum++
             console.log(postnum)
             generateOtherUserPost();}
-        updateSideBar(0);
+        updateSideBar(0, username);
     }
    
     /*if (document.title == "Homepage"){
