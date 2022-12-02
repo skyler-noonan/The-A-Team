@@ -8,6 +8,9 @@ var likes = 0;
 var comments = 0;
 var profilePic = "https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg";
 var date = new Date();
+var registered = false;
+
+
 
 function register()
 {
@@ -19,6 +22,7 @@ function register()
     document.getElementById("username").value = "";
     document.getElementById("password").value = "";
     document.getElementById("email").value = "";
+    registered = true;
 
 }
 function login(){
@@ -27,11 +31,19 @@ function login(){
     loginEmail = document.getElementById("email").value;
     if (loginEmail == email && loginUsername == username && loginPassword == password ){
     window.open("./homepage.html");
+    window.close("./login.html");
     }
-    
+    else{
+        alert ("Login details are incorrect...");
+    }
 
 
 
+}
+function logout()
+{
+    window.open("./login.html");
+    window.close("./homepage.html");
 }
 
 
