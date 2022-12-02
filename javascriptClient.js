@@ -75,6 +75,28 @@ randomDescription = {
 };
 JSONDescr = (randomDescription);
 
+randomComment = {
+    "0": "This is what I wanna do when I grow up. I don't want to sit on a computer screen and do work. I want to have a real adventure and explore the world. I want to Live!",
+    "1": " 👏👏👏Great photo 💐👍 You are a good photographer.",
+    "2": "Cool shot!🔥🔥",
+    "3": "Haha, I remember you guys! I was in the park at the same time as you",
+    "4": "What’s the flowers name?",
+    "5": "Hello! I really like the photos you have arranged. Can you borrow me as a reference for painting creation?",
+    "6": "Traveling is one of those hobbies or pastimes that seems to draw people of all ages and backgrounds. From the travel blogger to the serious traveler, there is a community of people who appreciate our wanderlust.",
+    "7": "Lovely",
+    "8": "❤️",
+    "9": "what a breathtaking view 😍", 
+    "10": "Good stuff here let’s go",
+    "11": "That looks like an amazing view!",
+    "12": "Canada has a lot of amazing sights to see.",
+    "13": "Beautiful shots",
+    "14": "Oh I miss this beautiful country so much",
+    "15": "I wish I had visited these places", 
+    "16": "Very beautiful thankyou",
+    "17": "you are super my friend you are a good photographer",
+    "18": "Stunning!"
+};
+JSONComment = (randomComment);
 
 randomNotifications = {
     "0": " started following your A-Team account.",
@@ -194,7 +216,21 @@ function generateOtherUserPost() {
                 $(span5).html(generateNumComment() + " comments");
                 $(posterInfo).append(span5);
                 console.log("works posterinfo")
-            $(poster).append(posterInfo);   
+            $(poster).append(posterInfo);  
+            
+            underBox = document.createElement("div"); // underBox underneath posterinfo -contains description and comments
+            $(underBox).attr("id", "underBox");
+                descriptionBox = document.createElement("p");
+                $(descriptionBox).attr("id", "descriptionBox");
+                $(descriptionBox).html(generateDescription())
+                $(descriptionBox).append(underBox);
+                
+                commentBox = document.createElement("p");
+                $(commentBox).attr("id", "commentBox");
+                $(descriptionBox).html(generate())
+                $(commentBox).append(commentBox);
+
+            $(poster).append(underBox);
 
         $(newPostDiv).append(poster);
 
@@ -271,3 +307,12 @@ function generatePostPicture() {
     generatedPostPic= newPostPic[choose];
     return generatedPostPic; // as image url for src = ""
 }; 
+
+function generateComment() {
+    ranChoose = (Math.floor(Math.random() * 19));
+    choose = ranChoose.toString();
+    newComment = JSONComment;
+    generatedComment = newComment[choose];
+    return generatedComment; 
+
+}
