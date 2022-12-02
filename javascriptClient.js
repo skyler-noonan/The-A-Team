@@ -224,7 +224,7 @@ function generateOtherUserPost() {
                 $(postDescription).attr("id", "postDescription");
                     descriptionBox = document.createElement("p");
                     $(descriptionBox).attr("id", "descriptionBox");
-                    $(descriptionBox).html(generateDescription())
+                    $(descriptionBox).html("Description" + generateDescription())
                     $(postDescription).append(descriptionBox);
                 $(underBox).append(postDescription);
                 
@@ -232,7 +232,7 @@ function generateOtherUserPost() {
                 $(commentOutline).attr("id", "commentOutline");
                     commentBox = document.createElement("p");
                     $(commentBox).attr("id", "commentBox");
-                    $(commentBox).html(generateComment());
+                    $(commentBox).html(generateUsername() + ": " + generateComment());
                     $(commentOutline).append(commentBox);
 
                     emptySpace = document.createElement("span");
