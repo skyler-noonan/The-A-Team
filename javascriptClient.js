@@ -279,7 +279,7 @@ function generateOtherUserPost() {
                     submitComment = document.createElement("button");
                     $(submitComment).attr("id", "submitComment");
                     $(submitComment).attr("value", "Submit Comment");
-                    $("#submitComment").click(function(){
+                    $(submitComment).click(function(){
                         c = $("#commentInput").text()
                         alert(c)
                         $(submitComment).css("visibility", hidden);
