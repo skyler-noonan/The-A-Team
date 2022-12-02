@@ -251,7 +251,7 @@ function generateOtherUserPost() {
                     }) */
                     $(commentOutline).append(commentBox);
 
-
+                $(underBox).append(commentOutline);
 
 
                 
@@ -278,7 +278,7 @@ function generateUsername() {
 }
 
 function generateDescription() {
-    ranChoose = (Math.floor(Math.random() * 5));
+    ranChoose = (Math.floor(Math.random() * 13));
     choose = ranChoose.toString();
     newDescription = (JSONDescr);
     generatedDescription = newDescription[choose];
