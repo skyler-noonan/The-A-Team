@@ -303,7 +303,7 @@ function generateOtherUserPost() {
                     //$(submitComment).attr("value", "Submit Comment");
                     $(submitComment).click(function(){
                         console.log("buttonWorks");
-                        c = $("#"+input1).html()
+                        c = $('"#"+input1').html()
                         alert(c)
                         $("#"+input2).css("visibility", "hidden");
                         $("#"+input1).css("visibility", "hidden");
