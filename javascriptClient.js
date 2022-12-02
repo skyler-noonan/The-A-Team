@@ -73,13 +73,13 @@ function updateSideBar(){
     console.log("update sidebar")
     $("#notifications").css("font-weight", "bold");
     genNotify = (Math.floor(Math.random()*16)) + 3
-    for (k = 1; k < genNotify; k++){
+    for (k = 1; k < 5; k++){
         notificationOutput = document.createElement("p");
         a = 0
         $(notificationOutput).attr("id", "notificationOutput" + a )
     
         $("#notificationOutput" +a).html(generateUsername() + " " + generateNotifications()); 
-        $("#outputNotify").append(notificationOutput);
+        $("#outputNotify").append("#notificationOutput" +a);
     }
     /*console.log(document.getElementById("notificationOutput").value);
     document.getElementById("notificationOutput").style.overflow = "scroll";
