@@ -212,14 +212,16 @@ window.onload = function(){
     console.log("working")
     postnum = 0
 
-    gen = Math.floor(Math.random() * 5)
-    gen++
-    gen++
-    for (i=0; i < gen; i++){
-        postnum++
-        console.log(postnum)
-        generateOtherUserPost();}
-       
+    if (document.title = "Homepage"){
+        updateSideBar();
+        gen = Math.floor(Math.random() * 5)
+        gen++
+        gen++
+        for (i=0; i < gen; i++){
+            postnum++
+            console.log(postnum)
+            generateOtherUserPost();}
+    }
    
     /*if (document.title == "Homepage"){
         randomGen = Math.floor(Math.random() * 12)
