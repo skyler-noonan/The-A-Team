@@ -9,6 +9,7 @@ var comments = 0;
 var profilePic = "https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg";
 var date = new Date();
 var registered = false;
+mainUserBio = ""
 
 
 
@@ -58,7 +59,17 @@ function profilePage()
 }
 
 
-
+function updateSideBar(){
+    mainUserBio = generateBio();
+    document.getElementById("userBio").innerHTML = mainUserBio;
+    document.getElementById("siderbarUsername").innerHTML = username;
+    document.getElementById("outputNotify").innerHTMl = generateNotifications();
+    document.getElementById("outputNotify").style.overflow = "scroll";
+    document.getElementById("userFollowers").innerHTMl = generateNumFollowers() + "Followers"
+    document.getElementById("userFollowers").style.fontWeight = "bold";
+    document.getElementById("userFollowing").innerHTMl = generateNumFollowing() + "Following"
+    document.getElementById("userFollowing").style.fontWeight = "bold";
+}
 // JSON literals for random generated content 
 //SCROLL ALL THE WAY DOWN FOR THE FUNCTIONS
 
@@ -81,6 +92,29 @@ randomUsername = {
 
 };
 JSONname = (randomUsername);
+
+//used https://sassycaptions.com/bio-generator/
+randomBio = {
+    "0": "Your life does not get better by chance. It gets better by a change.e",
+    "1": "Do you ever feel like a plastic bag?",
+    "2": "Kind of a good Samaritan, terrible athlete, but extremely blessed in the napping skills department.",
+    "3": "Will there be snacks?",
+    "4": "Hi, my hobbies include breakfast, lunch and dinner.",
+    "5": "Professional napper.",
+    "6": "Professional inquiries only.",
+    "7": "A caffeine-dependent life form.",
+    "8": "Born to express, not impress.",
+    "9": "Stay weird.", 
+    "10": "I write bios, not tragedies.",
+    "11": "I can’t remember who I stole my bio from or why.", 
+    "12": "I'm always on the go and love to explore new places! I love to document my travels and share my experiences with others.",
+    "13": "I love to travel and explore new cultures. I'm a huge foodie, and I love to try new things. I'm also a big fan of exploring new places by foot.",
+    "14": "I'm a traveler and explorer at heart. I love to see new places and experience different cultures. I believe that travel can be a transformative experience and that it is one of the best ways to learn about the world and about yourself.",
+    "15": "Hello, world! I'm a traveler and explorer at heart. I love nothing more than heading out into the world to see new sights and experience new cultures. I'm always looking for new adventures, and I hope my travels will inspire others to explore our beautiful planet.",
+    "16": "I'm a travel junkie who loves nothing more than exploring new places and cultures. I'm always looking for new adventures, and I love sharing my experiences with others.",
+    "17": "I'm a traveler and lover of all things adventure. I'm always looking for new places to explore and new people to meet. I believe that life is about learning and growing, and that there's no better way to do that than by getting out there and seeing the world. Come join me on my journey!"
+};
+
 // used https://www.dashword.com/meta-description-generator?result=ygJEEbEwJk for descriptions 
 randomDescription = {
     "0": "Photography is wonderful way to express yourself. Learn how to take better pictures.",
@@ -355,6 +389,17 @@ function generateNumLikes() {
     return generateLike;
 }
 
+function generateNumFollowers() {
+    generateFollowers = Math.floor(Math.random()*1001)
+    return generateFollowers; 
+}
+
+function generateNumFollowing() {
+    generateFollowing = Math.floor(Math.random()*1001)
+    return generateFollowing; 
+}
+
+
 function generateNumComment() {
     generateLike = Math.floor(Math.random() * 6)
     return generateLike;
@@ -375,6 +420,13 @@ function generateNotifications() {
     generatedNotification = newNotification[choose];
     return (toString(generatedNotification)); //string
 }; 
+
+function generateBio(){
+    ranChoose = Math.floor(Math.random()*18);
+    choose = ranChoose.toString();
+    generatedBio = randomBio[choose];
+    return generatedBio; 
+}
 
 function generateHashtag() {
     ranChoose = (Math.floor(Math.random() * 7));
