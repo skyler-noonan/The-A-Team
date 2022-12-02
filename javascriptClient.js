@@ -164,18 +164,22 @@ JSONPostPic = (randomURLPostPicture);
 
 window.onload = function(){ 
     console.log("working")
-    generateOtherUserPost();
-    generateOtherUserPost();
-    generateOtherUserPost();
-    generateOtherUserPost();
+    postnum = 0
+    gen = Math.floor(Math.random() * 5)
+    gen++
+    gen++
+    for (i=0; i < gen; i++){
+        postnum++
+        console.log(postnum)
+        generateOtherUserPost();}
+       
+   
     /*if (document.title == "Homepage"){
         randomGen = Math.floor(Math.random() * 12)
         for (i=0; i<= randomGen; i++){
             generateOtherUserPost();
     }}*/
 }
-
-function generateOwnUserPost() { }
 
 function generateOtherUserPost() { 
     allHomePosts = document.createElement("div");
@@ -258,29 +262,40 @@ function generateOtherUserPost() {
                         $(commentOutline).append(commentBox);
                     }
                 }else {
+
                     commentBox = document.createElement("p");
                     $(commentBox).attr("id", "commentBox");
                     $(commentBox).html("(No comments on post)");
                     $(commentOutline).append(commentBox);
                 }
-                    emptySpace = document.createElement("span");
+
+                    /*emptySpace = document.createElement("span");
                     $(emptySpace).attr("id", "emptySpace");
-                    $(commentOutline).append(emptySpace);
-            
+                    $(commentOutline).append(emptySpace);*/
+
                     commentInput = document.createElement("input");
-                    $(commentInput).attr("id", "commentInput");
+                    input1 = "commentInput" + postnum; //substitute $(commentInput)
+                    cInput1 = "#" + input1; //substitute $(commentInput)
+                    $(commentInput).attr("id", input1);
                     $(commentInput).attr("type", "text")
                     $(commentOutline).append(commentInput);
 
+                    input2 = "submitComment" + postnum 
+                    cInput2 = "#"+input2; //substitute $(submitComment)
                     submitComment = document.createElement("button");
-                    $(submitComment).attr("id", "submitComment");
+                    $(submitComment).attr("id", input2); 
                     $(submitComment).attr("value", "Submit Comment");
                     $(submitComment).click(function(){
                         c = $(commentInput).text()
                         alert(c)
-                        $(submitComment).css("visibility", hidden);
-                        $(commentInput).css("visibility", hidden);
-                        $(emptySpace).html($(commentInput).val())
+                        $(cInput2).css("visibility", "hidden");
+                        $(cInput1).css("visibility", "hidden");
+                        emptySpace = document.createElement("span");
+                        input3 = "emptySpace" + postnum;
+                        cInput3 = "# " + input3; //substitute $(emptySpace);
+                        $(emptySpace).attr("id", input3);
+                        $(commentOutline).prepend(emptySpace);
+                        $(cInput3).html($(commentInput).val()) //
                     }) 
                     $(commentOutline).append(submitComment);
 
@@ -373,5 +388,5 @@ function generateComment() {
     newComment = (JSONComment);
     generatedComment = newComment[choose];
     return generatedComment; 
-
+//
 }
