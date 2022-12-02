@@ -239,7 +239,7 @@ function generateOtherUserPost() {
                     commentInput = document.createElement("input");
                     $(commentInput).attr("id", "commentInput");
                     $(commentInput).attr("type", "text")
-                    $(commentOutline).append(commentBox);
+                    $(commentOutline).append(commentInput);
 
                     submitComment = document.createElement("button");
                     $(submitComment).attr("id", "submitComment");
@@ -249,7 +249,7 @@ function generateOtherUserPost() {
                         $(commentInput).css("visibility", hidden);
                         $(emptySpace).html($(commentInput).val())
                     }) */
-                    $(commentOutline).append(commentBox);
+                    $(commentOutline).append(submitComment);
 
                 $(underBox).append(commentOutline);
 
