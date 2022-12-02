@@ -440,7 +440,7 @@ function generateBio(){
     ranChoose = Math.floor(Math.random()*18);
     choose = ranChoose.toString();
     generatedBio = randomBio[choose];
-    return generatedBio; 
+    return generatedBio.toString(); 
 }
 
 function generateHashtag() {
