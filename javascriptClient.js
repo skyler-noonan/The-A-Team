@@ -186,12 +186,12 @@ function generateOtherUserPost() {
 
                 span4 = document.createElement("span"); //likes num
                 $(span4).attr("id", "likes");
-                $(span4).html(generateNumLikes());
+                $(span4).html(generateNumLikes() + " likes");
                 $(posterInfo).append(span4);
 
                 span5 = document.createElement("span"); //comments num
                 $(span5).attr("id", "comments");
-                $(span5).html(generateNumComment());
+                $(span5).html(generateNumComment() + " comments");
                 $(posterInfo).append(span5);
                 console.log("works posterinfo")
             $(poster).append(posterInfo);   
