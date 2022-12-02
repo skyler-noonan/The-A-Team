@@ -73,7 +73,7 @@ function updateSideBar(noti){
     console.log("update sidebar")
     $("#notifications").css("font-weight", "bold");
     genNotify = (Math.floor(Math.random()*16)) + 3
-    for (k = 1; k < 5; k++){
+    for (k = 1; k < genNotify; k++){
         notificationOutput = document.createElement("p");
         
         $(notificationOutput).attr("id", "notificationOutput" + noti )
