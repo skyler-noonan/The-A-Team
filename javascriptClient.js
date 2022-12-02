@@ -127,6 +127,7 @@ var randomBio = {
     "16": "I'm a travel junkie who loves nothing more than exploring new places and cultures. I'm always looking for new adventures, and I love sharing my experiences with others.",
     "17": "I'm a traveler and lover of all things adventure. I'm always looking for new places to explore and new people to meet. I believe that life is about learning and growing, and that there's no better way to do that than by getting out there and seeing the world. Come join me on my journey!"
 };
+JSONBio = randomBio;
 
 // used https://www.dashword.com/meta-description-generator?result=ygJEEbEwJk for descriptions 
 randomDescription = {
@@ -439,7 +440,7 @@ function generateNotifications() {
 function generateBio(){
     ranChoose = Math.floor(Math.random()*18);
     choose = ranChoose.toString();
-    var generatedBio = randomBio[choose];
+    var generatedBio = JSONBio[choose];
     return generatedBio; 
 }
 
