@@ -291,7 +291,7 @@ function generateOtherUserPost() {
                     //as well as setting an onclick attribute for generated button, if possible in jquery, which I have not figured out 
                     //when pressing submit, the function always applies to the last element with hiding the input & submit, 
                     //while also returning value of the unique text box input, which here only defaults to the first 
-                    //i'm not able to return the value using .text() or .html() 
+                    //i'm not able to return the value of 
 
                     commentInput = document.createElement("input");
                     $(commentInput).attr("id", "commentInput");
@@ -299,15 +299,17 @@ function generateOtherUserPost() {
                     $(commentOutline).append(commentInput);
                     
                     submitComment = document.createElement("button");
-                    $(submitComment).attr("id", input2); 
+                    $(submitComment).attr("id", "submitComment"); 
                     $(submitComment).click(function(){
                         console.log("buttonWorks");
                         c = $(submitComment).html()
                         alert(c)
-                        $("#"+input2).css("visibility", "hidden");
-                        $("#"+input1).css("visibility", "hidden");
-                        emptySpace = document.createElement("p")
-                        $(emptySpace).attr("id", "emptyspace");
+                        $(submitComment).css("visibility", "hidden");
+                        $(commentInput).css("visibility", "hidden");
+                        emptySpace = document.createElement("p");
+                        input3 = "emptySpace" + postnum;
+                        //cInput3 = "#" + input3; //substitute $(emptySpace);
+                        $(emptySpace).attr("id", input3);
                         $(commentOutline).prepend(emptySpace);
                         //$(cInput3).text($(commentInput).text()) //
                         alert($("#"+input1).text());
