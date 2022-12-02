@@ -224,7 +224,7 @@ JSONPostPic = (randomURLPostPicture);
 
 window.onload = function(){ 
     console.log("working")
-    postnum = 0
+    postnum = 1
 
     if (document.title = "Homepage"){
         generateOtherUserPost(); //always at least two posts
@@ -429,14 +429,14 @@ function generateDate() {
 }
 
 function generateNotifications() {
-    ranChoose = (Math.floor(Math.random() * 3))+1;
+    ranChoose = (Math.floor(Math.random() * 4));
     choose = ranChoose.toString();
     var generatedNotification = JSONNoti[choose];
     return (generatedNotification); //string
 }; 
 
 function generateBio(){
-    ranChoose = Math.floor(Math.random()*17)+1;
+    ranChoose = Math.floor(Math.random()*18);
     choose = ranChoose.toString();
     var generatedBio = JSONBio[choose];
     return generatedBio; 
