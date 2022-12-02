@@ -231,7 +231,7 @@ function generateDate() {
     year = d.getFullYear()
     date = d.getDate()
     month = d.getMonth()
-    return year + "-" + month + "-" + date)
+    return (year + "-" + month + "-" + date);
 }
 
 function generateNotifications() {
