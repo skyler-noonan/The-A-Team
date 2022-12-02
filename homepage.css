@@ -85,10 +85,11 @@ background-color: rgb(235, 221, 221);
 
 }
 #sideBar{
-    float: right;
+    /*float: right;*/
     position:static;
     /*display: block;*/
     vertical-align: top;
+    display: inline-block;
     
     width: 400px;
     height: auto;
