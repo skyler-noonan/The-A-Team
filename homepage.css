@@ -23,6 +23,7 @@ body{
     max-height: 200px;
     /*float: left;*/
     display: inline-block;
+    align-content: left;
 }
 header div{
     position: static;
