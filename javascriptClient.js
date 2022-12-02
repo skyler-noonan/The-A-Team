@@ -152,11 +152,11 @@ function generateOtherUserPost() {
         $(newPostDiv).append(break1);
 
         homeProfilePic = document.createElement("img"); //profile picture as followed in homepage.html
-        postimageURL = generateProfilePicture();
+        postimageURL = generatePostPicture();
         console.log(postimageURL);
         $(homeProfilePic).attr("src", postimageURL);
         $(homeProfilePic).attr("alt", "error");
-        $(homeProfilePic).attr("id", "profilePicture");
+        $(homeProfilePic).attr("id", "mainPost");
         $(newPostDiv).append(homeProfilePic);
 
         break2 = document.createElement("br");
@@ -166,7 +166,8 @@ function generateOtherUserPost() {
         $(poster).attr("id", "poster");
 
             posterImage = document.createElement("img");
-            $(posterImage).attr("src", generatePostPicture());
+            $(posterImage).attr("src", generateProfilePicture());
+            $(posterImage).attr("id", "profilePicture");
             $(posterImage).attr("alt", "cannot load post picture");
 
             $(poster).append(posterImage);
