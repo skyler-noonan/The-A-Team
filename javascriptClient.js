@@ -167,9 +167,12 @@ window.onload = function(){
     postnum = 0
     gen = Math.floor(Math.random() * 4)
     gen++
+    gen++
     for (i=0; i < gen; i++){
-        generateOtherUserPost();
-        postnum++}
+        postnum++
+        console.log(postnum)
+        generateOtherUserPost();}
+       
    
     /*if (document.title == "Homepage"){
         randomGen = Math.floor(Math.random() * 12)
