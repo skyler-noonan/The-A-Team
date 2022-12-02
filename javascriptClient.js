@@ -307,12 +307,10 @@ function generateOtherUserPost() {
                         $(submitComment).css("visibility", "hidden");
                         $(commentInput).css("visibility", "hidden");
                         emptySpace = document.createElement("p");
-                        input3 = "emptySpace" + postnum;
-                        //cInput3 = "#" + input3; //substitute $(emptySpace);
-                        $(emptySpace).attr("id", input3);
+                        $(emptySpace).attr("id", "emptySpace");
                         $(commentOutline).prepend(emptySpace);
-                        //$(cInput3).text($(commentInput).text()) //
-                        alert($("#"+input1).text());
+    
+                        
                         
                      
                     }) 
