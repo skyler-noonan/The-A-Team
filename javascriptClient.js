@@ -78,7 +78,7 @@ function updateSideBar(){
         noti = 0
         $(notificationOutput).attr("id", "notificationOutput" + noti )
     
-        $("#notificationOutput" +a).html(generateUsername() + " " + generateNotifications()); 
+        $("#notificationOutput" +noti).html(generateUsername() + " " + generateNotifications()); 
         $("#outputNotify").append(notificationOutput);
         noti++ 
     }
