@@ -65,13 +65,13 @@ function updateSideBar(){
     document.getElementById("sidebarUsername").innerHTML = username;
 //    document.getElementById("sidebarUsername").style.fontWeight = "bold";
     console.log("update sidebar")
-    document.getElementById("notificationOutput").innerHTMl = generateNotifications();
-    console.log(document.getElementById("notificationOutput").value);
+    $("#notificationOutput").text() = generateNotifications();
+    /*console.log(document.getElementById("notificationOutput").value);
     document.getElementById("notificationOutput").style.overflow = "scroll";
     document.getElementById("userFollowers").innerHTMl = generateNumFollowers() + "Followers";
     document.getElementById("userFollowers").style.fontWeight = "bold";
     document.getElementById("userFollowing").innerHTMl = generateNumFollowing() + "Following"
-    document.getElementById("userFollowing").style.fontWeight = "bold";
+    document.getElementById("userFollowing").style.fontWeight = "bold";*/
 }
 // JSON literals for random generated content 
 //SCROLL ALL THE WAY DOWN FOR THE FUNCTIONS
