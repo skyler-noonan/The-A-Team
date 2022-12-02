@@ -9,7 +9,7 @@ var comments = 0;
 var profilePic = "https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg";
 var date = new Date();
 var registered = false;
-mainUserBio = generateBio();
+mainUserBio = "";
 
 
 
@@ -60,7 +60,7 @@ function profilePage()
 
 
 function updateSideBar(){
-    //mainUserBio = generateBio();
+    mainUserBio = generateBio();
     $("#sidebarUsername").html(username);
     $("#sidebarUsername").css("font-weight", "bold");
     $("userBio").html(mainUserBio);
