@@ -65,7 +65,7 @@ function updateSideBar(){
     document.getElementById("sidebarUsername").innerHTML = username;
     document.getElementById("sidebarUsername").style.fontWeight = "bold";
     notification = generateNotifications();
-    document.getElementById("notificationOutput").innerHTMl = notification
+    document.getElementById("notificationOutput").innerHTMl = notification 
     document.getElementById("notificationOutput").style.overflow = "scroll";
     document.getElementById("userFollowers").innerHTMl = generateNumFollowers() + "Followers"
     document.getElementById("userFollowers").style.fontWeight = "bold";
@@ -164,7 +164,7 @@ randomNotifications = {
     "2": "commented on your post: ",
     "3": " viewed your profile."
 }   
-JSONNoti = (randomNotifications)
+JSONNoti = randomNotifications
 
 // used http://best-hashtags.com
 randomHashtag = {
@@ -419,8 +419,7 @@ function generateDate() {
 
 function generateNotifications() {
     ranChoose = (Math.floor(Math.random() * 4));
-    choose = ranChoose.toString();
-    var generatedNotification = JSONNoti[choose];
+    var generatedNotification = JSONNoti[ranChoose];
     return (generatedNotification); //string
 }; 
 
