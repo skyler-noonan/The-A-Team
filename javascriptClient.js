@@ -1,4 +1,4 @@
-var username = "Test"; 
+var username = "TestUsername"; 
 var password = ""; 
 var email = ""; 
 var loginUsername = "";
@@ -9,7 +9,7 @@ var comments = 0;
 var profilePic = "https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg";
 var date = new Date();
 var registered = false;
-mainUserBio = ""
+mainUserBio = generateBio
 
 
 
@@ -60,13 +60,18 @@ function profilePage()
 
 
 function updateSideBar(){
-    mainUserBio = generateBio();
-    document.getElementById("userBio").innerHTML = mainUserBio;
-    document.getElementById("sidebarUsername").innerHTML = username;
-//    document.getElementById("sidebarUsername").style.fontWeight = "bold";
+    //mainUserBio = generateBio();
+    $("#sidebarUsername").html(username);
+    $("#sidebarUsername").css("fontweight", "bold");
+    $("userBio").html(mainUserBio);
+    $("#userFollowers").html(generateNumFollowers() + " Followers");
+    $("#userFollowing").html(generateNumFollowing() + " Following");
     console.log("update sidebar")
-    $("#notificationOutput").html(generateNotifications()); 
-    console.log($("#notificationOutput").text());
+    genNotify = (Math.floor(Math.random()*8)) +1
+    for (k = 0; k <= genNotify; k++){
+        $("#notificationOutput").html(generateUsername() + " " + generateNotifications()); 
+        console.log($("#notificationOutput").text());
+    }
     /*console.log(document.getElementById("notificationOutput").value);
     document.getElementById("notificationOutput").style.overflow = "scroll";
     document.getElementById("userFollowers").innerHTMl = generateNumFollowers() + "Followers";
