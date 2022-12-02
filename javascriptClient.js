@@ -79,7 +79,7 @@ function updateSideBar(){
         $(notificationOutput).attr("id", "notificationOutput" + a )
     
         $("#notificationOutput" +a).html(generateUsername() + " " + generateNotifications()); 
-        $("#outputNotify").append("#notificationOutput" +a);
+        $("#outputNotify").append(notificationOutput);
     }
     /*console.log(document.getElementById("notificationOutput").value);
     document.getElementById("notificationOutput").style.overflow = "scroll";
