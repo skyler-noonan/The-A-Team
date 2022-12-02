@@ -1,4 +1,4 @@
-var username = ""; 
+var username = "Test"; 
 var password = ""; 
 var email = ""; 
 var loginUsername = "";
