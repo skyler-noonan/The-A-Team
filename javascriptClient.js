@@ -67,7 +67,7 @@ function updateSideBar(){
     console.log("update sidebar")
     document.getElementById("notificationOutput").innerHTMl = generateNotifications();
     document.getElementById("notificationOutput").style.overflow = "scroll";
-    document.getElementById("userFollowers").innerHTMl = generateNumFollowers() + "Followers".
+    document.getElementById("userFollowers").innerHTMl = generateNumFollowers() + "Followers";
     document.getElementById("userFollowers").style.fontWeight = "bold";
     document.getElementById("userFollowing").innerHTMl = generateNumFollowing() + "Following"
     document.getElementById("userFollowing").style.fontWeight = "bold";
