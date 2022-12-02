@@ -247,7 +247,7 @@ function generateHashtag() {
     choose = ranChoose.toString();
     newHashtag = (JSONHashtag);
     generatedHashtag = newHashtag[choose];
-    return (toString(generatedHashtag)); //string
+    return (generatedHashtag); //string
 }; 
 
 function generateProfilePicture() {
