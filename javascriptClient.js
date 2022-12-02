@@ -255,7 +255,7 @@ function generateOtherUserPost() {
 
 
                 
-
+            console.log("underBox works");
             $(poster).append(underBox);
 
         $(newPostDiv).append(poster);
