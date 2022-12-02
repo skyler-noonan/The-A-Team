@@ -109,7 +109,7 @@ background-color: rgb(235, 221, 221);
     background-color: turquoise;
     float:left;
     max-width: 350px;
-    
+    align-content: center;
 }
 #descriptionBox {
     text-align: left;}
@@ -128,7 +128,7 @@ background-color: rgb(235, 221, 221);
     background-color: turquoise;
     float:right;
     max-width: 400px;
-    text-align: left;
+    align-content: center;
 }
 
 #sideBar{
