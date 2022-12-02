@@ -222,7 +222,8 @@ function generateOtherUserPost() {
             $(underBox).attr("id", "underBox");
                 descriptionBox = document.createElement("p");
                 $(descriptionBox).attr("id", "descriptionBox");
-                $(descriptionBox).html(generateDescription())
+                d =$(descriptionBox).text()
+                d.replace(generateDescription());
                 $(descriptionBox).append(underBox);
                 
                 commentOutline = document.createElement("div");
