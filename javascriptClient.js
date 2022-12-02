@@ -215,7 +215,7 @@ window.onload = function(){
     postnum = 0
 
     if (document.title = "Homepage"){
-        updateSideBar();
+        
         gen = Math.floor(Math.random() * 5)
         gen++
         gen++
@@ -223,6 +223,7 @@ window.onload = function(){
             postnum++
             console.log(postnum)
             generateOtherUserPost();}
+        updateSideBar();
     }
    
     /*if (document.title == "Homepage"){
