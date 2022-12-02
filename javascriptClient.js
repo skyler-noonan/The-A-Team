@@ -210,7 +210,7 @@ function generateUsername() {
     choose = ranChoose.toString();
     newName = (JSONname);
     generatedUsername = newName[choose];
-    return (toString(generatedUsername));
+    return generatedUsername;
 }
 
 function generateDescription() {
@@ -218,17 +218,17 @@ function generateDescription() {
     choose = ranChoose.toString();
     newDescription = (JSONDescr);
     generatedDescription = newDescription[choose];
-    return (toString(generatedDescription)); 
+    return generatedDescription; 
 }; 
 
 function generateNumLikes() {
     generateLike = Math.floor(Math.random() * 1001)
-    return (toString(generateLike));
+    return generateLike;
 }
 
 function generateNumComment() {
     generateLike = Math.floor(Math.random() * 6)
-    return (toString(generateLike));
+    return generateLike;
 }
 
 function generateDate() {
