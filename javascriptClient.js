@@ -141,9 +141,9 @@ function generateOtherUserPost() {
     newPostDiv = document.createElement("div");
         $(newPostDiv).attr("id", "posts");
         span1 = document.createElement("span");
-        $(span1).text("Date Posted: " + generateDate());
+        $(span1).html("Date Posted: " + generateDate());
         span2 = document.createElement("span");
-        $(span2).text(generateHashtag());
+        $(span2).html(generateHashtag());
         $(newPostDiv).append(span1);
         $(newPostDiv).append(span2);
 
@@ -227,11 +227,11 @@ function generateNumComment() {
 }
 
 function generateDate() {
-    d = new Date()
+    var d = new Date()
     year = d.getFullYear()
     date = d.getDate()
     month = d.getMonth()
-    return (toString(year + "-" + month + "-" + date))
+    return year + "-" + month + "-" + date)
 }
 
 function generateNotifications() {
