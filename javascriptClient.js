@@ -1,6 +1,6 @@
-var username = "A-Team Test"; //A-Team Test //for TA 
-var password = "ateam123"; //ateam123
-var email = "ateam@email.com"; //ateam@email.com
+var username = ""; 
+var password = ""; 
+var email = ""; 
 var loginUsername = "";
 var loginPassword = "";
 var loginEmail = "";
