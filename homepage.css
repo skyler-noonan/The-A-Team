@@ -12,6 +12,7 @@ body{
     float: left;
 }
 
+#profilePicture
 header div{
     position: static;
     border: 3px solid;
