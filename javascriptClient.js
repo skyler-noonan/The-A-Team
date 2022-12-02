@@ -77,7 +77,7 @@ function updateSideBar(noti){
         notificationOutput = document.createElement("p");
         
         $(notificationOutput).attr("id", "notificationOutput" + noti )
-    
+        
        
         $("#outputNotify").append(notificationOutput);
         $("#notificationOutput" +noti).html(generateUsername() + " " + generateNotifications()); 
@@ -181,7 +181,7 @@ JSONComment = (randomComment);
 randomNotifications = {
     "0": " started following your A-Team account.",
     "1": " liked your A-Team post.", 
-    "2": "commented on your post: ",
+    "2": "commented on your post: " + generateComment(),
     "3": " viewed your profile."
 }   
 JSONNoti = randomNotifications
