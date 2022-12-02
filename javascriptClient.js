@@ -419,8 +419,7 @@ function generateDate() {
 function generateNotifications() {
     ranChoose = (Math.floor(Math.random() * 4));
     choose = ranChoose.toString();
-    newNotification = (JSONNoti);
-    generatedNotification = newNotification[choose];
+    var generatedNotification = JSONNoti[choose];
     return (generatedNotification); //string
 }; 
 
