@@ -133,7 +133,7 @@ background-color: rgb(235, 221, 221);
 
 #sideBar{
     /*float: right;*/
-    position:static;
+    position:sticky;
     /*display: block;*/
     vertical-align: top;
     display: inline-block;
