@@ -265,5 +265,5 @@ function generatePostPicture() {
     choose = ranChoose.toString();
     newPostPic = (JSONPostPic);
     generatedPostPic= newPostPic[choose];
-    return (toString(generatedPostPic)); // as image url for src = ""
+    return generatedPostPic; // as image url for src = ""
 }; 
