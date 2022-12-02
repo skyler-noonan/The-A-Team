@@ -225,10 +225,36 @@ function generateOtherUserPost() {
                 $(descriptionBox).html(generateDescription())
                 $(descriptionBox).append(underBox);
                 
-                commentBox = document.createElement("p");
-                $(commentBox).attr("id", "commentBox");
-                $(descriptionBox).html(generate())
-                $(commentBox).append(commentBox);
+                commentOutline = document.createElement("div");
+                $(commentOutline).attr("id", "commentOutline");
+                    commentBox = document.createElement("p");
+                    $(commentBox).attr("id", "commentBox");
+                    $(commentBox).html(generateComment());
+                    $(commentOutline).append(commentBox);
+
+                    emptySpace = document.createElement("span");
+                    $(emptySpace).attr("id", "emptySpace");
+                    $(commentOutline).append(emptySpace);
+            
+                    commentInput = document.createElement("input");
+                    $(commentInput).attr("id", "commentInput");
+                    $(commentInput).attr("type", "text")
+                    $(commentOutline).append(commentBox);
+
+                    submitComment = document.createElement("button");
+                    $(submitComment).attr("id", "submitComment");
+                    $(submitComment).attr("value", "Submit Comment");
+                    $(submitComment).click(function(){
+                        $(submitComment).css("visibility", hidden);
+                        $(commentInput).css("visibility", hidden);
+                        $(emptySpace).html($(commentInput).val())
+                    })
+                    $(commentOutline).append(commentBox);
+
+
+
+
+                
 
             $(poster).append(underBox);
 
