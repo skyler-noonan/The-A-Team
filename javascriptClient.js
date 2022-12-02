@@ -337,7 +337,7 @@ function generatePostPicture() {
 function generateComment() {
     ranChoose = (Math.floor(Math.random() * 19));
     choose = ranChoose.toString();
-    newComment = JSONComment;
+    newComment = (JSONComment);
     generatedComment = newComment[choose];
     return generatedComment; 
 
