@@ -203,7 +203,7 @@ function generateOtherUserPost() {
 function generateUsername() {
     ranChoose = (Math.floor(Math.random() * 15));
     choose = ranChoose.toString();
-    newName = JSON.parse(JSONname);
+    newName = (JSONname);
     generatedUsername = newName[choose];
     return (toString(generatedUsername));
 }
@@ -211,7 +211,7 @@ function generateUsername() {
 function generateDescription() {
     ranChoose = (Math.floor(Math.random() * 5));
     choose = ranChoose.toString();
-    newDescription = JSON.parse(JSONDescr);
+    newDescription = (JSONDescr);
     generatedDescription = newDescription[choose];
     return (toString(generatedDescription)); 
 }; 
@@ -237,7 +237,7 @@ function generateDate() {
 function generateNotifications() {
     ranChoose = (Math.floor(Math.random() * 4));
     choose = ranChoose.toString();
-    newNotification = JSON.parse(JSONNoti);
+    newNotification = (JSONNoti);
     generatedNotification = newNotification[choose];
     return (toString(generatedNotification)); //string
 }; 
@@ -245,7 +245,7 @@ function generateNotifications() {
 function generateHashtag() {
     ranChoose = (Math.floor(Math.random() * 7));
     choose = ranChoose.toString();
-    newHashtag = JSON.parse(JSONHashtag);
+    newHashtag = (JSONHashtag);
     generatedHashtag = newHashtag[choose];
     return (toString(generatedHashtag)); //string
 }; 
@@ -253,14 +253,14 @@ function generateHashtag() {
 function generateProfilePicture() {
     ranChoose = (Math.floor(Math.random() * 11));
     choose = ranChoose.toString();
-    newProfilePic = JSON.parse(JSONProfilePic);
+    newProfilePic = (JSONProfilePic);
     generatedProfilePic= newProfilePic[choose];
     return (toString(generatedProfilePic)); // as image url for src = ""
 }; 
 function generatePostPicture() {
     ranChoose = (Math.floor(Math.random() * 11));
     choose = ranChoose.toString();
-    newPostPic = JSON.parse(JSONPostPic);
+    newPostPic = (JSONPostPic);
     generatedPostPic= newPostPic[choose];
     return (toString(generatedPostPic)); // as image url for src = ""
 }; 
