@@ -225,18 +225,25 @@ function generateOtherUserPost() {
                 $(postDescription).attr("id", "postDescription");
                     descriptionBox = document.createElement("p");
                     $(descriptionBox).attr("id", "descriptionBox");
-                    $(descriptionBox).html("Description" + generateDescription())
+                    $(descriptionBox).html("Description: " + generateDescription())
                     $(postDescription).append(descriptionBox);
                 $(underBox).append(postDescription);
                 
                 commentOutline = document.createElement("div");
                 $(commentOutline).attr("id", "commentOutline");
+
+                if (t>0){
                     for(i = 1; i <= t; i++){
                         commentBox = document.createElement("p");
                         $(commentBox).attr("id", "commentBox");
                         $(commentBox).html(generateUsername() + ": " + generateComment());
                         $(commentOutline).append(commentBox);
                     }
+                }else {
+                    commentBox = document.createElement("p");
+                    $(commentBox).attr("id", "commentBox");
+                    $(commentBox).html("No comments on post");
+                }
                     emptySpace = document.createElement("span");
                     $(emptySpace).attr("id", "emptySpace");
                     $(commentOutline).append(emptySpace);
