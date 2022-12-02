@@ -187,7 +187,7 @@ function generateOtherUserPost() {
         $(newPostDiv).append(poster);
 
     $(allHomePosts).append(newPostDiv)
-    $(#allHomePosts).append(allHomePosts) //cannot link jquery function to id on homepage.html
+    $(#allHomePosts).append(allHomePosts) //cannot link jquery function to id on homepage.html 
 }
 
 //always generate on home page
