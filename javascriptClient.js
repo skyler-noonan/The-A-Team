@@ -151,7 +151,9 @@ function generateOtherUserPost() {
         $(newPostDiv).append(break1);
 
         homeProfilePic = document.createElement("img"); //profile picture as followed in homepage.html
-        $(homeProfilePic).attr("src", generateProfilePicture());
+        postimageURL = toString(generateProfilePicture());
+        console.log(postimageURL);
+        $(homeProfilePic).attr("src", postimageURL);
         $(homeProfilePic).attr("alt", "error");
         $(newPostDiv).append(homeProfilePic);
 
@@ -171,6 +173,7 @@ function generateOtherUserPost() {
                 $(span3).attr("id", "username");
                 $(span3).text(generateUsername());
                 $(span3).append(posterInfo);
+                
 
                 span4 = document.createElement("span"); //likes num
                 $(span4).attr("id", "likes");
@@ -181,7 +184,7 @@ function generateOtherUserPost() {
                 $(span5).attr("id", "comments");
                 $(span5).text(generateNumComment());
                 $(span5).append(posterInfo);
-
+                console.log("works posterinfo")
             $(poster).append(posterInfo);   
 
         $(newPostDiv).append(poster);
