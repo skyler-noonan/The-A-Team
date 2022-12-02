@@ -9,7 +9,7 @@ var comments = 0;
 var profilePic = "https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg";
 var date = new Date();
 var registered = false;
-mainUserBio = generateBio
+mainUserBio = generateBio();
 
 
 
@@ -62,15 +62,19 @@ function profilePage()
 function updateSideBar(){
     //mainUserBio = generateBio();
     $("#sidebarUsername").html(username);
-    $("#sidebarUsername").css("fontweight", "bold");
+    $("#sidebarUsername").css("font-weight", "bold");
     $("userBio").html(mainUserBio);
     $("#userFollowers").html(generateNumFollowers() + " Followers");
     $("#userFollowing").html(generateNumFollowing() + " Following");
     console.log("update sidebar")
-    genNotify = (Math.floor(Math.random()*8)) +1
+    $("#notifications").css("font-weight", "bold");
+    genNotify = (Math.floor(Math.random()*16)) +1
     for (k = 0; k <= genNotify; k++){
+        notificationOutput = document.createElement("p");
+        $(notificationOutput).attr("id", "notificationOutput")
         $("#notificationOutput").html(generateUsername() + " " + generateNotifications()); 
         console.log($("#notificationOutput").text());
+        $("#notifications").append(notificationOutput);
     }
     /*console.log(document.getElementById("notificationOutput").value);
     document.getElementById("notificationOutput").style.overflow = "scroll";
