@@ -66,6 +66,7 @@ function updateSideBar(){
 //    document.getElementById("sidebarUsername").style.fontWeight = "bold";
     console.log("update sidebar")
     document.getElementById("notificationOutput").innerHTMl = generateNotifications();
+    console.log(document.getElementById("notificationOutput").value);
     document.getElementById("notificationOutput").style.overflow = "scroll";
     document.getElementById("userFollowers").innerHTMl = generateNumFollowers() + "Followers";
     document.getElementById("userFollowers").style.fontWeight = "bold";
@@ -420,7 +421,8 @@ function generateDate() {
 
 function generateNotifications() {
     ranChoose = (Math.floor(Math.random() * 4));
-    var generatedNotification = JSONNoti[ranChoose];
+    choose = ranChoose.toString();
+    var generatedNotification = JSONNoti[choose];
     return (generatedNotification); //string
 }; 
 
