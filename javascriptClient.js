@@ -107,7 +107,7 @@ randomUsername = {
 JSONname = (randomUsername);
 
 //used https://sassycaptions.com/bio-generator/
-randomBio = {
+var randomBio = {
     "0": "Your life does not get better by chance. It gets better by a change.e",
     "1": "Do you ever feel like a plastic bag?",
     "2": "Kind of a good Samaritan, terrible athlete, but extremely blessed in the napping skills department.",
