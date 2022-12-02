@@ -71,9 +71,10 @@ function updateSideBar(){
     genNotify = (Math.floor(Math.random()*16)) + 3
     for (k = 1; k < genNotify; k++){
         notificationOutput = document.createElement("p");
-        $(notificationOutput).attr("id", "notificationOutput")
-        $("#notificationOutput").html(generateUsername() + " " + generateNotifications()); 
-        console.log($("#notificationOutput").text());
+        a = 0
+        $(notificationOutput).attr("id", "notificationOutput" + a)
+        $("#notificationOutput" + a).html(generateUsername() + " " + generateNotifications()); 
+        console.log($("#notificationOutput" + a).text());
         $("#outputNotify").append(notificationOutput);
     }
     /*console.log(document.getElementById("notificationOutput").value);
