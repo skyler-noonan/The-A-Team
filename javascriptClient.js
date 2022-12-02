@@ -298,7 +298,7 @@ function generateOtherUserPost() {
                     submitComment = document.createElement("button");
                     $(submitComment).attr("id", input2); 
                     //$(submitComment).attr("value", "Submit Comment");
-                    $("#"+input2).click(function(){
+                    $('[data-vp*="id: ' +  input2 + '").click(function(){
                         console.log("buttonWorks");
                         c = $(cInput1).text()
                         alert(c)
