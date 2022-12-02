@@ -243,6 +243,7 @@ function generateOtherUserPost() {
                     commentBox = document.createElement("p");
                     $(commentBox).attr("id", "commentBox");
                     $(commentBox).html("No comments on post");
+                    $(commentOutline).append(commentBox);
                 }
                     emptySpace = document.createElement("span");
                     $(emptySpace).attr("id", "emptySpace");
