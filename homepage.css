@@ -98,6 +98,31 @@ background-color: rgb(235, 221, 221);
     float:left;
     max-width: 800px;
 }
+
+#postDescription {
+    border: 2px solid;
+    border-color: hotpink;
+    margin:3px;
+    padding: 2px;
+    overflow: hidden;
+    width: 1050px;
+    background-color: turquoise;
+    float:left;
+    max-width: 800px;
+}
+
+#commentOutline {
+    border-color: hotpink;
+    border: 2px solid;
+    margin:3px;
+    padding: 2px;
+    overflow: hidden;
+    width: 1050px;
+    background-color: turquoise;
+    float:right;
+    max-width: 800px;
+}
+
 #sideBar{
     /*float: right;*/
     position:static;
