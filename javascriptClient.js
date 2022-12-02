@@ -227,7 +227,8 @@ window.onload = function(){
     postnum = 0
 
     if (document.title = "Homepage"){
-        
+        generateOtherUserPost();
+        generateOtherUserPost();
         gen = (Math.floor(Math.random() * 5)) + 2
         for (i=0; i < gen; i++){
             postnum++
