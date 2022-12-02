@@ -286,6 +286,9 @@ function generateOtherUserPost() {
                     $(emptySpace).attr("id", "emptySpace");
                     $(commentOutline).append(emptySpace);*/
 
+                    //For this, i have no idea how to pass a variable into the jquery selector
+                    //as the problem is each comment element needs to have a unique id. 
+
                     commentInput = document.createElement("input");
                     input1 = "commentInput" + postnum; //substitute $(commentInput)
                     cInput1 = "#" + input1; //substitute $(commentInput)
@@ -298,9 +301,9 @@ function generateOtherUserPost() {
                     submitComment = document.createElement("button");
                     $(submitComment).attr("id", input2); 
                     //$(submitComment).attr("value", "Submit Comment");
-                    $('[data-vp*="id: ' +  input2 + '").click(function(){
+                    $(submitComment).click(function(){
                         console.log("buttonWorks");
-                        c = $(cInput1).text()
+                        c = $("#"+input1).html()
                         alert(c)
                         $("#"+input2).css("visibility", "hidden");
                         $("#"+input1).css("visibility", "hidden");
