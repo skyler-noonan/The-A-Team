@@ -109,6 +109,12 @@ background-color: rgb(235, 221, 221);
     background-color: turquoise;
     float:left;
     max-width: 350px;
+    
+}
+#descriptionBox {
+    text-align: left;}
+
+#commentBox {
     text-align: left;
 }
 
