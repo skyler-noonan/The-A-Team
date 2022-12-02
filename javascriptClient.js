@@ -153,7 +153,7 @@ function generateOtherUserPost() {
         homeProfilePic = document.createElement("img"); //profile picture as followed in homepage.html
         postimageURL = toString(generateProfilePicture());
         console.log(postimageURL);
-        $(homeProfilePic).attr("src", postimageURL());
+        $(homeProfilePic).attr("src", postimageURL);
         $(homeProfilePic).attr("alt", "error");
         $(newPostDiv).append(homeProfilePic);
 
@@ -255,7 +255,7 @@ function generateProfilePicture() {
     choose = ranChoose.toString();
     newProfilePic = (JSONProfilePic);
     generatedProfilePic= newProfilePic[choose];
-    return (toString(generatedProfilePic)); // as image url for src = ""
+    return generatedProfilePic; // as image url for src = ""
 }; 
 function generatePostPicture() {
     ranChoose = (Math.floor(Math.random() * 11));
