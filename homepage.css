@@ -12,7 +12,10 @@ body{
     float: left;
 }
 
-#profilePicture
+#profilePicture {
+    max-width: 20px;
+    max-height: 20px;
+}
 header div{
     position: static;
     border: 3px solid;
