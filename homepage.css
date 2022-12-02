@@ -84,6 +84,16 @@ background-color: rgb(235, 221, 221);
     float:left;
 
 }
+#underBox {
+    border: 2px solid;
+    border-color: hotpink;
+    margin:3px;
+    padding: 2px;
+    overflow: hidden;
+    width: 1050px;
+    background-color: turquoise;
+    float:left;
+}
 #sideBar{
     /*float: right;*/
     position:static;
