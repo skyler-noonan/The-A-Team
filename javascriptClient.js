@@ -55,7 +55,7 @@ randomUsername = {
     "14": "Onblue"
 
 };
-JSONname = JSON.stringify(randomUsername);
+JSONname = (randomUsername);
 // used https://www.dashword.com/meta-description-generator?result=ygJEEbEwJk for descriptions 
 randomDescription = {
     "0": "Photography is wonderful way to express yourself. Learn how to take better pictures.",
@@ -72,7 +72,7 @@ randomDescription = {
     "11": "A collection of topographic maps and images of the most beautiful places in Canada.", 
     "12": "Canada has a lot of amazing sights to see."
 };
-JSONDescr = JSON.stringify(randomDescription);
+JSONDescr = (randomDescription);
 
 
 randomNotifications = {
@@ -81,7 +81,7 @@ randomNotifications = {
     "2": "commented on your post: ",
     "3": " viewed your profile."
 }   
-JSONNoti = JSON.stringify(randomNotifications)
+JSONNoti = (randomNotifications)
 
 // used http://best-hashtags.com
 randomHashtag = {
@@ -93,7 +93,7 @@ randomHashtag = {
     "5": "#travelgram #hiking #adventure",
     "6": "##summer #music #pretty",
 } 
-JSONHashtag = JSON.stringify(randomHashtag);
+JSONHashtag = (randomHashtag);
 
 randomURLProfilePicture = { 
     "0": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
@@ -108,7 +108,7 @@ randomURLProfilePicture = {
     "9": "https://static.wikia.nocookie.net/k-hip-hop/images/1/19/Sik-k_1.png/revision/latest?cb=20200618183901e", 
     "10": "https://thumbs.dreamstime.com/z/head-shoulder-front-portrait-young-man-suit-blue-shirt-looking-camera-over-gray-studio-background-65164267.jpg"
 }
-JSONProfilePic = JSON.stringify(randomURLProfilePicture);
+JSONProfilePic = randomURLProfilePicture;
 
 //random picture posts 
 randomURLPostPicture = {
@@ -124,7 +124,7 @@ randomURLPostPicture = {
     "9": "https://static-cse.canva.com/blob/666309/bestfreestockphotos.24b4e3f6.jpg", 
     "10": "https://assets.bucketlistly.blog/sites/5adf778b6eabcc00190b75b1/assets/6075182686d092000b192cf1/best-free-travel-images-image-3.jpg"
 }
-JSONPostPic = JSON.stringify(randomURLPostPicture);
+JSONPostPic = (randomURLPostPicture);
 
 
 window.onload = function(){ 
@@ -165,6 +165,8 @@ function generateOtherUserPost() {
 
             posterImage = document.createElement("img");
             $(posterImage).attr("src", generatePostPicture());
+            $(posterImage).attr("alt", "cannot load post picture");
+
             $(poster).append(posterImage);
 
             posterInfo = document.createElement("div");
