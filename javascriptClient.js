@@ -34,7 +34,6 @@ function login(){
 
 }
 
-function
 
 // JSON literals for random generated content 
 //SCROLL ALL THE WAY DOWN FOR THE FUNCTIONS
