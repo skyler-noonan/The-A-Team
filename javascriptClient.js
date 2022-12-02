@@ -74,7 +74,7 @@ function updateSideBar(){
         $(notificationOutput).attr("id", "notificationOutput")
         $("#notificationOutput").html(generateUsername() + " " + generateNotifications()); 
         console.log($("#notificationOutput").text());
-        $("#notifications").append(notificationOutput);
+        $(".notifications").append(notificationOutput);
     }
     /*console.log(document.getElementById("notificationOutput").value);
     document.getElementById("notificationOutput").style.overflow = "scroll";
@@ -228,9 +228,7 @@ window.onload = function(){
 
     if (document.title = "Homepage"){
         
-        gen = Math.floor(Math.random() * 5)
-        gen++
-        gen++
+        gen = (Math.floor(Math.random() * 5)) + 2
         for (i=0; i < gen; i++){
             postnum++
             console.log(postnum)
