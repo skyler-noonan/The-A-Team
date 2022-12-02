@@ -62,9 +62,9 @@ function profilePage()
     window.open("./userProfile.html");
 }
 
-mainUserBio = generateBio();
-function updateSideBar(){
 
+function updateSideBar(){
+    mainUserBio = generateBio();
     $("#sidebarUsername").html(username);
     $("#sidebarUsername").css("font-weight", "bold");
     $("#userBio").html(mainUserBio);
