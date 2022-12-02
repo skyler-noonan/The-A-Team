@@ -108,7 +108,7 @@ background-color: rgb(235, 221, 221);
     width: 1050px;
     background-color: turquoise;
     float:left;
-    max-width: 800px;
+    max-width: 400px;
 }
 
 #commentOutline {
@@ -120,7 +120,7 @@ background-color: rgb(235, 221, 221);
     width: 1050px;
     background-color: turquoise;
     float:right;
-    max-width: 800px;
+    max-width: 400px;
 }
 
 #sideBar{
