@@ -175,6 +175,8 @@ window.onload = function(){
     }}*/
 }
 
+function generateOwnUserPost() { }
+
 function generateOtherUserPost() { 
     allHomePosts = document.createElement("div");
     $(allHomePosts).attr("id", "allHomePosts");
@@ -274,6 +276,8 @@ function generateOtherUserPost() {
                     $(submitComment).attr("id", "submitComment");
                     $(submitComment).attr("value", "Submit Comment");
                     $(submitComment).click(function(){
+                        c = $(commentInput).text()
+                        alert(c)
                         $(submitComment).css("visibility", hidden);
                         $(commentInput).css("visibility", hidden);
                         $(emptySpace).html($(commentInput).val())
