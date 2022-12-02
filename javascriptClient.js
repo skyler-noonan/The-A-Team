@@ -62,8 +62,8 @@ function profilePage()
     window.open("./userProfile.html");
 }
 
-var noti = 0
-function updateSideBar(){
+
+function updateSideBar(noti){
     mainUserBio = generateBio();
     $("#sidebarUsername").html(username);
     $("#sidebarUsername").css("font-weight", "bold");
@@ -75,7 +75,7 @@ function updateSideBar(){
     genNotify = (Math.floor(Math.random()*16)) + 3
     for (k = 1; k < 5; k++){
         notificationOutput = document.createElement("p");
-        noti = 0
+        
         $(notificationOutput).attr("id", "notificationOutput" + noti )
     
         $("#notificationOutput" +noti).html(generateUsername() + " " + generateNotifications()); 
@@ -239,7 +239,7 @@ window.onload = function(){
             postnum++
             console.log(postnum)
             generateOtherUserPost();}
-        updateSideBar();
+        updateSideBar(0);
     }
    
     /*if (document.title == "Homepage"){
