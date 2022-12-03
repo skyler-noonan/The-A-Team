@@ -23,8 +23,9 @@ app.post('/post', (req, res) => {
 
 
     if (z['action'] == 'upload'){
+        console.log(z)
         //generate a code for this user
-        idCounter++;
+        /*idCounter++;
         var nameID = z['name'] + idCounter;
         generateCode(nameID);
         var jsontext = JSON.stringify({
@@ -34,7 +35,7 @@ app.post('/post', (req, res) => {
         });
         console.log(jsontext);
         console.log(codes);
-        // send the response while including the JSON text		
+        // send the response while including the JSON text	*/	
         
         res.send(jsontext)
     }}).listen(3000) 
