@@ -60,6 +60,7 @@ function postEvent()
 function profilePage()
 {
     window.open("./userProfile.html");
+    document.title = "User Profile Page";
 }
 
 
