@@ -13,7 +13,7 @@
 <div class = "mainContent">
 <header>
     <div>
-    <h1 onclick="">WEBSITE NAME</h1>
+    <h1 onclick="goHome()">WEBSITE NAME</h1>
     <!-- <button>Post Event</button> -->
     <button onclick="goHome()">Cancel Post</button>
     <!--<button>Logout</button> -->
@@ -26,7 +26,7 @@
     <div id = "top">
     <span> Post Draft </span>  
   
-    <span> Enter hashtag/s</span> <input type="text" id="hashtagBox" value="#...">
+    <span id="uploadHashtag"> Enter hashtag/s</span> <input type="text" id="hashtagBox" value="#...">
     </div>
 </div>        
 
@@ -47,7 +47,7 @@
         <label for="description">Enter Post Description:</label>
         <input type="text" name="description" id="newPostDescription" value="Enter post description"> 
     
-        <button id = "submitPost" type="button" value = "Post Event" onclick="">Save Changes</button>
+        <button id = "saveChanges" type="button" value = "Post Event" onclick="uploadSaveChanges">Save Changes</button>
         </form>
         </div>
     </div>
@@ -60,7 +60,7 @@
     <!--<label for="imageJPEGFile">For image upload? (JPEG & PNG only):</label>
      <input type="file" id="uploadImageTypeFile" accept="image/jpg, image/png" name="imageJPEGFile"> <!-- Using input type ="File"-->
     </form>
-    <button id ="submitFinalPost" type="button" onclick="">Submit Post</button>
+    <button id ="submitPost" type="button" onclick="">Submit Post</button>
 </div>
 
 

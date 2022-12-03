@@ -612,7 +612,6 @@ function profilePageGeneration() {
     }}*/
 }
 
-//function uploadContent {}
 function profilePagePost(numPost, username, profilePicURL) { 
     allHomePosts = document.createElement("div");
     $(allHomePosts).attr("id", "allHomePosts");
@@ -817,4 +816,27 @@ function profilePagePost(numPost, username, profilePicURL) {
     $(allHomePosts).append(newPostDiv)
     $("#allHomePosts").append(allHomePosts) //cannot link jquery function to id on homepage.html 
 }
+
+function uploadSaveChanges(){
+    $("#saveChanges").css("visibility", "hidden")
+    uploadDescription = $("#newPostDescription").val()
+    uploadDate = $("#dateBox").val()
+    uploadHashtag = $("#uploadHashtag").val()
+    uploadImg = $("uploadURLTypeFile").val()
+    console.log(uploadDate, uploadHashtag, uploadImg);
+
+    youUpload = {
+        'uploadDescription': uploadDescription,
+        'uploadDate': uploadDate,
+        'uploadHashtag': uploadHashtag,
+        'uploadImg': uploadImg
+    }
+    m = JSON.stringify(youUpload);
+    n = JSON.parse(youUpload);
+    console.log(n['uploadDescription'])
+
+
+
+}
+
 
