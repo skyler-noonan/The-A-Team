@@ -818,6 +818,7 @@ function profilePagePost(numPost, username, profilePicURL) {
 }
 
 function uploadSaveChanges(){
+    console.log("Works");
     $("#saveChanges").css("visibility", "hidden")
     uploadDescription = $("#newPostDescription").val()
     uploadDate = $("#dateBox").val()
