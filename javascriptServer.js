@@ -24,7 +24,7 @@ app.post('/post',function(req,res)
         console.log(codes);
         // send the response while including the JSON text		
         /*TODO 2 ... send the response including the JSON text*/
-        res.send(jsontext);
+        res.send(jsontext);}
     
 
 });

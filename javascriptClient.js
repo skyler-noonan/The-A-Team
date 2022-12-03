@@ -877,7 +877,7 @@ function response(data, status){
     console.log(data);}
     console.log(data);
     if (response['action'] == 'generateCode'){
-        console.log(response['msg'])
+        console.log(response['msg']) }
 
 
 /*function uploadPost() {
