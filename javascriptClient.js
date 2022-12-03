@@ -573,9 +573,9 @@ function profilePageGeneration() {
 
     if (document.title = "Homepage"){
         //generateOtherUserPost(); //always at least two posts
-        gen = (Math.floor(Math.random() * 3)) + 1
+        gen = (Math.floor(Math.random() * 4)) + 1
         //if
-        profileUsername = generateUsername()
+        
         profilePageProfilePic = generateProfilePicture();
         for (i=0; i < gen; i++){
             
@@ -677,7 +677,7 @@ function profilePagePost(numPost, username, profilePicURL) {
                     $(postDescription).append(descriptionBox);
                 $(underBox).append(postDescription);
                 
-                visitProfile = document.createElement("button");
+                /*visitProfile = document.createElement("button");
                 $(visitProfile).attr("id", "visitProfile" +numPost);
 
                 $(visitProfile).html("Visit Profile");
@@ -695,8 +695,7 @@ function profilePagePost(numPost, username, profilePicURL) {
 
                     window.open("./userprofile.html")
                     window.close("./homepage.html"); //option for only new tab
-                    })});
-
+                    })}); */
 
                 commentOutline = document.createElement("div");
                 $(commentOutline).attr("id", "commentOutline");
