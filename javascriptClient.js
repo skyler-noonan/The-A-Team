@@ -28,7 +28,16 @@ function register()
     document.getElementById("password").value = "";
     document.getElementById("email").value = "";
     registered = true;
-    
+    /*
+    $.post(
+        url+'?data='+JSON.stringify({
+        'action': "personalInfo",
+        'username': username,
+        'password': password,
+        'email': email
+        }),
+        response
+    ); DONT KNOW HOW TO USE THIS */
 
 }
 function login(){
@@ -599,6 +608,7 @@ function profilePageGeneration() {
     }}*/
 }
 
+//function uploadContent {}
 function profilePagePost(numPost, username, profilePicURL) { 
     allHomePosts = document.createElement("div");
     $(allHomePosts).attr("id", "allHomePosts");
