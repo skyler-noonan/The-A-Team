@@ -564,10 +564,10 @@ function profilePageGeneration() {
     profileUsername = generateUsername()
     profileFollowers = generateNumFollowers();
     profileFollowing = generateNumFollowing();
-    document.getElementsByClassName("profileUsername").innerHTML = profileUsername
-    document.getElementsByClassName("profileFollowers").innerHTML = profileFollowers
-    document.getElementsByClassName("profileFollowing").innerHTML = profileFollowing
-    document.getElementsByClassName("profileHeader").innerHTML = profileUsername + "'s Posts"
+    document.getElementById("profileUsername").innerHTML = profileUsername
+    document.getElementById("profileFollowers").innerHTML = profileFollowers
+    document.getElementById("profileFollowing").innerHTML = profileFollowing
+    document.getElementById("profileHeader").innerHTML = profileUsername + "'s Posts"
 
 
 
