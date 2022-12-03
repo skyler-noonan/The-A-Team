@@ -846,6 +846,7 @@ function uploadSaveChanges(){
     m = JSON.stringify(youUpload);
     n = JSON.parse(m);
     console.log(n.uploadDescription)
+    return m;
     /*
     $.post(
         url+'?data='+JSON.stringify({
@@ -861,7 +862,15 @@ function uploadSaveChanges(){
 }
 
 function uploadPost() {
+    uploadData = JSON.parse(uploadSaveChanges())
+    /*'uploadDescription': uploadDescription,
+        'uploadDate': uploadDate,
+        'uploadHashtag': uploadHashtag,
+        'uploadImg': uploadImg
+        */
 
+    console.log(uploadData.uploadImg)
+//
 }
 
 
