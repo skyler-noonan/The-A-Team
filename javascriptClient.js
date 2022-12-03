@@ -328,7 +328,7 @@ function generateOtherUserPost(numPost, username, profilePicURL) {
                 $(span3).attr("id", "username"+numPost);
                 
                 $(posterInfo).append(span3);
-                $(span3).append(username); //change for profile page
+                $(span3).append(generateUsername()); //change for profile page
                 
                 $("#username"+numPost).click(function(){
                     window.open("./userprofile.html")
