@@ -863,10 +863,10 @@ function uploadSaveChanges(){
 
 function uploadPost() {
     uploadData = JSON.parse(uploadSaveChanges())
-    uploadData.uploadDescription
+    uploadDescription = uploadData.uploadDescription
     uploadDate = uploadData.uploadDate
-    uploadData.uploadHashtag
-    uploadData.uploadImg
+    uploadHashtag = uploadData.uploadHashtag
+    uploadImg = uploadData.uploadImg
     
     /*'uploadDescription': uploadDescription,
         'uploadDate': uploadDate,
@@ -876,11 +876,11 @@ function uploadPost() {
 
     console.log(uploadData.uploadImg);
     console.log(uploadDate)
-    //ownPagePost(0, profileUsername, profilePic, imgUpload, )
+    ownPagePost(0, profileUsername, profilePic, uploadImg, uploadHashtag, uploadDate, uploadDescription)
 //
 }
 
-function ownPagePost(numPost, username, profilePicURL, postURL, uploadHashtag, uploadDate ) { 
+function ownPagePost(numPost, username, profilePicURL, postURL, uploadHashtag, uploadDate, uploadDescription,  ) { 
     allHomePosts = document.createElement("div");
     $(allHomePosts).attr("id", "allHomePosts");
 
@@ -889,10 +889,10 @@ function ownPagePost(numPost, username, profilePicURL, postURL, uploadHashtag, u
     newPostDiv = document.createElement("div");
         $(newPostDiv).attr("id", "posts");
         span1 = document.createElement("span");
-        $(span1).html("Date Posted: " + generateDate());
+        $(span1).html("Date Posted: " + uploadDate); //
         $(span1).attr("id", "datePlaceholder");
         span2 = document.createElement("span");
-        $(span2).html(generateHashtag());
+        $(span2).html(uploadHashtag); //
         $(span2).attr("id", "hashtagPlaceholder");
         $(newPostDiv).append(span1);
         $(newPostDiv).append(span2);
@@ -902,8 +902,8 @@ function ownPagePost(numPost, username, profilePicURL, postURL, uploadHashtag, u
 
         homeProfilePic = document.createElement("img"); //profile picture as followed in homepage.html
         postOnProfileURL = generatePostPicture();
-//        //console.log(postimageURL);
-        $(homeProfilePic).attr("src", postOnProfileURL);
+
+        $(homeProfilePic).attr("src", postURL); // 
         $(homeProfilePic).attr("alt", "error");
         $(homeProfilePic).attr("id", "mainPost");
         $(newPostDiv).append(homeProfilePic);
@@ -915,7 +915,7 @@ function ownPagePost(numPost, username, profilePicURL, postURL, uploadHashtag, u
         $(poster).attr("id", "poster");
 
             posterImage = document.createElement("img");
-           $(posterImage).attr("src", profilePicURL);
+           $(posterImage).attr("src", profilePicURL); // 
             $(posterImage).attr("id", "profilePicture");
             $(posterImage).attr("alt", "cannot load post picture");
 
@@ -961,7 +961,7 @@ function ownPagePost(numPost, username, profilePicURL, postURL, uploadHashtag, u
                 $(postDescription).attr("id", "postDescription");
                     descriptionBox = document.createElement("p");
                     $(descriptionBox).attr("id", "descriptionBox");
-                    $(descriptionBox).html("Description: " + generateDescription())
+                    $(descriptionBox).html("Description: " + uploadDescription) //
                     $(postDescription).append(descriptionBox);
                 $(underBox).append(postDescription);
                 
