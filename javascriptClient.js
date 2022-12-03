@@ -84,7 +84,8 @@ function profilePage()
 
 function yourProfilePage(){
     window.open("./profile.html");
-    document.title = "Your Profile Page";
+    window.onload(function(){
+        $(document).prop("title", "Your Profile Page")})
 }
 function updateSideBar(noti, usernameInput, profilePic, followers, following){
     mainUserBio = generateBio();
