@@ -13,7 +13,7 @@ mainUserBio = "";
 
 var sideFollowers = 345
 
-var sideFollowing = 564
+var sideFollowing = generateNumFollowing();
 
 
 
