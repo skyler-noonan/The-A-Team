@@ -242,16 +242,18 @@ JSONPostPic = (randomURLPostPicture);
 function homepageGeneration() {
     console.log("working")
     postnum = 0
+    profileUsername = generateUsername()
+    profilePicUrl = generateProfilePicture()
 
     if (document.title = "Homepage"){
         //generateOtherUserPost(); //always at least two posts
-        gen = (Math.floor(Math.random() * 5)) + 2
+        gen = (Math.floor(Math.random() * 4)) + 1
         for (i=0; i < gen; i++){
             
             console.log(postnum)
             generateOtherUserPost(postnum);
             postnum++}
-        updateSideBar(0, username);
+        updateSideBar(0, profileUsername, profilePicUrl);
     }
    
     /*if (document.title == "Homepage"){
@@ -261,7 +263,7 @@ function homepageGeneration() {
     }}*/
 }
 
-function generateOtherUserPost(numPost) { 
+function generateOtherUserPost(numPost, username, profilePicURL) { 
     allHomePosts = document.createElement("div");
     $(allHomePosts).attr("id", "allHomePosts");
 
@@ -279,7 +281,7 @@ function generateOtherUserPost(numPost) {
         break1 = document.createElement("br");
         $(newPostDiv).append(break1);
 
-        homeProfilePic = document.createElement("img"); //profile picture as followed in homepage.html
+        homeProfilePic = document.createElement("img"); // post picture as followed in homepage.html
         postimageURL = generatePostPicture();
         console.log(postimageURL);
         $(homeProfilePic).attr("src", postimageURL);
@@ -294,7 +296,7 @@ function generateOtherUserPost(numPost) {
         $(poster).attr("id", "poster");
 
             posterImage = document.createElement("img");
-            $(posterImage).attr("src", generateProfilePicture());
+            $(posterImage).attr("src", profilePicUrl);
             $(posterImage).attr("id", "profilePicture");
             $(posterImage).attr("alt", "cannot load post picture");
 
@@ -305,11 +307,9 @@ function generateOtherUserPost(numPost) {
                 span3 = document.createElement("span"); //username
                 console.log("create p")
                 $(span3).attr("id", "username"+numPost);
-                //$("#username"+numPost).replaceWith("test");
-
-                //$(".username"+numPost).html(generateUsername());
+                
                 $(posterInfo).append(span3);
-                $(span3).append(generateUsername());
+                $(span3).append(username); //change for profile page
                 
                 $("#username"+numPost).click(function(){
                     window.open("./userprofile.html")
@@ -318,10 +318,6 @@ function generateOtherUserPost(numPost) {
                 $("#username" +numPost).html(generateUsername);
                 $("#username"+numPost).css("font-weight", "bold");
                 
-
-                
-                
-
                 span4 = document.createElement("span"); //likes num
                 $(span4).attr("id", "likes");
                 $(span4).html(generateNumLikes() + " likes");
@@ -345,7 +341,7 @@ function generateOtherUserPost(numPost) {
                     $(postDescription).append(descriptionBox);
                 $(underBox).append(postDescription);
                 
-                visitProfile = document.createElement("button");
+                /*visitProfile = document.createElement("button"); COMMENT OUT VISIT PROFILE BUTTON UNDER DESCRIPTION
                 $(visitProfile).attr("id", "visitProfile" +numPost);
 
                 $(visitProfile).html("Visit Profile");
@@ -364,7 +360,7 @@ function generateOtherUserPost(numPost) {
                     window.open("./userprofile.html")
                     window.close("./homepage.html"); //option for only new tab
                     })});
-
+                */
 
                 commentOutline = document.createElement("div");
                 $(commentOutline).attr("id", "commentOutline");
@@ -565,6 +561,7 @@ function generateComment() {
 function profilePageGeneration() {
     console.log("working")
     postnum = 0
+    profileUsername = generateUsername()
 
     if (document.title = "Homepage"){
         //generateOtherUserPost(); //always at least two posts
@@ -574,7 +571,7 @@ function profilePageGeneration() {
         for (i=0; i < gen; i++){
             
             console.log(postnum)
-            profilePagePost(postnum);
+            profilePagePost(postnum,profileUsername,);
             postnum++}
         //updateSideBar(0, username);
     }
@@ -586,7 +583,7 @@ function profilePageGeneration() {
     }}*/
 }
 
-function profilePagePost(numPost, username, profilePic) { 
+function profilePagePost(numPost, username, profilePicURL, postURL,) { 
     allHomePosts = document.createElement("div");
     $(allHomePosts).attr("id", "allHomePosts");
 
@@ -608,8 +605,8 @@ function profilePagePost(numPost, username, profilePic) {
 
         homeProfilePic = document.createElement("img"); //profile picture as followed in homepage.html
         postimageURL = generatePostPicture();
-        console.log(postimageURL);
-        $(homeProfilePic).attr("src", postimageURL);
+//        //console.log(postimageURL);
+        $(homeProfilePic).attr("src", );
         $(homeProfilePic).attr("alt", "error");
         $(homeProfilePic).attr("id", "mainPost");
         $(newPostDiv).append(homeProfilePic);
@@ -621,7 +618,7 @@ function profilePagePost(numPost, username, profilePic) {
         $(poster).attr("id", "poster");
 
             posterImage = document.createElement("img");
-            $(posterImage).attr("src", );
+//            $(posterImage).attr("src", );
             $(posterImage).attr("id", "profilePicture");
             $(posterImage).attr("alt", "cannot load post picture");
 
@@ -632,9 +629,8 @@ function profilePagePost(numPost, username, profilePic) {
                 span3 = document.createElement("span"); //username
                 console.log("create p")
                 $(span3).attr("id", "username"+numPost);
-                //$("#username"+numPost).replaceWith("test");
 
-                //$(".username"+numPost).html(generateUsername());
+                
                 $(posterInfo).append(span3);
 //                $(span3).append(); 
                 
@@ -642,8 +638,8 @@ function profilePagePost(numPost, username, profilePic) {
                     window.open("./userprofile.html")
                     window.close("./homepage.html") 
                 })
-                $("#username" +numPost).html(generateUsername);
-                $("#username"+numPost).css("font-weight", "bold");
+                //$("#username" +numPost).html(generateUsername);
+                //$("#username"+numPost).css("font-weight", "bold");
                 
 
                 
