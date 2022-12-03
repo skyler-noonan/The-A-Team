@@ -343,25 +343,32 @@ function generateOtherUserPost(numPost) {
                 $(underBox).append(postDescription);
                 
                 visitProfile = document.createElement("button");
-                $(visitProfile).attr("id", "visitProfile");
+                $(visitProfile).attr("id", "visitProfile"+numPost);
                 $(visitProfile).html("Visit Profile");
                 $(postDescription).append(visitProfile);
+                $("#visitProfile"+numPost).click(function(){
+                    window.open("./userprofile.html")
+                    window.close("./homepage.html");
+                })
+
+
                 commentOutline = document.createElement("div");
-                $(commentOutline).attr("id", "commentOutline");
+                $(commentOutline).attr("id", "commentOutline" +numPost);
+                comment0 = "#commentOutline" + numPost
 
                 if (t>0){
                     for(i = 1; i <= t; i++){
                         commentBox = document.createElement("p");
                         $(commentBox).attr("id", "commentBox");
                         $(commentBox).html(generateUsername() + ": " + generateComment());
-                        $(commentOutline).append(commentBox);
+                        $(comment0).append(commentBox);
                     }
                 }else {
 
                     commentBox = document.createElement("p");
                     $(commentBox).attr("id", "commentBox");
                     $(commentBox).html("(No comments on post)");
-                    $(commentOutline).append(commentBox);
+                    $(comment0).append(commentBox);
                 }
 
                     /*emptySpace = document.createElement("span");
@@ -378,7 +385,7 @@ function generateOtherUserPost(numPost) {
                     commentInput = document.createElement("input");
                     $(commentInput).attr("id", "commentInput");
                     $(commentInput).attr("type", "text")
-                    $(commentOutline).append(commentInput);
+                    $(comment0).append(commentInput);
                     
                     submitComment = document.createElement("button");
                     $(submitComment).attr("id", "submitComment"); 
@@ -391,13 +398,13 @@ function generateOtherUserPost(numPost) {
                         $(commentInput).css("visibility", "hidden");
                         emptySpace = document.createElement("p");
                         $(emptySpace).attr("id", "emptySpace");
-                        $(commentOutline).prepend(emptySpace);
+                        $(comment0).prepend(emptySpace);
     
                         
                         
                      
                     }) 
-                    $(commentOutline).append(submitComment);
+                    $(comment0).append(submitComment);
 
                 $(underBox).append(commentOutline);
 
