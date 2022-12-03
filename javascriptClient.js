@@ -313,6 +313,8 @@ function generateOtherUserPost(numPost) {
                 })
                 
                 $("#username"+numPost).css("font-weight", "bold");
+                $("#username"+numPost).html("hello");
+
                 
                 
 
