@@ -822,14 +822,14 @@ function uploadSaveChanges(){
     $("#saveChanges").css("visibility", "hidden")
     $("#newPostDescription").css("visibility", "hidden")
     $("#newPostDescription").css("visibility", "hidden")
-    $("#uploadHashtag").css("visibility", "hidden")
+    $("#hashtagBox").css("visibility", "hidden")
     $("uploadURLTypeFile").css("visibility", "hidden")
     $("#dateBox").css("visibility", "hidden")
     $("#uploadURLTypeFile").css("visibility", "hidden")
     $("#submitPost").css("visibility", "hidden");
     uploadDescription = $("#newPostDescription").val()
     uploadDate = $("#dateBox").val()
-    uploadHashtag = $("#uploadHashtag").val()
+    uploadHashtag = $("#hashtagBox").val()
     uploadImg = $("#uploadURLTypeFile").val()
     
     console.log(uploadDate, uploadHashtag, uploadImg);
