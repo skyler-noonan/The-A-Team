@@ -825,11 +825,11 @@ function uploadSaveChanges(){
     $("#uploadHashtag").css("visibility", "hidden")
     $("uploadURLTypeFile").css("visibility", "hidden")
     $("#dateBox").css("visibility", "hidden")
-    $("uploadURLTypeFile").css("visibility", "hidden")
+    $("#uploadURLTypeFile").css("visibility", "hidden")
     uploadDescription = $("#newPostDescription").val()
     uploadDate = $("#dateBox").val()
     uploadHashtag = $("#uploadHashtag").val()
-    uploadImg = $("uploadURLTypeFile").val()
+    uploadImg = $("#uploadURLTypeFile").val()
     console.log(uploadDate, uploadHashtag, uploadImg);
 
     youUpload = {
