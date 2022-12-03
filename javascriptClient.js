@@ -353,7 +353,7 @@ function generateOtherUserPost(numPost) {
                     visitOtherProfileButton= (this.id)
                     console.log(visitOtherProfileButton)
                     console.log(typeof(visitOtherProfileButton));
-                    profileOfPostIdentify = parseInt(button.charAt(visitOtherProfileButton.length-1))
+                    profileOfPostIdentify = parseInt(visitOtherProfileButton.charAt(visitOtherProfileButton.length-1))
                     console.log(profileOfPostIdentify);
 
 
