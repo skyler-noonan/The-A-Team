@@ -258,7 +258,7 @@ window.onload = function(){
     }}*/
 }
 
-function generateOtherUserPost(place) { 
+function generateOtherUserPost(numPost) { 
     allHomePosts = document.createElement("div");
     $(allHomePosts).attr("id", "allHomePosts");
 
@@ -401,10 +401,10 @@ function generateOtherUserPost(place) {
                     
                     keepSpan = document.createElement("span");
                     $(commentOutline).append(keepSpan);
-                    $(keepSpan).val(place);
+                    $(keepSpan).val(numPost);
                     
-                    numPost = parseInt($(keepSpan).val())
-                    console.log(numPost);
+                    
+                    console.log($(keepSpan).val());
 
 
                     $("#submitComment" + numPost).click(function(){
