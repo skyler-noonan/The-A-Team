@@ -8,6 +8,8 @@ app.post('/post',function(req,res)
     res.header("Access-Control-Allow-Origin", "*");
     console.log("New express client");
     res.send('Hello World!');
+    var z = JSON.parse(req.query['data']);
+    console.log(z.uploadDescription)
     
 
 });
