@@ -306,7 +306,7 @@ function generateOtherUserPost(numPost) {
                     window.open("./userprofile.html")
                     window.close("./homepage.html") 
                 })
-                $(span3).css("font-weight", "bold");
+                $(span3).css("font-weight", "bold")
                 
 
                 span4 = document.createElement("span"); //likes num
