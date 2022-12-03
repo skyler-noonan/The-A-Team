@@ -891,10 +891,13 @@ function uploadPost() {
 
     console.log(uploadData.uploadImg);
     console.log(uploadDate)
+    c = JSON.parse(blank[1])
+    console.log(c.uploadDescription)
+
     //ownPagePost(0, profileUsername, profilePic, uploadImg, uploadHashtag, uploadDate, uploadDescription)
 //
 }
-blank= []
+blank= [0,]
 
 
 function ownPagePost(numPost, username, profilePicURL, postURL, uploadHashtag, uploadDate, uploadDescription,  ) { 
