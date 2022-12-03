@@ -412,6 +412,8 @@ function generateOtherUserPost(numPost) {
                             button = (this.id)
                             console.log(button)
                             console.log(typeof(button));
+                            postIdentify = parseInt(button.charAt(button.length-1))
+                            console.log(postIdentify);
                             /*
                             indicate = parseInt($(keepSpan).val())
                             console.log($("#submitComment" + indicate).attr("id"));
