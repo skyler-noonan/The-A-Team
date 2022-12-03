@@ -304,7 +304,7 @@ function generateOtherUserPost(numPost) {
                 $(span3).attr("id", "username" +numPost);
                 //$("#username"+numPost).replaceWith("test");
                 $(posterInfo).append(span3);
-             
+                $("#username"+numPost).text("test");
                 
                 $("#username"+numPost).click(function(){
                     window.open("./userprofile.html")
@@ -312,7 +312,7 @@ function generateOtherUserPost(numPost) {
                 })
                 
                 $("#username"+numPost).css("font-weight", "bold");
-                $("#username"+numPost).html("test");
+                
                 
 
                 span4 = document.createElement("span"); //likes num
