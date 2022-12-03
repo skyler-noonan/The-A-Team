@@ -343,7 +343,7 @@ function generateOtherUserPost(numPost) {
                 $(underBox).append(postDescription);
                 
                 commentOutline = document.createElement("div");
-                $(commentOutline).attr("id", "commentOutline");
+                $(commentOutline).attr("id", "commentOutline" +numPost); 
 
                 if (t>0){
                     for(i = 1; i <= t; i++){
@@ -374,7 +374,7 @@ function generateOtherUserPost(numPost) {
                     commentInput = document.createElement("input");
                     $(commentInput).attr("id", "commentInput");
                     $(commentInput).attr("type", "text")
-                    $(commentOutline).append(commentInput);
+                    $("#commentOutline" +numPost).append(commentInput);
                     
                     submitComment = document.createElement("button");
                     $(submitComment).attr("id", "submitComment"); 
