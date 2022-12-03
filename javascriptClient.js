@@ -856,18 +856,15 @@ function uploadSaveChanges(){
     n = JSON.parse(m);
     console.log(n.uploadDescription)
     return m;
-    /*
-    $.post(
-        url+'?data='+JSON.stringify({
-        'action': 'upload',
+    
+    $.post(url+'?data='+JSON.stringify({
         'uploadDescription': uploadDescription,
         'uploadDate': uploadDate,
         'uploadHashtag': uploadHashtag,
         'uploadImg': uploadImg
-        }),
-        response
-    );*/
+    }))
 
+    
 }
 
 
@@ -1105,6 +1102,5 @@ function ownPagePost(numPost, username, profilePicURL, postURL, uploadHashtag, u
     $(allHomePosts).append(newPostDiv)
     $("#allHomePosts").append(allHomePosts) //cannot link jquery function to id on homepage.html 
 }
-
 
 

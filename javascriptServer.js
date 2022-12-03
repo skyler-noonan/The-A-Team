@@ -1,10 +1,14 @@
 var express=require('express');
 var app=express();
-const port = 80
+const port = 3000
 app.listen(port, () => console.log('listening at 3000'));
-app.get('/',function(req,res)
+
+app.post('/post',function(req,res)
 {   
+    res.header("Access-Control-Allow-Origin", "*");
+    console.log("New express client");
     res.send('Hello World!');
+    $(uploadData) = JSON.parse(uploadSaveChanges())
 
 });
 var server=app.listen(port,function() {});
