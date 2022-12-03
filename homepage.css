@@ -138,7 +138,7 @@ background-color: rgb(235, 221, 221);
     vertical-align: top;
     display: inline-block;
     
-    width: 400px;
+    max-width: 350px;
     height: auto;
     border: 2px solid;
     border-color: green;
