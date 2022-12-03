@@ -401,10 +401,12 @@ function generateOtherUserPost(numPost) {
                     $(submitComment).attr("id", "submitComment" + numPost); 
                     $(submitComment).html("Submit Comment");
 
-                    emptySpace = document.createElement("p");
+                    /*emptySpace = document.createElement("p");
                     $(emptySpace).attr("id", "emptySpace");
                     $(emptySpace).attr("class", "emptySpace" + numPost);
-                    $(emptySpace).css("visibility", "hidden");
+                    $(commentOutline).append(emptySpace)
+                    $(emptySpace).css("visibility", "hidden");*/
+                    
                     
                     keepSpan = document.createElement("span");
                     $(commentOutline).append(keepSpan);
@@ -424,6 +426,9 @@ function generateOtherUserPost(numPost) {
                                 yourComment = $(".commentInput"+postIdentify).val()
                             console.log(yourComment);
                             
+                           postYourComment = document.createElement("p");
+                           $(".commentOutline"+postIdentify).prepend($(postYourComment))
+                           $(postYourComment).html(yourComment);
                             //indicate = parseInt($(keepSpan).val())
                             
                             //console.log($("#commentInput" +indicate).html()) //test
