@@ -634,7 +634,7 @@ function profilePagePost(numPost, username, profilePic) {
                 $(span3).attr("id", "username"+numPost);
                 //$("#username"+numPost).replaceWith("test");
 
-                //$(".username"+numPost).html(generateUsername());
+//                $(".username"+numPost).html(generateUsername());
                 $(posterInfo).append(span3);
 //                $(span3).append(); 
                 
