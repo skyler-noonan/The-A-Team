@@ -18,8 +18,8 @@ var sideFollowers = 345
 
 var sideFollowing = generateNumFollowing();
 
-var url = "http://localhost:3000/post"
-var port = 3000 
+var url = "http://localhost:3500/post"
+var port = 3500 
 
 
 
