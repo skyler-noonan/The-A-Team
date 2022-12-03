@@ -870,7 +870,7 @@ function uploadPost() {
         */
 
     console.log(uploadData.uploadImg)
-
+//
 }
 
 
