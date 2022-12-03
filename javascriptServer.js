@@ -10,9 +10,9 @@ var profilePic = "https://www.planetware.com/wpimages/2020/02/france-in-pictures
 const express = require('express');
 const app = express();
 app.listen(3000, () => console.log('listening at 3000'));
-
+*/
 var url = "http://localhost:3000/post"
-var port = 3000 */
+var port = 3000 
 
 
 
