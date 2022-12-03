@@ -844,9 +844,10 @@ function uploadSaveChanges(){
     n = JSON.parse(m);
     console.log(n.uploadDescription)
 
+    if 
     $.post(
         url+'?data='+JSON.stringify({
-        'action': 'upload';
+        'action': 'upload',
         'uploadDescription': uploadDescription,
         'uploadDate': uploadDate,
         'uploadHashtag': uploadHashtag,

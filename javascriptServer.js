@@ -12,16 +12,17 @@ const app = express();
 app.listen(3000, () => console.log('listening at 3000'));
 
 var url = "http://localhost:3000/post"
-var port = 3000
+var port = 3000 */
 
-/*
+
+
 app.post('/post', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     var z = JSON.parse(req.query['data']);
 
-    // check if the request action is generateCode
-    /*TODO 1 ... check if the request action is generateCode*/ /*
-    if (z['action'] == 'personalInfo'){
+
+
+    if (z['action'] == 'upload'){
         //generate a code for this user
         idCounter++;
         var nameID = z['name'] + idCounter;
@@ -36,4 +37,4 @@ app.post('/post', (req, res) => {
         // send the response while including the JSON text		
         
         res.send(jsontext)
-    }}).listen(3000) */
+    }}).listen(3000) 
