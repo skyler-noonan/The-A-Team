@@ -301,13 +301,13 @@ function generateOtherUserPost(numPost) {
             $(posterInfo).attr("id", "posterInfo");
                 span3 = document.createElement("p"); //username
                 console.log("create p")
-                $(span3).attr("id", "username"+numPost);
+                $(span3).attr("class", "username"+numPost);
                 //$("#username"+numPost).replaceWith("test");
                 
                 
-                $("#username"+numPost).html(generateUsername());
-                //$(posterInfo).append("#username" +numPost);
-                $("username"+numPost).appendTo($(posterInfo));
+                $(".username"+numPost).html(generateUsername());
+                $(posterInfo).append(span3);
+                
                 
                 $("#username"+numPost).click(function(){
                     window.open("./userprofile.html")
