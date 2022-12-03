@@ -11,9 +11,9 @@ var date = new Date();
 var registered = false;
 mainUserBio = "";
 
-var sideFollowers = generateNumFollowers();
+var sideFollowers = 345
 
-var sideFollowing = generateNumFollowing();
+var sideFollowing = 564
 
 
 
