@@ -428,7 +428,7 @@ function generateOtherUserPost(numPost) {
                             
                            postYourComment = document.createElement("p");
                            $(".commentOutline"+postIdentify).prepend($(postYourComment))
-                           $(postYourComment).html(yourComment);
+                           $(postYourComment).html("You: " + yourComment);
                             //indicate = parseInt($(keepSpan).val())
                             
                             //console.log($("#commentInput" +indicate).html()) //test
