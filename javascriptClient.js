@@ -563,9 +563,11 @@ function generateComment() {
 }
 
 
-function generateOwnUserPost(numPost) { 
+function profilePagePost(numPost, username, profilePic) { 
     allHomePosts = document.createElement("div");
     $(allHomePosts).attr("id", "allHomePosts");
+
+    profilePageProfilePic = generateProfilePicture();
 
     newPostDiv = document.createElement("div");
         $(newPostDiv).attr("id", "posts");
@@ -596,7 +598,7 @@ function generateOwnUserPost(numPost) {
         $(poster).attr("id", "poster");
 
             posterImage = document.createElement("img");
-            $(posterImage).attr("src", generateProfilePicture());
+            $(posterImage).attr("src", );
             $(posterImage).attr("id", "profilePicture");
             $(posterImage).attr("alt", "cannot load post picture");
 
