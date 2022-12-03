@@ -889,8 +889,8 @@ function uploadPost() {
         'uploadImg': uploadImg
         */
 
-    console.log(uploadData.uploadImg);
-    console.log(uploadDate)
+    //console.log(uploadData.uploadImg);
+    //console.log(uploadDate)
     c = JSON.parse(blank[1])
     console.log(c.uploadDescription)
 
