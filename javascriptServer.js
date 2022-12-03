@@ -1,7 +1,7 @@
 var express=require('express');
 var app=express();
-var port = 3000
-app.listen(3000, () => console.log('listening at 3000'));
+var port = 3500
+app.listen(3500, () => console.log('listening at 3000'));
 
 app.post('/post',function(req,res)
 {  
@@ -28,4 +28,4 @@ app.post('/post',function(req,res)
     
 
 });
-var server=app.listen(3000,function() {});
+var server=app.listen(port,function() {});
