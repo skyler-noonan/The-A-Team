@@ -258,7 +258,7 @@ window.onload = function(){
     }}*/
 }
 
-function generateOtherUserPost(numPost) { 
+function generateOtherUserPost(place) { 
     allHomePosts = document.createElement("div");
     $(allHomePosts).attr("id", "allHomePosts");
 
@@ -353,22 +353,23 @@ function generateOtherUserPost(numPost) {
 
 
                 commentOutline = document.createElement("div");
-                $(commentOutline).attr("id", "commentOutline" +numPost);
-                comment0 = "#commentOutline" + numPost
+                $(commentOutline).attr("id", "commentOutline");
+                $(commentOutline).attr("class", "commentOutline"+numPost);
+              
 
                 if (t>0){
                     for(i = 1; i <= t; i++){
                         commentBox = document.createElement("p");
                         $(commentBox).attr("id", "commentBox");
                         $(commentBox).html(generateUsername() + ": " + generateComment());
-                        $("#commentOutline" +numPost).append(commentBox);
+                        $(commentOutline).append(commentBox);
                     }
                 }else {
 
                     commentBox = document.createElement("p");
                     $(commentBox).attr("id", "commentBox");
                     $(commentBox).html("(No comments on post)");
-                    $("#commentOutline"+numPost).append(commentBox);
+                    $(commentOutline).append(commentBox);
                 }
 
                     /*emptySpace = document.createElement("span");
@@ -384,29 +385,48 @@ function generateOtherUserPost(numPost) {
 
                     commentInput = document.createElement("input");
                     $(commentInput).attr("id", "commentInput");
+                    $(commentInput).attr("class", "commentInput" +numPost);
+                    
                     $(commentInput).attr("type", "text")
-                    $("#commentOutline"+numPost).append(commentInput);
+                    $(commentOutline).append(commentInput);
                     
                     submitComment = document.createElement("button");
-                    $(submitComment).attr("id", "submitComment"); 
+                    $(submitComment).attr("id", "submitComment" + numPost); 
                     $(submitComment).html("Submit Comment");
-                    $(submitComment).click(function(){
-                        console.log("buttonWorks");
-                        c = $(commentInput).val()
+
+                    emptySpace = document.createElement("p");
+                    $(emptySpace).attr("id", "emptySpace");
+                    $(emptySpace).attr("class", "emptySpace" + numPost);
+                    $(emptySpace).css("visibility", "hidden");
+                    
+                    keepSpan = document.createElement("span");
+                    $(commentOutline).append(keepSpan);
+                    $(keepSpan).val(place);
+                    
+                    numPost = parseInt($(keepSpan).val())
+                    console.log(numPost);
+
+
+                    $("#submitComment" + numPost).click(function(){
+                        console.log($("#submitComment" + numPost).attr("id"));
+
+                        console.log($("#commentInput" +numPost).html()) //test
+                        console.log($(commentInput).html()) //test
+
+                        $(".emptySpace" + numPost).html($(commentInput))
                         alert(c)
                         $(submitComment).css("visibility", "hidden");
                         $(commentInput).css("visibility", "hidden");
-                        emptySpace = document.createElement("p");
-                        $(emptySpace).attr("id", "emptySpace");
-                        $("#commentOutline"+numPost).prepend(emptySpace);
+                       
+                        $(commentOutline).prepend(emptySpace);
     
                         
                         
                      
                     }) 
-                    $("#commentOutline" + numPost).append(submitComment);
+                    $(commentOutline).append(submitComment);
 
-                $(underBox).append("#commentOutline" + numPost);
+                $(underBox).append(commentOutline);
 
 
                 
