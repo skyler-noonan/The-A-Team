@@ -245,7 +245,7 @@ function homepageGeneration() {
     console.log("working")
     postnum = 0
     profileUsername = generateUsername()
-    profilePicUrl = generateProfilePicture()
+    //profilePicUrl = generateProfilePicture()
 
     if (document.title = "Homepage"){
         //generateOtherUserPost(); //always at least two posts
