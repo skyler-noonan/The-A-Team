@@ -299,7 +299,7 @@ function generateOtherUserPost(numPost) {
 
             posterInfo = document.createElement("div");
             $(posterInfo).attr("id", "posterInfo");
-                span3 = document.createElement("span"); //username
+                span3 = document.createElement("p"); //username
                 console.log("create p")
                 $(span3).attr("id", "username"+numPost);
                 //$("#username"+numPost).replaceWith("test");
