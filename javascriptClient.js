@@ -303,8 +303,9 @@ function generateOtherUserPost(numPost) {
                 console.log("create p")
                 $(span3).attr("id", "username" +numPost);
                 //$("#username"+numPost).replaceWith("test");
+                $("#username"+numPost).html(generateUsername());
                 $(posterInfo).append(span3);
-                $("username"+numPost).text(generateUsername());
+                
                 
                 $("#username"+numPost).click(function(){
                     window.open("./userprofile.html")
