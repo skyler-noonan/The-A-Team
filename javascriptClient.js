@@ -881,6 +881,7 @@ function response(data, status){
 
 
 function uploadPost() {
+    window.open(./homepage.html)
     uploadData = JSON.parse(uploadSaveChanges())
     uploadDescription = uploadData.uploadDescription
     uploadDate = uploadData.uploadDate
