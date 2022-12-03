@@ -244,9 +244,10 @@ window.onload = function(){
         //generateOtherUserPost(); //always at least two posts
         gen = (Math.floor(Math.random() * 5)) + 2
         for (i=0; i < gen; i++){
-            postnum++
+            
             console.log(postnum)
-            generateOtherUserPost(postnum);}
+            generateOtherUserPost(postnum);
+            postnum++}
         updateSideBar(0, username);
     }
    
