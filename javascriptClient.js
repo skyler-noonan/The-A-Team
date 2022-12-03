@@ -344,7 +344,7 @@ function generateOtherUserPost(numPost) {
                 
                 visitProfile = document.createElement("button");
                 $(visitProfile).attr("id", "visitProfile");
-                $(visitProfile).attr("value", "Visit Profile");
+                $(visitProfile).prop("value", "Visit Profile");
                 $(postDescription).append(visitProfile);
                 commentOutline = document.createElement("div");
                 $(commentOutline).attr("id", "commentOutline");
