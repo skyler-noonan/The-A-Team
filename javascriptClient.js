@@ -878,15 +878,7 @@ function uploadPost() {
     uploadHashtag = uploadData.uploadHashtag
     uploadImg = uploadData.uploadImg
     
-    $.post(
-        url+'?data='+JSON.stringify({
-        'action': 'upload',
-        'uploadDescription': uploadDescription,
-        'uploadDate': uploadDate,
-        'uploadHashtag': uploadHashtag,
-        'uploadImg': uploadImg
-        }),
-        response)
+  
     /*'uploadDescription': uploadDescription,
         'uploadDate': uploadDate,
         'uploadHashtag': uploadHashtag,
@@ -898,24 +890,6 @@ function uploadPost() {
     //ownPagePost(0, profileUsername, profilePic, uploadImg, uploadHashtag, uploadDate, uploadDescription)
 //
 }
-
-function response(data, status){
-    var response = JSON.parse(data);
-    console.log(data);
-    if (response['action'] == 'generateCode'){
-        
-        myName = response['nameID'];
-        
-        // acttion: Generate Code
-        activateAttempt(1); //activate the first attempt
-        peg_selected = 0;   //no peg should be selected 
-        //reset the visibility of every shadow_balls
-        for (var i = 1; i <= NUM_BALLS; i++){
-            $("#shadow"+i).css({'opacity' : 1});
-        }
-        
-        //reset timer
-        start = new Date(); }}
 
 function ownPagePost(numPost, username, profilePicURL, postURL, uploadHashtag, uploadDate, uploadDescription,  ) { 
     allHomePosts = document.createElement("div");
