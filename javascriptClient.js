@@ -844,8 +844,10 @@ function uploadSaveChanges(){
     n = JSON.parse(m);
     console.log(n.uploadDescription)
 
-    if ($("#submitPost").data("clicked", true)){
-        console.log("yes")
+    if (document.getElementById("submitPost").clicked == true){
+        console.log("yes button press")
+    } else{
+        console.log('no')
     }
     /*
     $.post(
