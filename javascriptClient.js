@@ -65,8 +65,10 @@ function profilePage()
 }
 
 
-function updateSideBar(noti, usernameInput){
+function updateSideBar(noti, usernameInput, profilePic){
     mainUserBio = generateBio();
+    if (profilePic != null){
+        $("#imgProfile").attr("src", profilePic) }
     $("#sidebarUsername").html(usernameInput);
     $("#sidebarUsername").css("font-weight", "bold");
     $("#userBio").html(mainUserBio);
@@ -568,7 +570,7 @@ function profilePageGeneration() {
     document.getElementById("profileFollowers").innerHTML = profileFollowers
     document.getElementById("profileFollowing").innerHTML = profileFollowing
     document.getElementById("profileHeader").innerHTML = profileUsername + "'s Posts"
-
+    updateSideBar()
 
 
     if (document.title = "Homepage"){
