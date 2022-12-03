@@ -561,3 +561,210 @@ function generateComment() {
     return generatedComment; 
 //
 }
+
+
+function generateOwnUserPost(numPost) { 
+    allHomePosts = document.createElement("div");
+    $(allHomePosts).attr("id", "allHomePosts");
+
+    newPostDiv = document.createElement("div");
+        $(newPostDiv).attr("id", "posts");
+        span1 = document.createElement("span");
+        $(span1).html("Date Posted: " + generateDate());
+        $(span1).attr("id", "datePlaceholder");
+        span2 = document.createElement("span");
+        $(span2).html(generateHashtag());
+        $(span2).attr("id", "hashtagPlaceholder");
+        $(newPostDiv).append(span1);
+        $(newPostDiv).append(span2);
+
+        break1 = document.createElement("br");
+        $(newPostDiv).append(break1);
+
+        homeProfilePic = document.createElement("img"); //profile picture as followed in homepage.html
+        postimageURL = generatePostPicture();
+        console.log(postimageURL);
+        $(homeProfilePic).attr("src", postimageURL);
+        $(homeProfilePic).attr("alt", "error");
+        $(homeProfilePic).attr("id", "mainPost");
+        $(newPostDiv).append(homeProfilePic);
+
+        break2 = document.createElement("br");
+        $(newPostDiv).append(break2);
+
+        poster = document.createElement("div");
+        $(poster).attr("id", "poster");
+
+            posterImage = document.createElement("img");
+            $(posterImage).attr("src", generateProfilePicture());
+            $(posterImage).attr("id", "profilePicture");
+            $(posterImage).attr("alt", "cannot load post picture");
+
+            $(poster).append(posterImage);
+
+            posterInfo = document.createElement("div");
+            $(posterInfo).attr("id", "posterInfo");
+                span3 = document.createElement("span"); //username
+                console.log("create p")
+                $(span3).attr("id", "username"+numPost);
+                //$("#username"+numPost).replaceWith("test");
+
+                //$(".username"+numPost).html(generateUsername());
+                $(posterInfo).append(span3);
+                $(span3).append(generateUsername());
+                
+                $("#username"+numPost).click(function(){
+                    window.open("./userprofile.html")
+                    window.close("./homepage.html") 
+                })
+                $("#username" +numPost).html(generateUsername);
+                $("#username"+numPost).css("font-weight", "bold");
+                
+
+                
+                
+
+                span4 = document.createElement("span"); //likes num
+                $(span4).attr("id", "likes");
+                $(span4).html(generateNumLikes() + " likes");
+                $(posterInfo).append(span4);
+
+                span5 = document.createElement("span"); //comments num
+                $(span5).attr("id", "comments");
+                t = generateNumComment()
+                $(span5).html( t + " comments");
+                $(posterInfo).append(span5);
+                console.log("works posterinfo")
+            $(poster).append(posterInfo);  
+            
+            underBox = document.createElement("div"); // underBox underneath posterinfo -contains description and comments
+            $(underBox).attr("id", "underBox");
+                postDescription = document.createElement("div");
+                $(postDescription).attr("id", "postDescription");
+                    descriptionBox = document.createElement("p");
+                    $(descriptionBox).attr("id", "descriptionBox");
+                    $(descriptionBox).html("Description: " + generateDescription())
+                    $(postDescription).append(descriptionBox);
+                $(underBox).append(postDescription);
+                
+                visitProfile = document.createElement("button");
+                $(visitProfile).attr("id", "visitProfile" +numPost);
+
+                $(visitProfile).html("Visit Profile");
+                $(postDescription).append(visitProfile);
+                $(document)
+                $(document).ready(function(){
+                $("#visitProfile"+numPost).click(function(){
+                    visitOtherProfileButton= (this.id)
+                    console.log(visitOtherProfileButton)
+                    console.log(typeof(visitOtherProfileButton));
+                    profileOfPostIdentify = parseInt(visitOtherProfileButton.charAt(visitOtherProfileButton.length-1))
+                    console.log(profileOfPostIdentify);
+
+
+
+                    window.open("./userprofile.html")
+                    window.close("./homepage.html"); //option for only new tab
+                    })});
+
+
+                commentOutline = document.createElement("div");
+                $(commentOutline).attr("id", "commentOutline");
+                $(commentOutline).attr("class", "commentOutline"+numPost);
+              
+
+                if (t>0){
+                    for(i = 1; i <= t; i++){
+                        commentBox = document.createElement("p");
+                        $(commentBox).attr("id", "commentBox");
+                        $(commentBox).html(generateUsername() + ": " + generateComment());
+                        $(commentOutline).append(commentBox);
+                    }
+                }else {
+
+                    commentBox = document.createElement("p");
+                    $(commentBox).attr("id", "commentBox");
+                    $(commentBox).html("(No comments on post)");
+                    $(commentOutline).append(commentBox);
+                }
+                
+                    /*emptySpace = document.createElement("span");
+                    $(emptySpace).attr("id", "emptySpace");
+                    $(commentOutline).append(emptySpace);*/
+
+                    //For this, i have no idea how to pass a variable into the jquery selector
+                    //the problem is each comment element needs to have a unique id. 
+                    //as well as setting an onclick attribute for generated button, if possible in jquery, which I have not figured out 
+                    //when pressing submit, the function always applies to the last element with hiding the input & submit, 
+                    //while also returning value of the unique text box input, which here only defaults to the first 
+                    //i'm not able to return the value of 
+
+                    commentInput = document.createElement("input");
+                    $(commentInput).attr("id", "commentInput");
+                    $(commentInput).attr("class", "commentInput" +numPost);
+                    $(commentInput).attr("type", "text")
+                    $(commentOutline).append(commentInput);
+                    
+                    submitComment = document.createElement("button");
+                    $(submitComment).attr("id", "submitComment" + numPost); 
+                    $(submitComment).html("Submit Comment");
+
+                    /*emptySpace = document.createElement("p");
+                    $(emptySpace).attr("id", "emptySpace");
+                    $(emptySpace).attr("class", "emptySpace" + numPost);
+                    $(commentOutline).append(emptySpace)
+                    $(emptySpace).css("visibility", "hidden");*/
+                    
+                    
+                    keepSpan = document.createElement("span");
+                    $(commentOutline).append(keepSpan);
+                    $(keepSpan).val(numPost);
+                    
+                    
+                    
+                    console.log(parseInt($(keepSpan).val()) + "hello!");
+
+                    $(document).ready(function(){
+                        $("#submitComment" + numPost).click(function(){
+                            button = (this.id)
+                            console.log(button)
+                            console.log(typeof(button));
+                            postIdentify = parseInt(button.charAt(button.length-1))
+                            console.log(postIdentify);
+                                yourComment = $(".commentInput"+postIdentify).val()
+                            console.log(yourComment);
+                            
+                           postYourComment = document.createElement("p");
+                           $(".commentOutline"+postIdentify).prepend($(postYourComment))
+                           $(postYourComment).html("You: " + yourComment);
+                            //indicate = parseInt($(keepSpan).val())
+                            
+                            //console.log($("#commentInput" +indicate).html()) //test
+                            //console.log($(commentInput).html()) //test
+
+                            //$(".emptySpace" + numPost).html($(commentInput))
+                            //alert(c)
+                            //$(submitComment).css("visibility", "hidden");
+                            //$(commentInput).css("visibility", "hidden");
+                        
+                            //$(commentOutline).prepend(emptySpace);
+    
+                        
+                        
+                     
+                        }) })
+                    $(commentOutline).append(submitComment);
+
+                $(underBox).append(commentOutline);
+
+
+                
+            console.log("underBox works");
+            $(poster).append(underBox);
+
+        $(newPostDiv).append(poster);
+
+    $(allHomePosts).append(newPostDiv)
+    $("#allHomePosts").append(allHomePosts) //cannot link jquery function to id on homepage.html 
+}
+
