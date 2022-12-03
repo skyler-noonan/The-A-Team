@@ -347,6 +347,8 @@ function generateOtherUserPost(numPost) {
 
                 $(visitProfile).html("Visit Profile");
                 $(postDescription).append(visitProfile);
+                $(document)
+                $(document).ready(function(){
                 $("#visitProfile"+numPost).click(function(){
                     visitOtherProfileButton= (this.id)
                     console.log(visitOtherProfileButton)
@@ -358,7 +360,7 @@ function generateOtherUserPost(numPost) {
 
                     window.open("./userprofile.html")
                     window.close("./homepage.html");
-                    });
+                    })});
 
 
                 commentOutline = document.createElement("div");
