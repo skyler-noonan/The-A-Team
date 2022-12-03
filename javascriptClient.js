@@ -877,7 +877,7 @@ function uploadPost() {
     uploadDate = uploadData.uploadDate
     uploadHashtag = uploadData.uploadHashtag
     uploadImg = uploadData.uploadImg
-    blank.push(uploadData);
+    //blank.push(uploadData);
     console.log(blank)
     m = JSON.stringify(uploadData)
     blank.push(m)
