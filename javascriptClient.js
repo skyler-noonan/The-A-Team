@@ -346,10 +346,18 @@ function generateOtherUserPost(numPost) {
                 $(visitProfile).attr("id", "visitProfile"+numPost);
                 $(visitProfile).html("Visit Profile");
                 $(postDescription).append(visitProfile);
-                $("#visitProfile"+numPost).click(function(){
+                $("#visitProfile"+numPost).click($("#submitComment" + numPost).click(function(){
+                    button = (this.id)
+                    console.log(button)
+                    console.log(typeof(button));
+                    postIdentify = parseInt(button.charAt(button.length-1))
+                    console.log(postIdentify);
+
+
+
                     window.open("./userprofile.html")
                     window.close("./homepage.html");
-                })
+                    }))
 
 
                 commentOutline = document.createElement("div");
@@ -386,7 +394,6 @@ function generateOtherUserPost(numPost) {
                     commentInput = document.createElement("input");
                     $(commentInput).attr("id", "commentInput");
                     $(commentInput).attr("class", "commentInput" +numPost);
-                    
                     $(commentInput).attr("type", "text")
                     $(commentOutline).append(commentInput);
                     
@@ -414,19 +421,20 @@ function generateOtherUserPost(numPost) {
                             console.log(typeof(button));
                             postIdentify = parseInt(button.charAt(button.length-1))
                             console.log(postIdentify);
-                            /*
-                            indicate = parseInt($(keepSpan).val())
-                            console.log($("#submitComment" + indicate).attr("id"));
+                            yourComment = $("#commentInput"+postIdentify).val()
+                            console.log(yourComment);
+                            
+                            //indicate = parseInt($(keepSpan).val())
+                            
+                            //console.log($("#commentInput" +indicate).html()) //test
+                            //console.log($(commentInput).html()) //test
 
-                            console.log($("#commentInput" +indicate).html()) //test
-                            console.log($(commentInput).html()) //test
-
-                            $(".emptySpace" + numPost).html($(commentInput))
-                            alert(c)
-                            $(submitComment).css("visibility", "hidden");
-                            $(commentInput).css("visibility", "hidden");
+                            //$(".emptySpace" + numPost).html($(commentInput))
+                            //alert(c)
+                            //$(submitComment).css("visibility", "hidden");
+                            //$(commentInput).css("visibility", "hidden");
                         
-                            $(commentOutline).prepend(emptySpace);*/
+                            //$(commentOutline).prepend(emptySpace);
     
                         
                         
