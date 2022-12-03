@@ -306,7 +306,8 @@ function generateOtherUserPost(numPost) {
                 
                 
                 $("#username"+numPost).html(generateUsername());
-                $(posterInfo).append("#username" +numPost);
+                //$(posterInfo).append("#username" +numPost);
+                $("username"+numPost).appendTo($(posterInfo));
                 
                 $("#username"+numPost).click(function(){
                     window.open("./userprofile.html")
