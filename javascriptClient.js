@@ -1,4 +1,5 @@
 var profileUsername = "A-Team Username"; 
+var nameUser =[]
 var password = ""; 
 var email = ""; 
 var loginUsername = "";
@@ -17,6 +18,7 @@ var sideFollowing = generateNumFollowing();
 
 
 
+
 function register()
 {
     $("#register").css("visibility", "hidden");
@@ -28,6 +30,8 @@ function register()
     document.getElementById("password").value = "";
     document.getElementById("email").value = "";
     registered = true;
+
+    
     /*
     $.post(
         url+'?data='+JSON.stringify({

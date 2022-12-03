@@ -1,6 +1,6 @@
-var profileUsername = "A-Team Username"; 
-var password = ""; 
-var email = ""; 
+/*var profileUsername = "A-Team Username"; 
+var serverPassword = ""; 
+var serverEmail = ""; 
 var loginUsername = "";
 var loginPassword = "";
 var loginEmail = "";
