@@ -897,7 +897,7 @@ function uploadPost() {
     //ownPagePost(0, profileUsername, profilePic, uploadImg, uploadHashtag, uploadDate, uploadDescription)
 //
 }
-blank= ["fuckyou",]
+
 console.log(blank[0])
 console.log(blank[1])
 
