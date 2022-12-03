@@ -12,6 +12,10 @@ body{
     float: left;
 }
 
+#submitPost {
+    visibility: hidden;
+}
+
 header div{
     position: static;
     border: 3px solid;
