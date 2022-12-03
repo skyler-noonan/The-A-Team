@@ -404,7 +404,7 @@ function generateOtherUserPost(numPost) {
                     $(keepSpan).val(numPost);
                     
                     
-                    console.log($(keepSpan).val());
+                    console.log(parseInt($(keepSpan).val()) + "hello!");
 
 
                     $("#submitComment" + numPost).click(function(){
