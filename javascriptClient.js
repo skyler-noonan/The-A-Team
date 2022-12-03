@@ -24,7 +24,7 @@ function register()
     document.getElementById("password").value = "";
     document.getElementById("email").value = "";
     registered = true;
-    updateSideBar(0, username);
+    
 
 }
 function login(){
@@ -238,7 +238,8 @@ randomURLPostPicture = {
 JSONPostPic = (randomURLPostPicture);
 
 
-window.onload = function(){ 
+//window.onload = function(){ 
+function homepageGeneration() {
     console.log("working")
     postnum = 0
 
