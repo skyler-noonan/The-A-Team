@@ -824,6 +824,8 @@ function profilePagePost(numPost, username, profilePicURL) {
 
 function uploadPageLoad() {
     $("#uploadPageUsername").html(profileUsername)
+    
+
 }
 function uploadSaveChanges(){
     console.log("Works");
