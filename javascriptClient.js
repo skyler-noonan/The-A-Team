@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 var profileUsername = "A-Team Username"; 
 var nameUser =[]
 var password = ""; 
@@ -862,10 +864,14 @@ function uploadSaveChanges(){
         'uploadDate': uploadDate,
         'uploadHashtag': uploadHashtag,
         'uploadImg': uploadImg
-    }))
+    }), response)
 
     
 }
+
+function response(data, status){
+    var response = JSON.parse(data);
+    console.log(data);}
 
 
 function uploadPost() {
