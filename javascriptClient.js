@@ -361,14 +361,14 @@ function generateOtherUserPost(numPost) {
                         commentBox = document.createElement("p");
                         $(commentBox).attr("id", "commentBox");
                         $(commentBox).html(generateUsername() + ": " + generateComment());
-                        $(comment0).append(commentBox);
+                        $("#commentOutline" +numPost).append(commentBox);
                     }
                 }else {
 
                     commentBox = document.createElement("p");
                     $(commentBox).attr("id", "commentBox");
                     $(commentBox).html("(No comments on post)");
-                    $(comment0).append(commentBox);
+                    $("#commentOutline"+numPost).append(commentBox);
                 }
 
                     /*emptySpace = document.createElement("span");
@@ -385,7 +385,7 @@ function generateOtherUserPost(numPost) {
                     commentInput = document.createElement("input");
                     $(commentInput).attr("id", "commentInput");
                     $(commentInput).attr("type", "text")
-                    $(comment0).append(commentInput);
+                    $("#commentOutline"+numPost).append(commentInput);
                     
                     submitComment = document.createElement("button");
                     $(submitComment).attr("id", "submitComment"); 
@@ -398,15 +398,15 @@ function generateOtherUserPost(numPost) {
                         $(commentInput).css("visibility", "hidden");
                         emptySpace = document.createElement("p");
                         $(emptySpace).attr("id", "emptySpace");
-                        $(comment0).prepend(emptySpace);
+                        $("#commentOutline"+numPost).prepend(emptySpace);
     
                         
                         
                      
                     }) 
-                    $(comment0).append(submitComment);
+                    $("#commentOutline" + numPost).append(submitComment);
 
-                $(underBox).append(commentOutline);
+                $(underBox).append("#commentOutline" + numPost);
 
 
                 
