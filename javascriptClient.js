@@ -304,8 +304,8 @@ function generateOtherUserPost(numPost) {
                 $(span3).attr("class", "username"+numPost);
                 //$("#username"+numPost).replaceWith("test");
                 
-                
-                $(".username"+numPost).html(generateUsername());
+                document.getElementByClass(".username" +numPost).innerHTML = generateUsername();
+                //$(".username"+numPost).html(generateUsername());
                 $(posterInfo).append(span3);
                 
                 
