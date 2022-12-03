@@ -596,7 +596,7 @@ function profilePageGeneration() {
     document.getElementById("profileUsername").innerHTML = otherProfileUser
     document.getElementById("profileFollowers").innerHTML = otherProfileFollowers
     document.getElementById("profileFollowing").innerHTML = otherProfileFollowing
-    document.getElementById("profileHeader").innerHTML = profileUsername + "'s Posts"
+    document.getElementById("profileHeader").innerHTML = otherProfileUser + "'s Posts"
     updateSideBar(0, profileUsername, profilePic, sideFollowers, sideFollowing);
 
 
