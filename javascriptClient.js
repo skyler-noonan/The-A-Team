@@ -820,6 +820,10 @@ function profilePagePost(numPost, username, profilePicURL) {
 function uploadSaveChanges(){
     console.log("Works");
     $("#saveChanges").css("visibility", "hidden")
+    $("#newPostDescription").css("visibility", "hidden")
+    $("#newPostDescription").css("visibility", "hidden")
+    $("#uploadHashtag").css("visibility", "hidden")
+    $("uploadURLTypeFile").val()
     uploadDescription = $("#newPostDescription").val()
     uploadDate = $("#dateBox").val()
     uploadHashtag = $("#uploadHashtag").val()
@@ -834,7 +838,7 @@ function uploadSaveChanges(){
     }
     m = JSON.stringify(youUpload);
     n = JSON.parse(m);
-    console.log(n['uploadDescription'])
+    console.log(n.uploadDescription)
 
 
 
