@@ -879,6 +879,9 @@ function uploadPost() {
     uploadImg = uploadData.uploadImg
     blank.push(uploadData);
     console.log(blank)
+    m = JSON.stringify(uploadData)
+    blank.push(m)
+    console.log(blank);
   
     /*'uploadDescription': uploadDescription,
         'uploadDate': uploadDate,
@@ -891,8 +894,7 @@ function uploadPost() {
     //ownPagePost(0, profileUsername, profilePic, uploadImg, uploadHashtag, uploadDate, uploadDescription)
 //
 }
-blank= {
-}
+blank= []
 
 
 function ownPagePost(numPost, username, profilePicURL, postURL, uploadHashtag, uploadDate, uploadDescription,  ) { 
