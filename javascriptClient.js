@@ -570,7 +570,7 @@ function profilePageGeneration() {
     otherProfileUser = generateUsername()
     otherProfileFollowers = generateNumFollowers();
     otherProfileFollowing = generateNumFollowing();
-    otherUserProfilePic = generatedProfilePic()
+    otherUserProfilePic = generateProfilePicture();
     document.getElementById("profileUsername").innerHTML = otherProfileUser
     document.getElementById("profileFollowers").innerHTML = otherProfileFollowers
     document.getElementById("profileFollowing").innerHTML = otherProfileFollowing
