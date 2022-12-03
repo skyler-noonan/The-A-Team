@@ -833,7 +833,7 @@ function uploadSaveChanges(){
         'uploadImg': uploadImg
     }
     m = JSON.stringify(youUpload);
-    n = JSON.parse(youUpload);
+    n = JSON.parse(m);
     console.log(n['uploadDescription'])
 
 
