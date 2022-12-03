@@ -562,8 +562,8 @@ function profilePageGeneration() {
     console.log("working")
     postnum = 0
     profileUsername = generateUsername()
-    profileFollowers = generateFollowers();
-    profileFollowing = generateFollowing();
+    profileFollowers = generateNumFollowers();
+    profileFollowing = generateNumFollowing();
     document.getElementsByClassName("profileUsername").innerHTML = profileUsername
     document.getElementsByClassName("profileFollowers").innerHTML = profileFollowers
     document.getElementsByClassName("profileFollowing").innerHTML = profileFollowing
