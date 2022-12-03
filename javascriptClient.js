@@ -334,7 +334,7 @@ function generateOtherUserPost(numPost, username, profilePicURL) {
                     window.open("./userprofile.html")
                     window.close("./homepage.html") 
                 })
-                $("#username" +numPost).html(generateUsername);
+                $("#username" +numPost).html(generateUsername());
                 $("#username"+numPost).css("font-weight", "bold");
                 
                 span4 = document.createElement("span"); //likes num
