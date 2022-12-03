@@ -826,7 +826,7 @@ function uploadSaveChanges(){
     $("uploadURLTypeFile").css("visibility", "hidden")
     $("#dateBox").css("visibility", "hidden")
     $("#uploadURLTypeFile").css("visibility", "hidden")
-    $("#submitPost").css("visibility", "hidden");
+    $("#submitPost").css("visibility", "visible");
     uploadDescription = $("#newPostDescription").val()
     uploadDate = $("#dateBox").val()
     uploadHashtag = $("#hashtagBox").val()
