@@ -575,7 +575,7 @@ function profilePageGeneration() {
     document.getElementById("profileFollowers").innerHTML = otherProfileFollowers
     document.getElementById("profileFollowing").innerHTML = otherProfileFollowing
     document.getElementById("profileHeader").innerHTML = profileUsername + "'s Posts"
-    updateSideBar(0, otherProfileUser, otherUserProfilePic, otherProfileFollowers, otherProfileFollowing)
+    updateSideBar(0, profileUsername, profilePic, sideFollowers, sideFollowing);
 
 
     if (document.title = "Homepage"){
@@ -587,7 +587,7 @@ function profilePageGeneration() {
         for (i=0; i < gen; i++){
             
             console.log(postnum)
-            profilePagePost(postnum,profileUsername,profilePageProfilePic);
+            profilePagePost(postnum,otherProfileUser,otherUserProfilePic);
             postnum++}
         //updateSideBar(0, username);
     }
