@@ -1,4 +1,4 @@
-var username = "A-Team Username"; 
+var profileUsername = "A-Team Username"; 
 var password = ""; 
 var email = ""; 
 var loginUsername = "";
@@ -12,7 +12,7 @@ var registered = false;
 mainUserBio = "";
 var sideFollowers = generateNumFollowers();
 var sideFollowing = generateNumFollowing();
-
+//profileUsername = generateUsername()
 
 
 function register()
@@ -246,7 +246,7 @@ JSONPostPic = (randomURLPostPicture);
 function homepageGeneration() {
     console.log("working")
     postnum = 0
-    profileUsername = generateUsername()
+    
     profilePicUrl = generateProfilePicture()
 
     if (document.title = "Homepage"){
@@ -257,7 +257,7 @@ function homepageGeneration() {
             console.log(postnum)
             generateOtherUserPost(postnum);
             postnum++}
-        updateSideBar(0, profileUsername, sideFollowers, sideFollowing);
+        updateSideBar(0, profileUsername, profilePic, sideFollowers, sideFollowing);
     }
    
     /*if (document.title == "Homepage"){
@@ -572,7 +572,7 @@ function profilePageGeneration() {
     document.getElementById("profileFollowers").innerHTML = profileFollowers
     document.getElementById("profileFollowing").innerHTML = profileFollowing
     document.getElementById("profileHeader").innerHTML = profileUsername + "'s Posts"
-    updateSideBar(0, profileUsername, sideFollowers, sideFollowers)
+    updateSideBar(0, profileUsername, profilePic, sideFollowers, sideFollowing)
 
 
     if (document.title = "Homepage"){
