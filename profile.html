@@ -2,39 +2,55 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Your Profile</title>
-<link rel="stylesheet" href="profile.css" type="text/css" title = "style" >
-<script src="javascriptClient.js"></script>   
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+<title>Your Profile Page</title>
+<link rel="stylesheet" href="userprofile.css" type="text/css" title = "style" >
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script src="javascriptClient.js"></script>  
 </head>
 
-<body>
+<body onload="profilePageGeneration()">
 
 <div class = "content">
 <header>
 <div>
-<h1 onclick="">WEBSITE NAME</h1>
-<button>Post Event</button>
-<button>Home Feed</button>
-<button>Logout</button>
+<h1 onclick="goHome()">A-TEAM SOCIAL</h1>
+<button onclick="postEvent()">Post Event</button>
+<button onclick="goHome()">Home Feed</button>
 </div>
 </header>
 
-<div id="sideBar">
+<!--<div id="sideBar" onload="updateSideBar()">
     <img id="imgProfile" src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg">
     <span> Notifications</span>
+</div> -->
+
+<div id="sideBar">
+    <img onclick="profilePage()" id="imgProfile" src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg">
+    <span id="sidebarUsername"> Username</span>
+    <p id ="userBio"> Short Bio </p> 
+    <br>
+    <span id="userFollowers"> 123 Followers </span> <span id="userFollowing"> 123 Following </span> 
+    <br>
+    <div class = "notifications" ></div>
+        <br><span id="notifications"> Notifications<br></span>
+        <div id="outputNotify">
+            <!--<p id ="notificationOutput"> Test notification,
+                elements should scroll down
+            </p>-->
+        </div>
+        
 </div>
 
 <div class = "profile">
 
-    <h2>Main User<span class= "followers"></span> Followers:<span class="following"></span> Following:</h2>
+    <h2>Username:<span id ="profileUsername"></span> Followers:<span id= "profileFollowers"> </span> Following:<span id="profileFollowing"></span></h2>
     <hr>
     <br>
-    <Button>Edit Profile</Button>
-    <h3>Your Posts</h3>
+    <!-- REMOVE <Button>Edit Profile</Button> -->
+    <h3 id = "profileHeader"></h3>
     <br>
-
-<div id = "posts">
+<div id = "allHomePosts">
+<!--<div id = "posts">
     
     <span> Date Posted </span>  <span> #Hashtag placeholder</span>
     <br>
@@ -48,8 +64,9 @@
         <span id="comments">Comments:</span>
 
     </div>
+    <h4><span class="description">Description:</span> <span>Username: comment placeholder</span> <br> <span>Username: comment placeholder</span></h4>
     </div>
-    </div>
+    </div> -->
 </div>
 </div>
 </body>

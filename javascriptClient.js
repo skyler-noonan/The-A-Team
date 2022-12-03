@@ -868,6 +868,15 @@ function uploadPost() {
     uploadHashtag = uploadData.uploadHashtag
     uploadImg = uploadData.uploadImg
     
+    $.post(
+        url+'?data='+JSON.stringify({
+        'action': 'upload',
+        'uploadDescription': uploadDescription,
+        'uploadDate': uploadDate,
+        'uploadHashtag': uploadHashtag,
+        'uploadImg': uploadImg
+        }),
+        response)
     /*'uploadDescription': uploadDescription,
         'uploadDate': uploadDate,
         'uploadHashtag': uploadHashtag,
