@@ -562,6 +562,14 @@ function profilePageGeneration() {
     console.log("working")
     postnum = 0
     profileUsername = generateUsername()
+    profileFollowers = generateFollowers();
+    profileFollowing = generateFollowing();
+    document.getElementsByClassName("profileUsername").innerHTML = profileUsername
+    document.getElementsByClassName("profileFollowers").innerHTML = profileFollowers
+    document.getElementsByClassName("profileFollowing").innerHTML = profileFollowing
+    document.getElementsByClassName("profileHeader").innerHTML = profileUsername + "'s Posts"
+
+
 
     if (document.title = "Homepage"){
         //generateOtherUserPost(); //always at least two posts
