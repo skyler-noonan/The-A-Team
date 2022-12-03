@@ -844,7 +844,7 @@ function uploadSaveChanges(){
     n = JSON.parse(m);
     console.log(n.uploadDescription)
 
-    if ($("#cancelPost").date("clicked", true)){
+    if ($("#cancelPost").data("clicked", true)){
         console.log("yes")
     }
     /*
