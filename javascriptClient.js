@@ -567,11 +567,12 @@ function generateComment() {
 function profilePageGeneration() {
     console.log("working")
     postnum = 0
-    profileFollowers = generateNumFollowers();
-    profileFollowing = generateNumFollowing();
-    document.getElementById("profileUsername").innerHTML = profileUsername
-    document.getElementById("profileFollowers").innerHTML = profileFollowers
-    document.getElementById("profileFollowing").innerHTML = profileFollowing
+    otherProfileUser = generateUsername
+    otherProfileFollowers = generateNumFollowers();
+    otherProfileFollowing = generateNumFollowing();
+    document.getElementById("profileUsername").innerHTML = otherProfileUser
+    document.getElementById("profileFollowers").innerHTML = otherProfileFollowers
+    document.getElementById("profileFollowing").innerHTML = otherProfileFollowing
     document.getElementById("profileHeader").innerHTML = profileUsername + "'s Posts"
     updateSideBar(0, profileUsername, profilePic, sideFollowers, sideFollowing)
 
