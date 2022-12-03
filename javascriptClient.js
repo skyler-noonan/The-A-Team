@@ -65,15 +65,17 @@ function profilePage()
 }
 
 
-function updateSideBar(noti, usernameInput, profilePic){
+function updateSideBar(noti, usernameInput, profilePic, followers, following){
     mainUserBio = generateBio();
+    sideFollowers = generateNumFollowers();
+    sideFollowing = generateNumFollowing();
     if (profilePic != null){
         $("#imgProfile").attr("src", profilePic) }
     $("#sidebarUsername").html(usernameInput);
     $("#sidebarUsername").css("font-weight", "bold");
     $("#userBio").html(mainUserBio);
-    $("#userFollowers").html(generateNumFollowers() + " Followers");
-    $("#userFollowing").html(generateNumFollowing() + " Following");
+    $("#userFollowers").html(sideFollowers + " Followers");
+    $("#userFollowing").html(sideFollowing + " Following");
     console.log("update sidebar")
     $("#notifications").css("font-weight", "bold");
     genNotify = (Math.floor(Math.random()*16)) + 3
