@@ -562,12 +562,35 @@ function generateComment() {
 //
 }
 
+function profilePageGeneration() {
+    console.log("working")
+    postnum = 0
+
+    if (document.title = "Homepage"){
+        //generateOtherUserPost(); //always at least two posts
+        gen = (Math.floor(Math.random() * 3)) + 1
+        //if
+        profilePageProfilePic = generateProfilePicture();
+        for (i=0; i < gen; i++){
+            
+            console.log(postnum)
+            profilePagePost(postnum);
+            postnum++}
+        //updateSideBar(0, username);
+    }
+   
+    /*if (document.title == "Homepage"){
+        randomGen = Math.floor(Math.random() * 12)
+        for (i=0; i<= randomGen; i++){
+            generateOtherUserPost();
+    }}*/
+}
 
 function profilePagePost(numPost, username, profilePic) { 
     allHomePosts = document.createElement("div");
     $(allHomePosts).attr("id", "allHomePosts");
 
-    profilePageProfilePic = generateProfilePicture();
+   
 
     newPostDiv = document.createElement("div");
         $(newPostDiv).attr("id", "posts");
@@ -613,7 +636,7 @@ function profilePagePost(numPost, username, profilePic) {
 
                 //$(".username"+numPost).html(generateUsername());
                 $(posterInfo).append(span3);
-                $(span3).append(generateUsername());
+//                $(span3).append(); 
                 
                 $("#username"+numPost).click(function(){
                     window.open("./userprofile.html")
