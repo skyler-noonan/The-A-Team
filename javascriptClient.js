@@ -11,15 +11,10 @@ var date = new Date();
 var registered = false;
 mainUserBio = "";
 
-var generateSideFollowers = generateNumFollowers();
-var f = []
-f.append(sideFollowers)
-var generateSideFollowing = generateNumFollowing();
-var ff = []
-ff.append(sideFollowers)
-//profileUsername = generateUsername()
-sideFollowers = f[0]
-sideFollowing = f[0]
+var sideFollowers = generateNumFollowers();
+
+var sideFollowing = generateNumFollowing();
+
 
 
 function register()
