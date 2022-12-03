@@ -817,6 +817,9 @@ function profilePagePost(numPost, username, profilePicURL) {
     $("#allHomePosts").append(allHomePosts) //cannot link jquery function to id on homepage.html 
 }
 
+function uploadPageLoad() {
+    $("#uploadPageUsername").html(profileUsername)
+}
 function uploadSaveChanges(){
     console.log("Works");
     $("#saveChanges").css("visibility", "hidden")
@@ -843,12 +846,6 @@ function uploadSaveChanges(){
     m = JSON.stringify(youUpload);
     n = JSON.parse(m);
     console.log(n.uploadDescription)
-
-    if (document.getElementById("submitPost").clicked == true){
-        console.log("yes button press")
-    } else{
-        console.log('no')
-    }
     /*
     $.post(
         url+'?data='+JSON.stringify({
@@ -860,6 +857,10 @@ function uploadSaveChanges(){
         }),
         response
     );*/
+
+}
+
+function uploadPost() {
 
 }
 
