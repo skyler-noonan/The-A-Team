@@ -382,6 +382,7 @@ function generateOtherUserPost(numPost) {
                     
                     submitComment = document.createElement("button");
                     $(submitComment).attr("id", "submitComment"); 
+                    $(submitComment).html("Submit Comment");
                     $(submitComment).click(function(){
                         console.log("buttonWorks");
                         c = $(submitComment).html()
