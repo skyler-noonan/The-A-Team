@@ -23,11 +23,9 @@ app.post('/post', (req, res) => {
 
 
     if (z['action'] == 'upload'){
-        console.log(z)
-        //generate a code for this user
-        /*idCounter++;
-        var nameID = z['name'] + idCounter;
-        generateCode(nameID);
+        console.log(z.uploadDescription)
+       
+        
         var jsontext = JSON.stringify({
             'action': 'generateCode',
             'nameID': nameID,
