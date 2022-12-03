@@ -385,7 +385,7 @@ function generateOtherUserPost(numPost) {
                     $(submitComment).html("Submit Comment");
                     $(submitComment).click(function(){
                         console.log("buttonWorks");
-                        c = $(commentInput).html()
+                        c = $(commentInput).val()
                         alert(c)
                         $(submitComment).css("visibility", "hidden");
                         $(commentInput).css("visibility", "hidden");
