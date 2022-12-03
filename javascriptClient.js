@@ -359,7 +359,7 @@ function generateOtherUserPost(numPost) {
 
 
                     window.open("./userprofile.html")
-                    window.close("./homepage.html");
+                    //window.close("./homepage.html"); //option for only new tab
                     })});
 
 
