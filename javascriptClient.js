@@ -345,7 +345,7 @@ function generateOtherUserPost(numPost, username, profilePicURL) {
                     $(postDescription).append(descriptionBox);
                 $(underBox).append(postDescription);
                 
-                /*visitProfile = document.createElement("button"); COMMENT OUT VISIT PROFILE BUTTON UNDER DESCRIPTION
+                visitProfile = document.createElement("button"); 
                 $(visitProfile).attr("id", "visitProfile" +numPost);
 
                 $(visitProfile).html("Visit Profile");
@@ -364,7 +364,7 @@ function generateOtherUserPost(numPost, username, profilePicURL) {
                     window.open("./userprofile.html")
                     window.close("./homepage.html"); //option for only new tab
                     })});
-                */
+                
 
                 commentOutline = document.createElement("div");
                 $(commentOutline).attr("id", "commentOutline");
