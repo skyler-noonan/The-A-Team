@@ -844,7 +844,10 @@ function uploadSaveChanges(){
     n = JSON.parse(m);
     console.log(n.uploadDescription)
 
-    if 
+    if ($("#cancelPost").date("clicked", true)){
+        console.log("yes")
+    }
+    /*
     $.post(
         url+'?data='+JSON.stringify({
         'action': 'upload',
@@ -854,7 +857,7 @@ function uploadSaveChanges(){
         'uploadImg': uploadImg
         }),
         response
-    );
+    );*/
 
 }
 
