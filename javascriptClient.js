@@ -10,9 +10,16 @@ var profilePic = "https://www.planetware.com/wpimages/2020/02/france-in-pictures
 var date = new Date();
 var registered = false;
 mainUserBio = "";
-var sideFollowers = generateNumFollowers();
-var sideFollowing = generateNumFollowing();
+
+var generateSideFollowers = generateNumFollowers();
+var f = []
+f.append(sideFollowers)
+var generateSideFollowing = generateNumFollowing();
+var ff = []
+ff.append(sideFollowers)
 //profileUsername = generateUsername()
+sideFollowers = f[0]
+sideFollowing = f[0]
 
 
 function register()
@@ -565,7 +572,6 @@ function generateComment() {
 function profilePageGeneration() {
     console.log("working")
     postnum = 0
-    profileUsername = generateUsername()
     profileFollowers = generateNumFollowers();
     profileFollowing = generateNumFollowing();
     document.getElementById("profileUsername").innerHTML = profileUsername
