@@ -301,19 +301,19 @@ function generateOtherUserPost(numPost) {
             $(posterInfo).attr("id", "posterInfo");
                 span3 = document.createElement("span"); //username
                 console.log("create p")
-                $(span3).attr("id", "username");
+                $(span3).attr("id", "username"+numPost);
                 //$("#username"+numPost).replaceWith("test");
+
                 //$(".username"+numPost).html(generateUsername());
                 $(posterInfo).append(span3);
-                $(posterInfo).text(generateUsername());
                 
                 
-                $("#username").click(function(){
+                $("#username"+numPost).click(function(){
                     window.open("./userprofile.html")
                     window.close("./homepage.html") 
                 })
                 
-                $("#username").css("font-weight", "bold");
+                $("#username"+numPost).css("font-weight", "bold");
                 
 
                 
@@ -343,7 +343,7 @@ function generateOtherUserPost(numPost) {
                 $(underBox).append(postDescription);
                 
                 commentOutline = document.createElement("div");
-                $(commentOutline).attr("id", "commentOutline" +numPost); 
+                $(commentOutline).attr("id", "commentOutline");
 
                 if (t>0){
                     for(i = 1; i <= t; i++){
@@ -374,7 +374,7 @@ function generateOtherUserPost(numPost) {
                     commentInput = document.createElement("input");
                     $(commentInput).attr("id", "commentInput");
                     $(commentInput).attr("type", "text")
-                    $("#commentOutline" +numPost).append(commentInput);
+                    $(commentOutline).append(commentInput);
                     
                     submitComment = document.createElement("button");
                     $(submitComment).attr("id", "submitComment"); 
