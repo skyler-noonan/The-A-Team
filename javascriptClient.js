@@ -343,21 +343,22 @@ function generateOtherUserPost(numPost) {
                 $(underBox).append(postDescription);
                 
                 visitProfile = document.createElement("button");
-                $(visitProfile).attr("id", "visitProfile"+numPost);
+                $(visitProfile).attr("id", "visitProfile" +numPost);
+
                 $(visitProfile).html("Visit Profile");
                 $(postDescription).append(visitProfile);
-                $("#visitProfile"+numPost).click($("#submitComment" + numPost).click(function(){
-                    button = (this.id)
-                    console.log(button)
-                    console.log(typeof(button));
-                    postIdentify = parseInt(button.charAt(button.length-1))
-                    console.log(postIdentify);
+                $("#visitProfile"+numPost).click(function(){
+                    visitOtherProfileButton= (this.id)
+                    console.log(visitOtherProfileButton)
+                    console.log(typeof(visitOtherProfileButton));
+                    profileOfPostIdentify = parseInt(button.charAt(visitOtherProfileButton.length-1))
+                    console.log(profileOfPostIdentify);
 
 
 
                     window.open("./userprofile.html")
                     window.close("./homepage.html");
-                    }))
+                    });
 
 
                 commentOutline = document.createElement("div");
