@@ -1,4 +1,4 @@
-var username = "TestUsername"; 
+var username = "A-Team Username"; 
 var password = ""; 
 var email = ""; 
 var loginUsername = "";
@@ -81,6 +81,7 @@ function updateSideBar(noti, usernameInput){
        
         $("#outputNotify").append(notificationOutput);
         notificationSidebar = generateNotifications()
+        console.log(notificationSidebar);
         if (notificationSidebar == "commented on your post: "){
             $("#notificationOutput" +noti).html(generateUsername() + " " + notificationSidebar + generateComment());
 
@@ -237,15 +238,15 @@ JSONPostPic = (randomURLPostPicture);
 
 window.onload = function(){ 
     console.log("working")
-    postnum = 1
+    postnum = 0
 
     if (document.title = "Homepage"){
-        generateOtherUserPost(); //always at least two posts
+        //generateOtherUserPost(); //always at least two posts
         gen = (Math.floor(Math.random() * 5)) + 2
         for (i=0; i < gen; i++){
             postnum++
             console.log(postnum)
-            generateOtherUserPost();}
+            generateOtherUserPost(postnum);}
         updateSideBar(0, username);
     }
    
@@ -256,7 +257,7 @@ window.onload = function(){
     }}*/
 }
 
-function generateOtherUserPost() { 
+function generateOtherUserPost(numPost) { 
     allHomePosts = document.createElement("div");
     $(allHomePosts).attr("id", "allHomePosts");
 
@@ -298,9 +299,14 @@ function generateOtherUserPost() {
             posterInfo = document.createElement("div");
             $(posterInfo).attr("id", "posterInfo");
                 span3 = document.createElement("span"); //username
-                $(span3).attr("id", "username");
+                $(span3).attr("id", "username" +numPost);
                 $(span3).html(generateUsername());
-                $(posterInfo).append(span3);
+                $(posterInfo).append("#username" +numPost);
+                $("#username").click(function(){
+                    window.open("./userprofile.html")
+                    window.close("./homepage.html") 
+                })
+                $(span3).css("font-weight", "bold");
                 
 
                 span4 = document.createElement("span"); //likes num
