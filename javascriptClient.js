@@ -421,7 +421,7 @@ function generateOtherUserPost(numPost) {
                             console.log(typeof(button));
                             postIdentify = parseInt(button.charAt(button.length-1))
                             console.log(postIdentify);
-                            yourComment = $("#commentInput"+postIdentify).val()
+                                yourComment = $(".commentInput"+postIdentify).val()
                             console.log(yourComment);
                             
                             //indicate = parseInt($(keepSpan).val())
