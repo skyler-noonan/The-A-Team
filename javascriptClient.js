@@ -301,20 +301,19 @@ function generateOtherUserPost(numPost) {
             $(posterInfo).attr("id", "posterInfo");
                 span3 = document.createElement("span"); //username
                 console.log("create p")
-                $(span3).attr("id", "username"+numPost);
+                $(span3).attr("id", "username");
                 //$("#username"+numPost).replaceWith("test");
-                
-                document.getElementById(".username" +numPost).innerHTML = generateUsername();
                 //$(".username"+numPost).html(generateUsername());
                 $(posterInfo).append(span3);
+                $(posterInfo).text(generateUsername();)
                 
                 
-                $("#username"+numPost).click(function(){
+                $("#username").click(function(){
                     window.open("./userprofile.html")
                     window.close("./homepage.html") 
                 })
                 
-                $("#username"+numPost).css("font-weight", "bold");
+                $("#username").css("font-weight", "bold");
                 
 
                 
