@@ -567,11 +567,12 @@ function profilePageGeneration() {
         //generateOtherUserPost(); //always at least two posts
         gen = (Math.floor(Math.random() * 3)) + 1
         //if
+        profileUsername = generateUsername()
         profilePageProfilePic = generateProfilePicture();
         for (i=0; i < gen; i++){
             
             console.log(postnum)
-            profilePagePost(postnum,profileUsername,);
+            profilePagePost(postnum,profileUsername,profilePageProfilePic);
             postnum++}
         //updateSideBar(0, username);
     }
@@ -583,7 +584,7 @@ function profilePageGeneration() {
     }}*/
 }
 
-function profilePagePost(numPost, username, profilePicURL, postURL,) { 
+function profilePagePost(numPost, username, profilePicURL) { 
     allHomePosts = document.createElement("div");
     $(allHomePosts).attr("id", "allHomePosts");
 
@@ -604,9 +605,9 @@ function profilePagePost(numPost, username, profilePicURL, postURL,) {
         $(newPostDiv).append(break1);
 
         homeProfilePic = document.createElement("img"); //profile picture as followed in homepage.html
-        postimageURL = generatePostPicture();
+        postOnProfileURL = generatePostPicture();
 //        //console.log(postimageURL);
-        $(homeProfilePic).attr("src", postImageURL);
+        $(homeProfilePic).attr("src", postOnProfileURL);
         $(homeProfilePic).attr("alt", "error");
         $(homeProfilePic).attr("id", "mainPost");
         $(newPostDiv).append(homeProfilePic);
