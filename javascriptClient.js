@@ -371,7 +371,7 @@ function generateOtherUserPost(numPost) {
                     $(commentBox).html("(No comments on post)");
                     $(commentOutline).append(commentBox);
                 }
-
+                
                     /*emptySpace = document.createElement("span");
                     $(emptySpace).attr("id", "emptySpace");
                     $(commentOutline).append(emptySpace);*/
@@ -404,26 +404,31 @@ function generateOtherUserPost(numPost) {
                     $(keepSpan).val(numPost);
                     
                     
+                    
                     console.log(parseInt($(keepSpan).val()) + "hello!");
 
+                    $(document).ready(function(){
+                        $("#submitComment" + numPost).click(function(){
+                            button = (this.id)
+                            console.log(button);
+                            /*
+                            indicate = parseInt($(keepSpan).val())
+                            console.log($("#submitComment" + indicate).attr("id"));
 
-                    $("#submitComment" + numPost).click(function(){
-                        console.log($("#submitComment" + numPost).attr("id"));
+                            console.log($("#commentInput" +indicate).html()) //test
+                            console.log($(commentInput).html()) //test
 
-                        console.log($("#commentInput" +numPost).html()) //test
-                        console.log($(commentInput).html()) //test
-
-                        $(".emptySpace" + numPost).html($(commentInput))
-                        alert(c)
-                        $(submitComment).css("visibility", "hidden");
-                        $(commentInput).css("visibility", "hidden");
-                       
-                        $(commentOutline).prepend(emptySpace);
+                            $(".emptySpace" + numPost).html($(commentInput))
+                            alert(c)
+                            $(submitComment).css("visibility", "hidden");
+                            $(commentInput).css("visibility", "hidden");
+                        
+                            $(commentOutline).prepend(emptySpace);*/
     
                         
                         
                      
-                    }) 
+                        }) })
                     $(commentOutline).append(submitComment);
 
                 $(underBox).append(commentOutline);
