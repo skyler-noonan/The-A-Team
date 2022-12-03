@@ -908,7 +908,7 @@ function uploadPost() {
 } 
 
 
-blank = []
+var blank = []
 
 function ownPagePost(numPost, username, profilePicURL, postURL, uploadHashtag, uploadDate, uploadDescription,  ) { 
     allHomePosts = document.createElement("div");
