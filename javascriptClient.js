@@ -852,9 +852,10 @@ function uploadSaveChanges(){
         'uploadDescription': uploadDescription,
         'uploadDate': uploadDate,
         'uploadHashtag': uploadHashtag,
-        'uploadImg': uploadImg
+        'uploadImg': uploadImg,
+        'action': 'storeUpload'
     }), response)
-    
+
     youUpload = {
         'uploadDescription': uploadDescription,
         'uploadDate': uploadDate,
@@ -874,6 +875,9 @@ function uploadSaveChanges(){
 function response(data, status){
     var response = JSON.parse(data);
     console.log(data);}
+    console.log(data);
+    if (response['action'] == 'generateCode'){
+        console.log(response['msg'])
 
 
 /*function uploadPost() {
