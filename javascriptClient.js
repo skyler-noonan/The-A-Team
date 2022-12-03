@@ -606,7 +606,7 @@ function profilePagePost(numPost, username, profilePicURL, postURL,) {
         homeProfilePic = document.createElement("img"); //profile picture as followed in homepage.html
         postimageURL = generatePostPicture();
 //        //console.log(postimageURL);
-        $(homeProfilePic).attr("src", );
+        $(homeProfilePic).attr("src", postImageURL);
         $(homeProfilePic).attr("alt", "error");
         $(homeProfilePic).attr("id", "mainPost");
         $(newPostDiv).append(homeProfilePic);
@@ -618,7 +618,7 @@ function profilePagePost(numPost, username, profilePicURL, postURL,) {
         $(poster).attr("id", "poster");
 
             posterImage = document.createElement("img");
-//            $(posterImage).attr("src", );
+           $(posterImage).attr("src", profilePicURL);
             $(posterImage).attr("id", "profilePicture");
             $(posterImage).attr("alt", "cannot load post picture");
 
@@ -632,7 +632,7 @@ function profilePagePost(numPost, username, profilePicURL, postURL,) {
 
                 
                 $(posterInfo).append(span3);
-//                $(span3).append(); 
+                $(span3).append(username); 
                 
                 $("#username"+numPost).click(function(){
                     window.open("./userprofile.html")
