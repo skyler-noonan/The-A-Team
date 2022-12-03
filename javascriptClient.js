@@ -897,8 +897,9 @@ function uploadPost() {
     //ownPagePost(0, profileUsername, profilePic, uploadImg, uploadHashtag, uploadDate, uploadDescription)
 //
 }
-blank= [0,]
-
+blank= ["fuckyou",]
+console.log(blank[0])
+console.log(blank[1])
 
 function ownPagePost(numPost, username, profilePicURL, postURL, uploadHashtag, uploadDate, uploadDescription,  ) { 
     allHomePosts = document.createElement("div");
