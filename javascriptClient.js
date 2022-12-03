@@ -570,7 +570,7 @@ function profilePageGeneration() {
     document.getElementById("profileFollowers").innerHTML = profileFollowers
     document.getElementById("profileFollowing").innerHTML = profileFollowing
     document.getElementById("profileHeader").innerHTML = profileUsername + "'s Posts"
-    updateSideBar()
+    updateSideBar(0, profileUsername)
 
 
     if (document.title = "Homepage"){
