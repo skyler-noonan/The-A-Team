@@ -10,6 +10,8 @@ var profilePic = "https://www.planetware.com/wpimages/2020/02/france-in-pictures
 var date = new Date();
 var registered = false;
 mainUserBio = "";
+var sideFollowers = generateNumFollowers();
+var sideFollowing = generateNumFollowing();
 
 
 
@@ -67,15 +69,13 @@ function profilePage()
 
 function updateSideBar(noti, usernameInput, profilePic, followers, following){
     mainUserBio = generateBio();
-    sideFollowers = generateNumFollowers();
-    sideFollowing = generateNumFollowing();
     if (profilePic != null){
         $("#imgProfile").attr("src", profilePic) }
     $("#sidebarUsername").html(usernameInput);
     $("#sidebarUsername").css("font-weight", "bold");
     $("#userBio").html(mainUserBio);
-    $("#userFollowers").html(sideFollowers + " Followers");
-    $("#userFollowing").html(sideFollowing + " Following");
+    $("#userFollowers").html(followers + " Followers");
+    $("#userFollowing").html(following + " Following");
     console.log("update sidebar")
     $("#notifications").css("font-weight", "bold");
     genNotify = (Math.floor(Math.random()*16)) + 3
@@ -257,7 +257,7 @@ function homepageGeneration() {
             console.log(postnum)
             generateOtherUserPost(postnum);
             postnum++}
-        updateSideBar(0, profileUsername);
+        updateSideBar(0, profileUsername, sideFollowers, sideFollowing);
     }
    
     /*if (document.title == "Homepage"){
