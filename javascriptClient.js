@@ -848,13 +848,13 @@ function uploadSaveChanges(){
     
     console.log(uploadDate, uploadHashtag, uploadImg);
 
-    $.post(url+'?data='+JSON.stringify({
+    /*$.post(url+'?data='+JSON.stringify({
         'uploadDescription': uploadDescription,
         'uploadDate': uploadDate,
         'uploadHashtag': uploadHashtag,
         'uploadImg': uploadImg,
         'action': 'storeUpload'
-    }), response)
+    }), response) */
 
     youUpload = {
         'uploadDescription': uploadDescription,
@@ -880,7 +880,7 @@ function response(data, status){
         console.log(response['msg']) }
 
 
-/*function uploadPost() {
+function uploadPost() {
     uploadData = JSON.parse(uploadSaveChanges())
     uploadDescription = uploadData.uploadDescription
     uploadDate = uploadData.uploadDate
@@ -903,9 +903,9 @@ function response(data, status){
     c = JSON.parse(blank[1])
     console.log(c.uploadDescription)
 
-    //ownPagePost(0, profileUsername, profilePic, uploadImg, uploadHashtag, uploadDate, uploadDescription)
+    ownPagePost(0, profileUsername, profilePic, uploadImg, uploadHashtag, uploadDate, uploadDescription)
 // 
-//} 
+} 
 
 
 blank = []
