@@ -824,7 +824,7 @@ function profilePagePost(numPost, username, profilePicURL) {
 
 function uploadPageLoad() {
     $("#uploadPageUsername").html(profileUsername)
-    
+
 
 }
 function uploadSaveChanges(){
@@ -892,7 +892,7 @@ function uploadPost() {
 
     console.log(uploadData.uploadImg);
     console.log(uploadDate)
-    ownPagePost(0, profileUsername, profilePic, uploadImg, uploadHashtag, uploadDate, uploadDescription)
+    //ownPagePost(0, profileUsername, profilePic, uploadImg, uploadHashtag, uploadDate, uploadDescription)
 //
 }
 
