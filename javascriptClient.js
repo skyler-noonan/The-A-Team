@@ -1,6 +1,6 @@
 //const { response } = require("express");
 
-var profileUsername = "A-Team Username"; 
+var profileUsername = "You"; 
 var nameUser =[]
 var password = ""; 
 var email = ""; 
@@ -13,13 +13,14 @@ var profilePic = "https://www.planetware.com/wpimages/2020/02/france-in-pictures
 var date = new Date();
 var registered = false;
 mainUserBio = "";
+var username;
 
 var sideFollowers = 345
 
 var sideFollowing = generateNumFollowing();
 
-var url = "http://localhost:3500/post"
-var port = 3500 
+var url = "http://localhost:3000/post"
+var port = 3000 
 
 
 
@@ -34,7 +35,6 @@ function register()
     document.getElementById("password").value = "";
     document.getElementById("email").value = "";
     registered = true;
-
     
     /*
     $.post(
@@ -91,11 +91,11 @@ function userProfilePage()
 }
 
 
-function updateSideBar(noti, usernameInput, profilePic, followers, following){
+function updateSideBar(noti, /*usernameInput*/ profilePic, followers, following){
     mainUserBio = generateBio();
     if (profilePic != null){
         $("#imgProfile").attr("src", profilePic) }
-    $("#sidebarUsername").html(usernameInput);
+   // $("#sidebarUsername").html(usernameInput);
     $("#sidebarUsername").css("font-weight", "bold");
     $("#userBio").html(mainUserBio);
     $("#userFollowers").html(followers + " Followers");
@@ -266,7 +266,7 @@ randomURLPostPicture = {
 JSONPostPic = (randomURLPostPicture);
 
 
-//window.onload = function(){ 
+
 function homepageGeneration() {
     console.log("working")
     postnum = 0
@@ -281,7 +281,8 @@ function homepageGeneration() {
             console.log(postnum)
             generateOtherUserPost(postnum);
             postnum++}
-        updateSideBar(0, profileUsername, profilePic, sideFollowers, sideFollowing);
+        updateSideBar(0,/* profileUsername*/ profilePic, sideFollowers, sideFollowing);
+       
     }
    
     /*if (document.title == "Homepage"){
@@ -597,7 +598,7 @@ function profilePageGeneration() {
     document.getElementById("profileFollowers").innerHTML = otherProfileFollowers
     document.getElementById("profileFollowing").innerHTML = otherProfileFollowing
     document.getElementById("profileHeader").innerHTML = otherProfileUser + "'s Posts"
-    updateSideBar(0, profileUsername, profilePic, sideFollowers, sideFollowing);
+    updateSideBar(0, /*profileUsername*/ profilePic, sideFollowers, sideFollowing);
 
 
     if (document.title = "Homepage"){
@@ -928,7 +929,7 @@ function yourProfilePage(){
         ownDescription = generateDescription()
 
         ownPagePost(0, profileUsername, profilePic, ownPost, ownHashtag, ownDate, ownDescription );}
-    updateSideBar(0, profileUsername, profilePic, sideFollowers, sideFollowing);
+    updateSideBar(0, /*profileUsername*/ profilePic, sideFollowers, sideFollowing);
             
 
 }

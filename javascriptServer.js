@@ -1,10 +1,10 @@
 var express=require('express');
 var app=express();
-var port = 3500
-app.listen(3500, () => console.log('listening at 3000'));
+var port = 3000
 
-app.post('/post',function(req,res)
-{  
+
+
+app.post('/post', function(req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     console.log("New express client");
     res.send('Hello World!');
@@ -25,7 +25,8 @@ app.post('/post',function(req,res)
         // send the response while including the JSON text		
         /*TODO 2 ... send the response including the JSON text*/
         res.send(jsontext);}
-    
 
-});
-var server=app.listen(port,function() {});
+    
+   
+}).listen(/*TODO 9 ... the port number this server listens to*/3000);
+console.log("Server is running! (listening on port " + port + ")");
