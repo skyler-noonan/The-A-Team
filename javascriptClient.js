@@ -871,13 +871,13 @@ function uploadSaveChanges(){
 
     
 }
-
+/*
 function response(data, status){
     var response = JSON.parse(data);
     console.log(data);}
     console.log(data);
     if (response['action'] == 'generateCode'){
-        console.log(response['msg']) }
+        console.log(response['msg']) }*/
 
 
 function uploadPost() {
