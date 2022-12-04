@@ -920,12 +920,13 @@ function yourProfilePage(){
     document.getElementById("profileHeader").innerHTML = profileUsername + "'s Posts"
     $(document).prop("title", "Your Profile Page")
     ownPageGen = Math.floor(Math.random()*4) +1
+    ownDate = generateDate()
     for (i=0; i<= ownPageGen; i++){
         ownPost = generatePostPicture()
         ownHashtag = generateHashtag()
         ownDescription = generateDescription()
 
-        ownPagePost(0, profileUsername, profilePic, ownPost, ownHashtag, date, ownDescription );}
+        ownPagePost(0, profileUsername, profilePic, ownPost, ownHashtag, ownDate, ownDescription );}
     updateSideBar(0, profileUsername, profilePic, sideFollowers, sideFollowing);
             
 
