@@ -7,9 +7,9 @@ body{
 }
 #imgProfile
 {
-    max-width: 50px;
+    width: 80px;
     height: 80px;
-    float: right;
+    float: left;
 }
 #mainPost {
     max-width: 1920px;
