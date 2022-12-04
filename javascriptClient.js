@@ -914,7 +914,10 @@ var blank = []
 
 function yourProfilePage(){
    
-    
+    document.getElementById("profileUsername").innerHTML = profileUsername
+    document.getElementById("profileFollowers").innerHTML = generateNumFollowers()
+    document.getElementById("profileFollowing").innerHTML = generateNumFollowing()
+    document.getElementById("profileHeader").innerHTML = profileUsername + "'s Posts"
     $(document).prop("title", "Your Profile Page")
     ownPageGen = Math.floor(Math.random()*4) +1
     for (i=0; i<= ownPageGen; i++){
