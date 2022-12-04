@@ -921,6 +921,7 @@ function yourProfilePage(){
     $(document).prop("title", "Your Profile Page")
     ownPageGen = Math.floor(Math.random()*4) +1
     ownDate = generateDate()
+    postnum = 0
     for (i=0; i<= ownPageGen; i++){
         ownPost = generatePostPicture()
         ownHashtag = generateHashtag()
