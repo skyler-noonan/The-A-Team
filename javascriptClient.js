@@ -913,7 +913,7 @@ var blank = []
 
 
 function yourProfilePage(){
-    window.open("./profile.html");
+   
     window.onload(function(){
         $(document).prop("title", "Your Profile Page")})
         ownPageGen = Math.floor(Math.random()*4) +1
