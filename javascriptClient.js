@@ -86,11 +86,6 @@ function profilePage()
 }
 
 
-function yourProfilePage(){
-    window.open("./profile.html");
-    window.onload(function(){
-        $(document).prop("title", "Your Profile Page")})
-}
 function updateSideBar(noti, usernameInput, profilePic, followers, following){
     mainUserBio = generateBio();
     if (profilePic != null){
@@ -910,6 +905,22 @@ function uploadPost() {
 
 
 var blank = []
+
+
+function yourProfilePage(){
+    window.open("./profile.html");
+    window.onload(function(){
+        $(document).prop("title", "Your Profile Page")})
+        ownPageGen = Math.floor(Math.random()*4) +1
+        for (i=0; i<= ownPageGen; i++){
+            ownPost = generatePostPicture()
+            ownHashtag = generateHashtag()
+            ownDescription = generateDescription()
+
+            ownPagePost(0, profileUsername, profilePic, ownPost, ownHashtag, date, ownDescription );}
+            
+
+}
 
 function ownPagePost(numPost, username, profilePicURL, postURL, uploadHashtag, uploadDate, uploadDescription,  ) { 
     allHomePosts = document.createElement("div");
