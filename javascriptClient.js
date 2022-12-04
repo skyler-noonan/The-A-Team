@@ -84,6 +84,11 @@ function profilePage()
     window.open("./userProfile.html");
     document.title = "User Profile Page";
 }
+function userProfilePage()
+{
+    window.open("./profile.html");
+    document.title = "User Profile Page";
+}
 
 
 function updateSideBar(noti, usernameInput, profilePic, followers, following){
