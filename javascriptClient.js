@@ -926,6 +926,7 @@ function yourProfilePage(){
         ownDescription = generateDescription()
 
         ownPagePost(0, profileUsername, profilePic, ownPost, ownHashtag, date, ownDescription );}
+    updateSideBar(0, profileUsername, profilePic, sideFollowers, sideFollowing);
             
 
 }
