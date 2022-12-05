@@ -407,7 +407,7 @@ function generateOtherUserPost(numPost, username, profilePicURL) {
 
                     commentBox = document.createElement("p");
                     $(commentBox).attr("id", "commentBox");
-                    $(commentBox).html("(No comments on post)");
+                    $(commentBox).html("");
                     $(commentOutline).append(commentBox);
                 }
                 
